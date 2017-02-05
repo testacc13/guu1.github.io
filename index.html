@@ -31,110 +31,73 @@ body {font-family: "Roboto", sans-serif}
   <a href="#">Gaming</a>
 
 
-  <a href="#">Tables</a>
+  <a href="#">About</a>
 </nav>
 
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
 <div class="w3-main" style="margin-left:250px;">
 
-<div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
-  <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
-  <span id="myIntro" class="w3-hide">W3.CSS: Introduction</span>
-</div>
+	<div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
+	  <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
+	  <span id="myIntro" class="w3-hide">W3.CSS: Introduction</span>
+	</div>
 
-<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
-  <h1 class="w3-xxxlarge w3-padding-16">W3.CSS</h1>
-</header>
+	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
+	  <h1 class="w3-xxxlarge w3-padding-16">Welcome lost traveller.</h1>
+	</header>
 
-<div class="w3-container w3-padding-32" style="padding-left:32px">
+	<div class="w3-container w3-padding-32" style="padding-left:32px">
 
-<h2>What is W3.CSS?</h2>
+			<hr>
+			<article>
+        <h2>Checking permissions: ls -l</h2>
+            <img src="https://k5lbea.bn1301.livefilestore.com/y3myTa6XcU8zSgLHlZ4hiNDXb5YR1v3wm7PzZ9m7_RotmF8OY95nFDkppzOOQCsq9INnk-31IWbaIwx6N17R997nLFymPocLHCkNsU1g6gOsiq3i-PZ2eB1Aodq5yCeWA2rwYM8xyzAdtHIOtRjIld-vydCWwpBlRWctVtSo0yVIE0?width=653&height=146&cropmode=none" width="653" height="146" />
 
-<p>W3.CSS is a modern CSS framework with built-in responsiveness:</p>
+        <p>Here we see that the file (squid) is a directory, users (joji) can read, write, and execute but the group dip can only read and execute (r-x).</p>
+            <img src="https://k5mryq.bn1301.livefilestore.com/y3mk2-5dvmQIFseIi2qbmgq-4Ru4vGcoqVvq-uJopnjY_QvN7_ljQqS0morY2aYhS-3X16gtxOB0j_7Yp1wmvDX6fRqfopz6yoORStGkdxCnRZ9dzkw1Xc4IzO6041Od8QBlTIub8Z_-XRTh5ghqKwENkx3RmYuIqRWHJ3lowOjA2o?width=653&height=160&cropmode=none">
+        <p>Here i created a new file and we can see that it is not a directory and that joji can only read and write so does the group also joji.</p>
+        <h2>Changing groups </p>
+        <p>first we check the groups using $groups</p>
+            <img src="https://kctjdw.bn1301.livefilestore.com/y3mX7DKHnWhbT2cndPZtX1AM8K_jSJxXGjPBS--FBc4WDT2FVbE0K333RjXYb_8WAeuZt8xSfaCC15IkTt1oJK-acl2m2wEgeQRzR_acTJ5bpX8S5lGsMP1T3LjhZUaSBNta1C-6o8-tr0rWQYbWmWNVbpJlqvnydiECTyCIo0XfXg?width=656&height=30&cropmode=none">
+        <p>sudo chown -R username:group directory</p>
+        <p>Let's check out chown with $man chown</p>
+        <p>we can see what the arg -R stands for:</p>
+            <img src="https://kcrwkq.bn1301.livefilestore.com/y3mcvzDmvJUA_-M0doRjVtzb71-AAgaU8szMLYwtGs3QoBcqHRBV2_lWWvmmE7iqrDLwHAGx8nH_f2cUjDwmOGR2nEkRwVtw5pTPMV_qyxVRaQh8-VhaxZrXb_RX5350G3GY2KOKgNuxu1Il3OWlRT7MIufpbTHfSxjUOLXZG2Zn30?width=655&height=22&cropmode=none" >
+        <p>And if we look at the bottom, cool it has some examples:</p>
+            <img src="https://kctxbq.bn1301.livefilestore.com/y3m8QPXHO0ODpxnGLUWAJALkrrTj1tdvuRK0pzEi0nLGKWzW92OxnHsvFbh2gp1-0mG9Pd5FgoEjB6tjCL-4EMZ_t9aCl0XhN7V_dTd4CVn4CLJ70JAHuvrOlUbcoSiPeDgYtct_iAm4Gv9-EbzG0RdRhu3GscG5E4cdqfZYVXSVk4?width=653&height=74&cropmode=none" >
+        <p>So now let's change our squid file permitions and group.</p>
+            <img src="https://kcqgqa.bn1301.livefilestore.com/y3mHectkeg27pIWhtCxdnMwSXUhi887tE2AkhfF7lDU62u5ThDiAAyI1paqD44DSlyc6Pon0dNyTmVjmBIG21dJMhqTc3q4uZc7B80pI6Wtbd5DO23dw1O4iErkKSF3yR791NV7mSBxwOLZd2P9wM44M2bwT90uYDdPkmxOnBVbXFM?width=655&height=62&cropmode=none" >
+        <p>Obviously we need root permissions to do so.</p>
+        <p>Now if we check ours files again we can see that the owner and the group changed.</p>
+            <img src="https://k5ks1g.bn1301.livefilestore.com/y3mRtID8qiuzIpjkav-ekCtJwxY_-J1SRShuLKZKVRRPAicj2c322W0M55DHfRMqfvyhuyicHyJEmP-0bgohfNCnsYqjriANkAjUmswRRDjtOVSARePR9hOeBH1yH24PDHjP37BTbq08mqWoSBMU4HZFwn58MnYi1HskXE1eon_Ghc?width=655&height=160&cropmode=none" >
+    </article>
+			<h2></h2>
+			<p></p>
+			<hr>
 
-<ul class="w3-leftbar w3-theme-border" style="list-style:none">
- <li>Smaller and faster than other CSS frameworks.</li>
- <li>Easier to learn, and easier to use than other CSS frameworks.</li>
- <li>Uses standard CSS only (No jQuery or JavaScript library).</li>
- <li>Speeds up mobile HTML apps.</li>
- <li>Provides CSS equality for all devices. PC, laptop, tablet, and mobile:</li>
-</ul>
-<br>
-<img src="img_responsive.png" style="width:100%;margin:20px 0" alt="Responsive">
+			<ul class="w3-leftbar w3-theme-border" style="list-style:none">
+			 <li></li>
+			 <li></li>
+			 <li></li>
+			 <li></li>
+			 <li></li>
+			</ul>
+			<br>
+			<img src="img_responsive.png" style="width:100%;margin:20px 0" alt="Responsive">
 
-<hr>
-<h2>W3.CSS is Free</h2>
-<p>W3.CSS is free to use. No license is necessary.</p>
 
-<hr>
-<h2>Easy to Use</h2>
-<div class="w3-container w3-sand w3-leftbar">
-<p><i>Make it as simple as possible, but not simpler.</i><br>
-Albert Einstein</p>
-</div>
+			<h2></h2>
+			<div class="w3-container w3-sand w3-leftbar">
+			<p><i></i><br></p>
+			</div>
+			
+	<br>
+	</div>
 
-<h2>W3.CSS Web Site Templates</h2>
-
-<p>We have created some responsive W3CSS templates for you to use.</p>
-<p>You are free to modify, save, share, use or do whatever you want with them:</p>
-
-<div class="w3-container w3-padding-16 w3-card-2" style="background-color:#eee">
-<h3 class="w3-center">Blog Template</h3>
-<div class="w3-content" style="max-width:800px">
-<img src="img_temp_blog.jpg" style="width:98%;margin:20px 0" alt="Blog Template"><br>
-<div class="w3-row">
-  <div class="w3-col m6">
-    <a href="tryw3css_templates_blog.htm" target="_blank" class="w3-btn w3-padding-12 w3-dark-grey" style="width:98.5%">Demo</a>
-  </div>
-  <div class="w3-col m6">
-    <a href="w3css_templates.asp" class="w3-btn w3-padding-12 w3-dark-grey" style="width:98.5%">More Templates »</a>
-  </div>
-</div>
-</div>
-</div>
-<br>
-
-<h2 class="w3-section w3-text-teal">Colors</h2>
-<p>W3.CSS uses color classes.</p>
-<p>The color classes are inspired by colors used in marketing, road signs, and sticky notes.</p>
-<div class="w3-container w3-red"><p>w3-red</p></div><br>
-<div class="w3-container w3-pink"><p>w3-pink</p></div><br>
-<div class="w3-container w3-purple"><p>w3-purple</p></div><br>
-<div class="w3-container w3-deep-purple"><p>w3-deep-purple</p></div><br>
-<div class="w3-container w3-indigo"><p>w3-indigo</p></div><br>
-<div class="w3-container w3-blue"><p>w3-blue</p></div><br>
-<div class="w3-container w3-light-blue"><p>w3-light-blue</p></div><br>
-<div class="w3-container w3-cyan"><p>w3-cyan</p></div><br>
-<div class="w3-container w3-aqua"><p>w3-aqua</p></div><br>
-<div class="w3-container w3-teal"><p>w3-teal</p></div><br>
-<div class="w3-container w3-green"><p>w3-green</p></div><br>
-<div class="w3-container w3-light-green"><p>w3-light-green</p></div><br>
-<div class="w3-container w3-lime"><p>w3-lime</p></div><br>
-<div class="w3-container w3-sand"><p>w3-sand</p></div><br>
-<div class="w3-container w3-khaki"><p>w3-khaki</p></div><br>
-<div class="w3-container w3-yellow"><p>w3-yellow</p></div><br>
-<div class="w3-container w3-amber"><p>w3-amber</p></div><br>
-<div class="w3-container w3-orange"><p>w3-orange</p></div><br>
-<div class="w3-container w3-deep-orange"><p>w3-deep-orange</p></div><br>
-<div class="w3-container w3-blue-grey"><p>w3-blue-grey</p></div><br>
-<div class="w3-container w3-brown"><p>w3-brown</p></div><br>
-<div class="w3-container w3-light-grey"><p>w3-light-grey</p></div><br>
-<div class="w3-container w3-grey"><p>w3-grey</p></div><br>
-<div class="w3-container w3-dark-grey"><p>w3-dark-grey</p></div><br>
-<div class="w3-container w3-black"><p>w3-black</p></div><br>
-<div class="w3-container w3-pale-red"><p>w3-pale-red</p></div><br>
-<div class="w3-container w3-pale-yellow"><p>w3-pale-yellow</p></div><br>
-<div class="w3-container w3-pale-green"><p>w3-pale-green</p></div><br>
-<div class="w3-container w3-pale-blue"><p>w3-pale-blue</p></div>
-
-</div>
-
-<footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
-  <h5>Footer</h5>
-  <p>Footer information goes here</p>
-</footer>
-     
+		<footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
+	  		<address style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>
+	  	</footer>   
 </div>
 
 <script>
