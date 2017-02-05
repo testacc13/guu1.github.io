@@ -1,9 +1,178 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+body {font-family: "Roboto", sans-serif}
+.w3-sidenav a {padding:16px;font-weight:bold}
+</style>
 <body>
 
+<nav class="w3-sidenav w3-collapse w3-dark-grey w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
+  <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
+  <a href="javascript:void(0)" onclick="w3_close()" 
+  class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
+  <a href="#" class="w3-light-grey w3-medium">Home</a>
+  <a href="#">Python</a>
+    <div class="w3-accordion">
+    <a onclick="myAccordion('demo')" href="javascript:void(0)">Networking <i class="fa fa-caret-down"></i></a>
+    <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
+      <a href="#protocols.html">Protocols</a>
+      <a href="apache.html">Apache</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+  <a href="#">C/ASM</a>
+  <a href="#">Linux</a>
+  <a href="posts.html">Photography</a>
+  <a href="#">Gaming</a>
+
+
+  <a href="#">About</a>
+</nav>
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:250px;">
+
+	<div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
+	  <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
+	  <span id="myIntro" class="w3-hide">Home</span>
+	</div>
+
+	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
+	  <h1 class="w3-xxxlarge w3-padding-16">Welcome lost traveller.</h1>
+	</header>
+
+	<div class="w3-container w3-padding-32" style="padding-left:32px">
+		<article>
+	<h1><b>CPU</b></h1>
+	
+	<p>We are going to look at the intel 8085. The 8085 is a conventional von Neumann design based on the Intel 8080. Is a 8-bit microprocessor and can address, with it's 16 lines, up to 64K memory positions (2^16 = 65536bytes or 64Kb). It has 6200 transistors. Like every processor, it needs a clock or oscillator to synchronize the operations. The 8085 has a clock that generates a digital signal with 3,125 MHz.</p>
+
+	<p>8085 Terminals </p>
+	<img src="https://7mj97g.bn1301.livefilestore.com/y3mfaWNWjx5GEsN8RXpKYgLSwXPSesoRQiTeZZ0Y8Y0Q92PZd1lUTmjwfi33yJ92hOXUu_O31ItvaM9vw_IzXuUnBXF9pj3ISZ2db93YWiB511P1Ri0EKcszoaRuqEAS0vOLS8zwSJQjPnoBX3lymMhdue7VfZSFz3V98EZa-pqOUg?width=386&height=496&cropmode=none">
+	<!--
+	<p>A8-A15 Exits of the 8 most significant bits of the address bus</p>
+	<p>Ad0-AD7 </p>
+	<p>ALE Adress latch enable</p>
+	<p>S0-S1 Information about the stat of the data bus. Indicate whether</p>
+	<p>RD Read</p>
+	<p>WR Write</p>
+	<p>READY</p>
+	-->
+
+	<p>Each CPU contains basicaly the following blocks:</p>
+	<li>Program Counter</li>
+	<li>Arithmetic and logic unit</li>
+	<li>Instruction Decoder</li>
+	<li>General-purpose registers</li>
+
+	<p>The CPU begins by looking at the <b>program counter</b>, and fetching whatever number
+is stored in memory at the location specified. It is then passed on to the
+<b>instruction decoder</b>
+which figures out what the instruction means. This includes what process
+needs to take place (addition, subtraction, multiplication, data movement, etc.) and
+what memory locations are going to be involved in this process. Computer
+instructions usually consist of both the actual instruction and the list of memory
+locations that are used to carry it out.
+Now the computer uses the
+<b>data bus</b>
+to fetch the memory locations to be used in
+the calculation. The data bus is the connection between the CPU and memory.
+In addition to the memory on the outside of the processor, the processor itself has
+some special, high-speed memory locations called <b>registers</b>.
+
+<p>The 8085 has several registers: </p>
+	<li><b>General-purpose registers</b> - There are 6 general purpose registers in 8085 processor, i.e. B, C, D, E, H and L. Each register can hold 8-bit data.
+These registers can work in pair to hold 16-bit data and their pairing combination is like B-C, D-E and H-L.</li>
+
+<p></p><li><b>Program counter</b> - It is a 16-bit register used to store the memory address location of the next instruction to be executed. Microprocessor increments the program whenever an instruction is being executed, so that the program counter points to the memory address of the next instruction that is going to be executed.</li>
+<p></p>
+<li><b>Stack pointer</b> - It is also a 16-bit register works like stack, which is always incremented/decremented by 2 during push and pop operations.</li>
+<p></p>
+<li><b>Temporary register</b> - It is an 8-bit register, which holds the temporary data of arithmetic and logical operations.</li>
+<p></p>
+<li><b>Flag register</b> - It is an 8-bit register having five 1-bit flip-flops, which holds either 0 or 1 depending upon the result stored in the accumulator.
+There are 5 flip-flops:
+		<p></p>
+		<li>Sign (S)</li>
+		<li>Zero (Z)</li>
+		<li>Auxiliary Carry (AC)</li>
+		<li>Parity (P)</li>
+		<li>Carry (C)</li>
+		</li>
+		<p></p>
+<li><b>Instruction register and decoder</b> - It is an 8-bit register. When an instruction is fetched from memory then it is stored in the Instruction register. Instruction decoder decodes the information present in the Instruction register.</li>
+
+<p>Now that the CPU has retrieved all of the data it needs, it passes on the data and
+the decoded instruction to the arithmetic and logic unit for further processing. <u>Here the instruction is actually executed.</u> After the results of the computation have
+been calculated, the results are then placed on the data bus and sent to the
+appropriate location in memory or in a register, as specified by the instruction.</p>
+<p>8085 Architecture</p>
+<img src="https://id117w.bn1301.livefilestore.com/y3mb7EiDK4BAo5nXXYseC9z9KtP4Vzrl024jxwIh8pvvNt-SSUm_Te8AEBPVsbcCBt0CRqBdxKYocWb-LtoVZLCRxhkgN_sn2sWgzJEJBzMbyYDORR9oJ_Kp_DNN0fG8lCinbuYIJd4votKac2U5JhYGtkfpjeaqf6gRUguh64DSUs?width=709&height=517&cropmode=none">
+<hr></hr>
+<p>Instruction Set</p>
+<img src="https://k5livw.bn1301.livefilestore.com/y3m_-Ul4dX9hZSz9rRC-JSKQfNyVO3ED-VOnshm6BN0AXfIauc5fMbBQIrMKwXb6H9YKMWtnu02LEdZD4F7W2v6LDNg71oM86MN87JNIi5QKR1PQQ9ykuv4ykT92XZFhjmcPaLBHdCR5h7iIw2UiUApAo984tLjsyQU5ORp5LgnMQs?width=989&height=299&cropmode=none" width="100%">
+<p>Let's look at instructions. An instruction is a binary pattern designed inside a cpu to perform a specific function. The size of 8085 instructions can be 1 byte, 2 bytes or 3 bytes. The 8085 has 246 instructions, each instruction is represented by an 8-bit binary value. These 8-bits of binary value is called Op-code or instruction Byte.
+    <li>The 1-byte instruction has an opcode alone.</li>
+    <p></p>
+
+    <li>The 2 bytes instruction has an opcode followed by an eight-bit address or data.</li>
+    <p></p>
+
+    <li>The 3 bytes instruction has an opcode followed by 16 bit address or data. While storing the 3 bytes instruction in memory, the sequence of storage is, opcode first followed by low byte of address or data and then high byte of address or data.</li> </p>
+
+
+<p></p>
+</article>
+	<br>
+	</div>
+
+		<footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
+	  		<address style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>
+	  	</footer>   
+</div>
+
+<script>
+// Open and close the sidenav on medium and small screens
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Change style of top container on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+        document.getElementById("myIntro").classList.add("w3-show-inline-block");
+    } else {
+        document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+        document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+    }
+}
+
+// Accordions
+function myAccordion(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme";
+    } else { 
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-theme", "");
+    }
+}
+</script>
+     
 </body>
-</html>
+</html> 
