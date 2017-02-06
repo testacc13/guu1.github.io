@@ -11,11 +11,11 @@ body {font-family: "Roboto", sans-serif}
 </style>
 <body>
 
-<nav class="w3-sidenav w3-collapse w3-dark-grey w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
+<nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
   <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
   <a href="javascript:void(0)" onclick="w3_close()" 
   class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="../..//index.html" class="w3-light-grey w3-medium">Home</a>
+  <a href="../../index.html" class="w3-light-grey w3-medium">Home</a>
   <a href="#">Python</a>
     <div class="w3-accordion">
     <a onclick="myAccordion('demo')" href="javascript:void(0)">Networking <i class="fa fa-caret-down"></i></a>
@@ -27,7 +27,7 @@ body {font-family: "Roboto", sans-serif}
   </div>
   <a href="#">C/ASM</a>
   <a href="../Linux/linux.html">Linux</a>
-  <a href="posts.html">Photography</a>
+  <a href="../../posts.html">Photography</a>
   <a href="#">Gaming</a>
 
 
@@ -44,7 +44,7 @@ body {font-family: "Roboto", sans-serif}
 	</div>
 
 	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
-	  <h1 class="w3-xxxlarge w3-padding-16">Welcome lost traveller.</h1>
+	  <h1 class="w3-xxxlarge w3-padding-16">C / ASM</h1>
 	</header>
 
 	<div class="w3-container w3-padding-32" style="padding-left:32px">
@@ -53,7 +53,7 @@ body {font-family: "Roboto", sans-serif}
 	
 	<p>We are going to look at the intel 8085. The 8085 is a conventional von Neumann design based on the Intel 8080. Is a 8-bit microprocessor and can address, with it's 16 lines, up to 64K memory positions (2^16 = 65536bytes or 64Kb). It has 6200 transistors. Like every processor, it needs a clock or oscillator to synchronize the operations. The 8085 has a clock that generates a digital signal with 3,125 MHz.</p>
 
-	<p>8085 Terminals </p>
+	<h2>8085 Terminals </h2>
 	<img src="https://7mj97g.bn1301.livefilestore.com/y3mfaWNWjx5GEsN8RXpKYgLSwXPSesoRQiTeZZ0Y8Y0Q92PZd1lUTmjwfi33yJ92hOXUu_O31ItvaM9vw_IzXuUnBXF9pj3ISZ2db93YWiB511P1Ri0EKcszoaRuqEAS0vOLS8zwSJQjPnoBX3lymMhdue7VfZSFz3V98EZa-pqOUg?width=386&height=496&cropmode=none">
 	<!--
 	<p>A8-A15 Exits of the 8 most significant bits of the address bus</p>
@@ -112,10 +112,10 @@ There are 5 flip-flops:
 the decoded instruction to the arithmetic and logic unit for further processing. <u>Here the instruction is actually executed.</u> After the results of the computation have
 been calculated, the results are then placed on the data bus and sent to the
 appropriate location in memory or in a register, as specified by the instruction.</p>
-<p>8085 Architecture</p>
+<h2>8085 Architecture</h2>
 <img src="https://id117w.bn1301.livefilestore.com/y3mb7EiDK4BAo5nXXYseC9z9KtP4Vzrl024jxwIh8pvvNt-SSUm_Te8AEBPVsbcCBt0CRqBdxKYocWb-LtoVZLCRxhkgN_sn2sWgzJEJBzMbyYDORR9oJ_Kp_DNN0fG8lCinbuYIJd4votKac2U5JhYGtkfpjeaqf6gRUguh64DSUs?width=709&height=517&cropmode=none">
 <hr></hr>
-<p>Instruction Set</p>
+<h2>Instruction Set</h2>
 <img src="https://k5livw.bn1301.livefilestore.com/y3m_-Ul4dX9hZSz9rRC-JSKQfNyVO3ED-VOnshm6BN0AXfIauc5fMbBQIrMKwXb6H9YKMWtnu02LEdZD4F7W2v6LDNg71oM86MN87JNIi5QKR1PQQ9ykuv4ykT92XZFhjmcPaLBHdCR5h7iIw2UiUApAo984tLjsyQU5ORp5LgnMQs?width=989&height=299&cropmode=none" width="100%">
 <p>Let's look at instructions. An instruction is a binary pattern designed inside a cpu to perform a specific function. The size of 8085 instructions can be 1 byte, 2 bytes or 3 bytes. The 8085 has 246 instructions, each instruction is represented by an 8-bit binary value. These 8-bits of binary value is called Op-code or instruction Byte.
     <li>The 1-byte instruction has an opcode alone.</li>
