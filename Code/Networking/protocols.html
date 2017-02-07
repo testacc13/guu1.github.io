@@ -15,7 +15,7 @@ body {font-family: "Roboto", sans-serif}
   <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
   <a href="javascript:void(0)" onclick="w3_close()" 
   class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="#" class="w3-light-grey w3-medium">Home</a>
+  <a href="../../index.html" class="w3-light-grey w3-medium">Home</a>
   <a href="../Python">Python</a>
     <div class="w3-accordion">
     <a onclick="myAccordion('demo')" href="javascript:void(0)">Networking <i class="fa fa-caret-down"></i></a>
@@ -27,7 +27,7 @@ body {font-family: "Roboto", sans-serif}
   </div>
   <a href="../Casm/casm.html">C/ASM</a>
   <a href="../Linux/linux.html">Linux</a>
-  <a href="../posts.html">Photography</a>
+  <a href="../../posts.html">Photography</a>
   <a href="#">Gaming</a>
 
 
@@ -91,13 +91,17 @@ http://abc.com:80/~smith/home.html</pre>
 <p>HTTP makes use of the Uniform Resource Identifier (URI) to identify a given resource and to establish a connection. Once the connection is established, HTTP messages are passed in a format similar to that used by the Internet mail [RFC5322] and the Multipurpose Internet Mail Extensions (MIME) [RFC2045]. These messages include requests from client to server and responses from server to client which will have the following format:</p>
 <pre>HTTP-message   = Request | Response     ; HTTP/1.1 messages</pre>
 <p>HTTP requests and HTTP responses use a generic message format of RFC 822 for transferring the required data. This generic message format consists of the following four items.</p>
-<pre><li>start-line</li>
+<pre>
+<ul>
+<li>start-line</li>
 <li>zero
 or more header fields (also known as "headers")</li>
 <li>an empty line (i.e.,
 a line with nothing preceding the CRLF) indicating the end of the
 header fields</li>
-<li>and possibly a message-body</li></pre>
+<li>and possibly a message-body</li>
+</ul>
+</pre>
 <h4>Message Start-Line</h4>
 <p>Syntax:</p>
 <pre>start-line = Request-Line | Status-Line</pre>
@@ -109,8 +113,110 @@ HTTP/1.1 200 OK             (This is Status-Line sent by the server)</pre>
 <h2>Header Fields</h2>
 
 <p>HTTP header fields provide required information about the request or response, or about the object sent in the message body.</p>
+<p>Example: </p>
+<img src="https://k5n17a.bn1301.livefilestore.com/y3mlEZmE7bWUHTnQkEBhj9jymQanwyuDnGs5CvIwV_XolIABiHozwqQayu05mza8qxia03XZB4s-ZTbkdJunwdmITh_EvRfPcKQnHyjIuLtUIRUYsEly9LTkvPu4qr0_Ijp8oqcmKDnf-d-o-vi0fFtWwC4hvJfn3trQuu2u02Dvl4?width=960&height=434&cropmode=none">
+<h2>Requests</h2>
+<p>An HTTP client sends an HTTP request to a server in the form of a request message which includes the following:</p>
+<pre>
+<ul>
+	<li>A Request-line</li>
+	<li>Zero or more header (General|Request|Entity) fields followed by <u><b>CRLF</b></u> (Carriage Return and Line Feed)</li>
+	<li>An empty line (i.e., a line with nothing preceding the CRLF) indicating the end of the header fields</li>
+	<li>Optionally a message-body</li>
+</ul></pre>
+<h4>Request Method</h4>
+<p>The request method indicates the method to be performed on the resource identified by the given Request-URI.</p>
+<ul>
+
+	<li><b>GET</b> - The GET method is used to retrieve information from the given server using a given URI. Requests using <u>GET should only retrieve data and should have no other effect on the data.</u></li>
+	<li>HEAD - Same as GET, but it transfers the status line and the header section only.</li>
+	<li><b>POST</b> - A POST request is used to send data to the server, for example, customer information, file upload, etc. using HTML forms.</li>
+	<li>PUT - Replaces all the current representations of the target resource with the uploaded content.</li>
+	<li>DELETE - Removes all the current representations of the target resource given by URI.</li>
+	<li>CONNECT - Establishes a tunnel to the server identified by a given URI.</li>
+	<li>TRACE - Performs a message loop back test along with the path to the target resource.</li>
+</ul>
+
+<h2>Responses</h2>
+
+<p>After receiving and interpreting a request message, a server responds with an HTTP response message: </p>
+<pre>
+<ul>
+	<li>A Status-line</li>
+	<li>An empty line (i.e., a line with nothing preceding the CRLF) 
+indicating the end of the header fields</li>
+	<li>Optionally a message-body</li>
+
+</ul></pre>
+
+<h2>HTTP Status Codes</h2>
+<p>The Status-Code element in a server response, is a 3-digit integer where the first digit of the Status-Code defines the class of response and the last two digits do not have any categorization role. There are 5 values for the first digit:</p>
+
+<img src="https://k5laea.bn1301.livefilestore.com/y3mbqsZTz2l56tTn-JUoH7N58jJiWXDfRrdo9GGFPd9X7V2v53elLTE-hZMp4jdmeotPNiI-FXjx00qlTNVF19J6Yw5XQkz0O6XA2nzoYZqA-V0AzfArqICaULUjP-ePsb7Tj4OMIxyg3XEOQ2p3nRH6fJ_Wl3TKrdeIfR3tn0AXlY?width=607&height=466&cropmode=none">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
-			
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<br>
 	</div>
 
