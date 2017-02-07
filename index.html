@@ -28,7 +28,7 @@ body {font-family: "Roboto", sans-serif}
   <a href="Code/Casm/casm.html">C/ASM</a>
   <a href="Code/Linux/linux.html">Linux</a>
   <a href="posts.html">Photography</a>
-  <a href="#">Gaming</a>
+  <a href="Gaming/gaming.html">Gaming</a>
 
 
   <a href="about.html">About</a>
@@ -59,6 +59,34 @@ body {font-family: "Roboto", sans-serif}
 		<hr>
 
 	-->
+
+				<article>
+		<h2>Major topic on iptables</h2>
+		<h4>DESCRIPTION</h2>
+<p>Iptables  and  ip6tables  are used to set up, maintain, and inspect the tables of IPv4 and IPv6 packet filter rules in the Linux kernel.  Several different tables may be defined.  Each table contains a number of built-in chains and may also contain user-defined chains. Each chain is a list of rules which can match a set of packets.  Each rule specifies what to do with a packet that matches.  This  is  called  a  `target', which may be a jump to a user-defined chain in the same table.</p>
+
+		<h4>TARGETS</h4>
+<p> A firewall rule specifies criteria for a packet and a target.  If the packet does not match, the next rule in the chain is examined; if it does match, then the next rule is specified by the value of the target, which can be the name of a user-defined chain, one  of  the  targets  described  in iptables-extensions(8), or one of the special values ACCEPT, DROP or RETURN.</p>
+		<ul>
+			<li>ACCEPT -  means  to let the packet through.</li>
+			<li> DROP - means to drop the packet on the floor.</li>
+			<li> RETURN - means stop traversing this chain and resume at the next rule in the previous (calling) chain. If the end of a built-in chain is reached or a rule in a built-in chain with target RETURN is matched, the target specified by the chain policy determines the fate of the packet.</li>
+		</ul>
+		
+
+		</article>
+		<hr>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
