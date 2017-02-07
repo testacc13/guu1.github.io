@@ -50,7 +50,66 @@ body {font-family: "Roboto", sans-serif}
 	<div class="w3-container w3-padding-32" style="padding-left:32px">
 
 			<hr>
+<article>
+<h1>HTTP</h1>
+<h2>About it:</h2>
+<p>The Hypertext Transfer Protocol (HTTP) is an application-level
+protocol for distributed, collaborative, hypermedia information
+systems. HTTP has been in use by the World-Wide Web global
+information initiative since 1990.</p>
 
+
+<p>The HTTP protocol is a request/response protocol. A client sends a
+request to the server in the form of a request method, <span style="font-size: 20px;">URI</span>, and
+protocol version, followed by a <span style="font-size: 20px;">MIME-like</span> message containing request
+modifiers, client information, and possible body content over a
+connection with a server. The server responds with a status line,
+including the message's protocol version and a success or error code,
+followed by a MIME-like message containing server information, entity
+metainformation, and possible entity-body content.</p>
+
+<h4>URI</h4>
+<p>Uniform Resource Identifiers (URI) are simply formatted, case-insensitive string containing name, location, etc. to identify a resource, for example, a website, a web service, etc.</p>
+<pre>URI = "http:" "//" host [ ":" port ] [ abs_path [ "?" query ]] <br>
+http://abc.com:80/~smith/home.html</pre>
+
+<h4>MIME</h4>
+<p>Multipurpose Internet Mail Extension. The MIME type is the mechanism to tell the client the variety of document transmitted: the extension of a file name has no meaning on the web. It is, therefore, important that the server is correctly set up, so that the correct MIME type is transmitted with each document. Browsers often use the MIME-type to determine what default action to do when a resource is fetched.</p>
+<h4> Importance of setting the correct MIME type</h4>
+<p>Most web servers send unknown-type resources using the default application/octet-stream MIME type. For security reasons, most browsers do not allow setting a custom default action for such resources, forcing the user to store it to disk to use it. Some commonly seen incorrect server configurations happen with the following file types:</p>
+<ul>
+<li><p>RAR-encoded files. In this case, the ideal would be to set the true type of the encoded files; this is often not possible (as it may not be known to the server and these files may contain several resources of different types). In this case, configuring the server to send the application/x-rar-compressed MIME type, users will not have defined a useful default action for them.</p></li>
+
+<li><p>Proprietary file types. Pay particular attention when serving a proprietary file type. Avoid using application/octet-stream as special handling will not be possible: most browsers do not allow defining a default behavior (like "Opening in Word") for this generic MIME type.</p></li>
+</ul>
+
+<h4> MIME sniffing</h4>
+<p>In the absence of a MIME type, or in some other cases where a client believes they are incorrectly set, browsers may conduct MIME sniffing, which is guessing the correct MIME type by looking at the resource. Each browser performs this differently and under different circumstances. There are some security concerns with this practice, as some MIME types represent executable content and others not. Servers can block MIME sniffing.</p>
+
+<h2>HTTP Messages</h2>
+<p>HTTP is based on the client-server architecture model and a stateless request/response protocol that operates by exchanging messages across a reliable TCP/IP connection.</p>
+<p>HTTP makes use of the Uniform Resource Identifier (URI) to identify a given resource and to establish a connection. Once the connection is established, HTTP messages are passed in a format similar to that used by the Internet mail [RFC5322] and the Multipurpose Internet Mail Extensions (MIME) [RFC2045]. These messages include requests from client to server and responses from server to client which will have the following format:</p>
+<pre>HTTP-message   = Request | Response     ; HTTP/1.1 messages</pre>
+<p>HTTP requests and HTTP responses use a generic message format of RFC 822 for transferring the required data. This generic message format consists of the following four items.</p>
+<pre><li>start-line</li>
+<li>zero
+or more header fields (also known as "headers")</li>
+<li>an empty line (i.e.,
+a line with nothing preceding the CRLF) indicating the end of the
+header fields</li>
+<li>and possibly a message-body</li></pre>
+<h4>Message Start-Line</h4>
+<p>Syntax:</p>
+<pre>start-line = Request-Line | Status-Line</pre>
+<p>Examples:</p>
+<pre>GET /hello.htm HTTP/1.1     (This is Request-Line sent by the client)
+
+HTTP/1.1 200 OK             (This is Status-Line sent by the server)</pre>
+
+<h2>Header Fields</h2>
+
+<p>HTTP header fields provide required information about the request or response, or about the object sent in the message body.</p>
+</article>
 			
 	<br>
 	</div>
