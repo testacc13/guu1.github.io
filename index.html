@@ -89,9 +89,9 @@ body {font-family: "Roboto", sans-serif}
 		<li>NAT table - This table is consulted when a packet that creates a new connection is encountered. It consists of three built-ins: <b>PREROUTING</b> (for altering packets as soon as they <u>come in</u>), <b>OUTPUT</b> (for altering locally -generated packets <u>before routing</u>), and <b>POSTROUTING</b> (for altering packets as they are about to <u>go out</u>).
 			<ul>
 			<p></p>
-				<li>PREROUTING chain – Alters packets before routing. i.e Packet translation happens immediately after the packet comes to the system (and before routing). This helps to translate the destination ip address of the packets to something that matches the routing on the local server. This is used for DNAT (destination NAT).</li>
-				<li>OUTPUT chain – NAT for locally generated packets on the firewall.</li>
-				<li>POSTROUTING chain – Alters packets after routing. i.e Packet translation happens when the packets are leaving the system. This helps to translate the source ip address of the packets to something that might match the routing on the desintation server. This is used for SNAT (source NAT).</li>
+				<li>PREROUTING chain - Alters packets before routing. i.e Packet translation happens immediately after the packet comes to the system (and before routing). This helps to translate the destination ip address of the packets to something that matches the routing on the local server. This is used for DNAT (destination NAT).</li>
+				<li>OUTPUT chain - NAT for locally generated packets on the firewall.</li>
+				<li>POSTROUTING chain - Alters packets after routing. i.e Packet translation happens when the packets are leaving the system. This helps to translate the source ip address of the packets to something that might match the routing on the desintation server. This is used for SNAT (source NAT).</li>
 			</ul>
 			
 		</li>
