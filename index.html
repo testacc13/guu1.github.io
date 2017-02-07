@@ -83,7 +83,7 @@ body {font-family: "Roboto", sans-serif}
 			<li>FORWARD chain -  Packet for another NIC (Network interface controller) on the local server. For packets routed through the local server.</li>
 			<p></p>
 		</ul>
-		<img src="https://kcsz1q.bn1301.livefilestore.com/y3mrOkID5d-1nKmEuSsRUsxq40ADOPqYE0hX_89qgjXDJqbsXzYw7yhY7Q6rTzERqWF6t6fK3PvSsiE5nAV8KSosUFA4HiXrqn5N2hb8QYFOuTwPV_FQPeg12uKNm_31F3Y248dnC1_7aftPcLX99Ij3vU2NSpPo12vsX2G82Nz7ho?width=663&height=145&cropmode=none" style="margin: 20px 0px 20px; ">
+		<img src="https://kcsz1q.bn1301.livefilestore.com/y3mrOkID5d-1nKmEuSsRUsxq40ADOPqYE0hX_89qgjXDJqbsXzYw7yhY7Q6rTzERqWF6t6fK3PvSsiE5nAV8KSosUFA4HiXrqn5N2hb8QYFOuTwPV_FQPeg12uKNm_31F3Y248dnC1_7aftPcLX99Ij3vU2NSpPo12vsX2G82Nz7ho?width=663&height=145&cropmode=none" style="margin: 20px 0px 20px; "></li>
 		<p></p>
 
 		<li>NAT table - This table is consulted when a packet that creates a new connection is encountered. It consists of three built-ins: <b>PREROUTING</b> (for altering packets as soon as they <u>come in</u>), <b>OUTPUT</b> (for altering locally -generated packets <u>before routing</u>), and <b>POSTROUTING</b> (for altering packets as they are about to <u>go out</u>).
@@ -95,7 +95,19 @@ body {font-family: "Roboto", sans-serif}
 			</ul>
 			
 		</li>
+		<p></p>
+		<li>Mangle table - This table is used for specialized packet alteration. It has the following built-in chains: 
+		<ul>
+		<p></p>
+    <li>PREROUTING chain - for altering incoming packets before  routing</li>
+    <li>OUTPUT chain - for altering locally-generated packets before routing</li>
+    <li>FORWARD chain - for altering packets being routed through the  box</li>
+    <li>INPUT chain - for packets coming into the box itself</li>
+    <li>POSTROUTING chain - for altering packets as they are about to go out</li>
 
+    	</ul>
+			
+		</li>
 
 
 
