@@ -63,7 +63,7 @@ body {font-family: "Roboto", sans-serif}
 				<article>
 		<h2>Major topic on iptables</h2>
 		<h4>Description</h2>
-		<p>Iptables  and  ip6tables  are used to set up, maintain, and inspect the tables of IPv4 and IPv6 packet filter rules in the Linux kernel.  Several different tables may be defined.  Each table contains a number of built-in chains and may also contain user-defined chains. Each chain is a list of rules which can match a set of packets.  Each rule specifies what to do with a packet that matches.  This  is  called  a  `target', which may be a jump to a user-defined chain in the same table.</p>
+		<p>Iptables  and  ip6tables  are used to set up, maintain, and inspect the tables of IPv4 and IPv6 packet filter rules in the Linux kernel.  Several different tables may be defined.  Each table contains a number of built-in chains and may also contain user-defined chains. Each chain is a list of rules which can match a set of packets.  Each rule specifies what to do with a packet that matches.  This  is  called  a  'target', which may be a jump to a user-defined chain in the same table.</p>
 
 		<h4>Targets</h4>
 		<p> A firewall rule specifies criteria for a packet and a target.  If the packet does not match, the next rule in the chain is examined; if it does match, then the next rule is specified by the value of the target, which can be the name of a user-defined chain, one  of  the  targets  described  in iptables-extensions(8), or one of the special values ACCEPT, DROP or RETURN.</p>
@@ -77,10 +77,10 @@ body {font-family: "Roboto", sans-serif}
 			
 		<li>Filter Tables - Filter is default table. It contains the built-in chains <b>INPUT</b> (for packets destined to local sockets), <b>FORWARD</b> (for packets being routed through the box) and <b>OUTPUT</b> (for locally generated packets)
 		<p></p>
-		<ul>
-			<li>INPUT chain -  Incoming to firewall. For packets coming to the local server.</li>
-			<li>OUTPUT chain -  Outgoing from firewall. For packets generated locally and going out of the local server.</li>
-			<li>FORWARD chain -  Packet for another NIC (Network interface controller) on the local server. For packets routed through the local server.</li>
+			<ul>
+				<li>INPUT chain -  Incoming to firewall. For packets coming to the local server.</li>
+				<li>OUTPUT chain -  Outgoing from firewall. For packets generated locally and going out of the local server.</li>
+				<li>FORWARD chain -  Packet for another NIC (Network interface controller) on the local server. For packets routed through the local server.</li>
 			<p></p>
 		</ul>
 		<img src="https://kcsz1q.bn1301.livefilestore.com/y3mrOkID5d-1nKmEuSsRUsxq40ADOPqYE0hX_89qgjXDJqbsXzYw7yhY7Q6rTzERqWF6t6fK3PvSsiE5nAV8KSosUFA4HiXrqn5N2hb8QYFOuTwPV_FQPeg12uKNm_31F3Y248dnC1_7aftPcLX99Ij3vU2NSpPo12vsX2G82Nz7ho?width=663&height=145&cropmode=none" style="margin: 20px 0px 20px; "></li>
@@ -97,16 +97,15 @@ body {font-family: "Roboto", sans-serif}
 		</li>
 		<p></p>
 		<li>Mangle table - This table is used for specialized packet alteration. It has the following built-in chains: 
-		<ul>
-		<p></p>
-    <li>PREROUTING chain - for altering incoming packets before  routing</li>
-    <li>OUTPUT chain - for altering locally-generated packets before routing</li>
-    <li>FORWARD chain - for altering packets being routed through the  box</li>
-    <li>INPUT chain - for packets coming into the box itself</li>
-    <li>POSTROUTING chain - for altering packets as they are about to go out</li>
+			<ul>
+			<p></p>
+			    <li>PREROUTING chain - for altering incoming packets before  routing</li>
+			    <li>OUTPUT chain - for altering locally-generated packets before routing</li>
+			    <li>FORWARD chain - for altering packets being routed through the  box</li>
+			    <li>INPUT chain - for packets coming into the box itself</li>
+			    <li>POSTROUTING chain - for altering packets as they are about to go out</li>
 
-    	</ul>
-			
+    		</ul>
 		</li>
 
 
@@ -132,10 +131,8 @@ body {font-family: "Roboto", sans-serif}
 		<article>
 		<h2>Free</h2>
 		<p>free - Display amount of free and used memory in the system</p>
-		<p>free displays the total amount of free and used physical and swap memory in the sys‐
-       		tem, as well as the buffers used by the kernel.  The shared memory column represents
-       		either  the MemShared value (2.4 series kernels) or the Shmem value (2.6 series ker‐
-       		nels and later) taken from the /proc/meminfo file. The value is zero if none of  the
+		<p>free displays the total amount of free and used physical and swap memory in the system, as well as the buffers used by the kernel.  The shared memory column represents
+       		either  the MemShared value (2.4 series kernels) or the Shmem value (2.6 series kernels and later) taken from the /proc/meminfo file. The value is zero if none of  the
        		entries is exported by the kernel.</p>
 
 		<img src="https://9a861q.bn1301.livefilestore.com/y3mEjqoL2mWsfuShxwX6md-ZwtFaE9YBR0wuyhXQL6fgY8LOYqgXfF5_ylq_RzJMidyYPSV677WEDV941wRSoEwo5RBJgp4k9qKlpqXyMjBnUs-z2ksERfrbqgN9PD0Yys9iJPMrUlrmICVs23SZ9L9Nt4fn4fFbrgb3NvFMFRdei8?width=587&height=338&cropmode=none">
