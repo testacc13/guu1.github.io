@@ -109,7 +109,41 @@ body {font-family: "Roboto", sans-serif}
     		<img src="https://7mjgbq.bn1301.livefilestore.com/y3mY0pp-cK_YtV51j6jCBLEd4u3I6tMNLKaI6ingqTH8W8nUYZWhoQhnBnhkjXJwjMQKaFRK4nPpBNQQavwDz5MzUqUq43Hb7YW_du6axS9zAFDaFBhz8txdmC-MOeQ4xsRy1tYcEZjvUaOQ-nK16PwO50eue-ruBf6JoHkrNMt_Bk?width=659&height=258&cropmode=none" style="margin: 20px 0px 20px; ">
 		</li>
 		<p></p>
-		<li>Raw table - This table is used for configuration excemptions.</li>
+		<li>Raw table - This table is used for configuration excemptions. It has the following built-in chains:
+		<p>
+				<li>PREROUTING chain</li>
+				<li>OUTPUT chain</li>
+		</p>
+		</li>
+			<img src="https://7mgdng.bn1301.livefilestore.com/y3ma8MFc2kIDhLHsukiCpziu8pvWey8jljNU4n5xFsw-JimPqXOrfAYknW9hvo3o-ydZNQKpZLZSbRHxa16yWuJupYxV6XEuuRk347bqMrPSay4tYMIQEL34JAedKSQrNm3Im3IyeU1vaFph3UPN26hYveMd0ecGQsokEk1g4OyOFs?width=660&height=113&cropmode=none" style="margin: 20px 0px 20px; ">
+		</ul>
+		<h4>Table Chain and Rule Structure</h4>
+		<img src="https://7mixyw.bn1301.livefilestore.com/y3mAZK0PfG8BfiJZSsMnw7G9GSGVBqW-_K3LeaYqt7qUoHd7feUMY-uK41UL2HXFowMY1rSDUwprf5JjeA5t1gIP5Mz6IBJqobHAugcjzy7ryDUuCBrG_J9FEY7YhInXrMQrFi0fUxrazpoMNwJOog1Ser_zyHGMzXLin_PnLi8XNY?width=233&height=463&cropmode=none">
+		<h4>Edit iptable rules</h4>
+		<ul>
+			<ul>
+			<img src="https://7mj87g.bn1301.livefilestore.com/y3miD6uCYJ9CYsRkPPNEDlTaXO7ayQAWKJfzpowUV_alMTC_MJKzshRsNV8kKSzXEtZ2DMAZu02Us-2Ay7moSvzK2vot2OaZ9F6X872KNcDU7o47oJKcekXa-1v5EbLD6pBDyOK49SCWp3So0OjkLZ4k-kRgNgtV4iWVgxxoub_RQw?width=572&height=52&cropmode=none" style="margin: 20px 0px 20px; ">
+			<li>target - Special target variable (ACCEPT; DROP; REJECT; etc)</li>
+			<li>prot - Protocols. (TCP; UDP; ICMP; etc)</li>
+			<li>opt - Special options for that specific rule.</li>
+			<li>source - Source ip-address of the packet.</li>
+			<li>destination - Destination ip-address for the packet</li>
+			</ul>
+			<ul>
+				<p>Let's append a rule to the INPUT chain. This will allow incoming SSH (port 22) traffic:</p>
+				<img src="https://7mj1pw.bn1301.livefilestore.com/y3mRJA_aA7xwxR87UT2yM3kqgyHpm0x9bvTEH9CRaGloJKeDGIG9qQbfx8LmlBGUI4uHYJYwtgzAPxCOpjuE8Gtdd6YAsmP_Dlge3zLgM4PqU8tyNfWB1LAYMeK75IN6RdfnocrHC5zrj2UduR0Ouf3lnBvju0cEDAunOQ-ZkQdnrk?width=570&height=20&cropmode=none" style="margin: 20px 0px 20px; ">
+				<p>What just happened</p>
+				<li><b>-A INPUT</b> - Append a rule to the INPUT chain</li>
+				<li><b>-p tcp</b> - Apply the rule to the tcp protocol</li>
+				<li><b>--dport ssh</b> - Apply the rule to the port used by SSH (port 22)</li>
+				<li><b>-j ACCEPT</b> - Set it to accept traffic to the input chain when using tcp on the ssh port</li>
+			</ul>
+
+
+
+
+
+		</ul>
 
 
 
