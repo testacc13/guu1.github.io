@@ -110,10 +110,10 @@ body {font-family: "Roboto", sans-serif}
 		</li>
 		<p></p>
 		<li>Raw table - This table is used for configuration excemptions. It has the following built-in chains:
-		<p>
+			<ul>
 				<li>PREROUTING chain</li>
 				<li>OUTPUT chain</li>
-		</p>
+			</ul>
 		</li>
 			<img src="https://7mgdng.bn1301.livefilestore.com/y3ma8MFc2kIDhLHsukiCpziu8pvWey8jljNU4n5xFsw-JimPqXOrfAYknW9hvo3o-ydZNQKpZLZSbRHxa16yWuJupYxV6XEuuRk347bqMrPSay4tYMIQEL34JAedKSQrNm3Im3IyeU1vaFph3UPN26hYveMd0ecGQsokEk1g4OyOFs?width=660&height=113&cropmode=none" style="margin: 20px 0px 20px; ">
 		</ul>
@@ -139,6 +139,40 @@ body {font-family: "Roboto", sans-serif}
 				<li><b>-j ACCEPT</b> - Set it to accept traffic to the input chain when using tcp on the ssh port</li>
 			</ul>
 
+			<h4>Basic Iptables Options</h4>
+			<p><b>- A</b> - Append this rule to a rule chain. Valid chains for what we're doing are INPUT, FORWARD and OUTPUT, but we mostly deal with INPUT in this tutorial, which affects only incoming traffic. </p>
+			<p><b>- L</b> - List the current filter rules. </p>
+			<p><b>- m conntrack</b> - Allow filter rules to match based on connection state. Permits the use of the --ctstate option. </p>
+			<p><b>- -ctstate</b> - Define the list of states for the rule to match on. Valid states are:</p>
+			<ul>
+				<li><b>NEW</b> - The connection has not yet been seen.</li>
+				<li><b>RELATED</b> - The connection is new, but is related to another connection already permitted.</li>
+				<li><b>ESTABLISHED</b> - The connection is already established.</li>
+				<li><b>INVALID</b> - The traffic couldn't be identified for some reason.</li>
+			</ul>
+			<p><b>- m limit</b> - Require the rule to match only a limited number of times. Allows the use of the --limit option. Useful for limiting logging rules. </p>
+				<ul><li><b> - -limit</b> - The maximum matching rate, given as a number followed by "/second", "/minute", "/hour", or "/day" depending on how often you want the rule to match. If this option is not used and -m limit is used, the default is "3/hour". </li>
+					<img src="https://7mhamw.bn1301.livefilestore.com/y3m1rSbTcmgMfQCRdLmnWkPP3kClgJbalkKY2Vicadqn6_nYO3wy1NDNaQHtcaH4Z0u3gAMfn1q_ACIrObZ8kPcR45N2FFY_1vHoJYTVb805dP05cm_XN4vGLP_VYghxQzaclFpy7jnXq_BunpD0_sV8NucX9wh0bqZgqR8qpSC9-k?width=733&height=49&cropmode=none" style="margin: 20px 0px 20px; ">
+				</ul>
+			<p><b>- p</b> - The connection protocol used. </p>
+			<p><b>- -dport</b> - The destination port(s) required for this rule. A single port may be given, or a range may be given as start:end, which will match all ports from start to end, inclusive. </p>
+			<p><b>- j</b> - Jump to the specified target. By default, iptables allows four targets: </p>
+			<ul>
+				<li>ACCEPT - Accept the packet and stop processing rules in this chain. </li>
+				<li>REJECT - Reject the packet and notify the sender that we did so, and stop processing rules in this chain. </li>
+				<li>DROP - Silently ignore the packet, and stop processing rules in this chain. </li>
+				<li>LOG - Log the packet, and continue processing more rules in this chain. Allows the use of the --log-prefix and --log-level options.	</li>
+			</ul>
+			<p>
+			
+			<p><b>- -log-prefix</b> - When logging, put this text before the log message. Use double quotes around the text to use. </p>
+			<p><b>- -log-level</b> - Log using the specified syslog level. 7 is a good choice unless you specifically need something else. </p>
+			<img src="https://id107w.bn1301.livefilestore.com/y3mt2clXAYHZwNVBfjq5qVVvdvOmphc5LIFSnq3qI4coEoKHoh6q7O_lnkCImz5DiMyefXfmd8GQUM78WseK_ltWhCYm_lxMI6r8a0JZwwQwKer3nL93ZQP-VWHWJOM6pPq_YL0nzQBdlpGFxXIJdlk5401Rox0N50lZV4vplJmbB8?width=852&height=96&cropmode=none" style="margin: 20px 0px 20px; ">
+			
+			</p>
+			<p></p>
+			<p></p>
+			<p></p>
 
 
 
