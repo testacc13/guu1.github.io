@@ -301,14 +301,14 @@ def	proxy_handler(client_socket, remote_host, remote_port, receive_fist):
 	#receive data from the remote end if necessary
 	if receive_first:
 
-		remove_buffer = receive_from(remote_socket)
+		remote_buffer = receive_from(remote_socket)
 		hexdump(remote_buffer)
 
 		#send it to our reponse handler
-		remote_buffer = response_handler(remove_buffer)
+		remote_buffer = response_handler(remote_buffer)
 
 		#if we have data to send to our local client, send it
-	if len(remove_buffer):
+	if len(remote_buffer):
 		print "[<==] Sending %d bytes to localhost." % len(remote_buffer)	
 		client_socket.send(remote_buffer)
 		#now lets loop and read from local, send to remote, send to local
@@ -361,8 +361,8 @@ def hexdump(src, length=16):
 	for i in xrange(0, len(src), length):
 		s = src[i:i+length]
 		hexa = b' '.join(["0%*X" % (digits, ord(x)) for x in s])
-		text = b''.join([x if 0x20 <= ord(x) < 0x7F else b'.' for x in s])
-		result.append( b"%04X %-*s %s" % (o, length*(digits +1), hexa, text))
+		text = b' '.join([x if 0x20 <= ord(x) < 0x7F else b'.' for x in s])
+		result.append( b"%04X %-*s %s" % (i, length*(digits +1), hexa, text))
 
 	print b'\n'.join(result)
 
@@ -433,6 +433,7 @@ def main():
 	server_loop(local_host, local_port, remote_host, remote_port, receive_first)
 
 main()
+
 
 
 
