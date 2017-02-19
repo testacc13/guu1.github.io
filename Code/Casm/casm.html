@@ -49,6 +49,69 @@ body {font-family: "Roboto", sans-serif}
 
 	<div class="w3-container w3-padding-32" style="padding-left:32px">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<article>
+		<h2>Variable Scoping</h2>
+		<p>Each function has its own set of local variables, which are independent of everything else.</p>
+
+		<ul>
+			<li>Local Variables - Declared inside a function or block. They can be used only by statements that are iside that function or block of code. <u>Local variables are not known to functions outside their own.</u>
+			<h2></h2>
+			</li><img src="https://9a9hyw.bn1301.livefilestore.com/y3mKrb877PGUnWzLu5NpCRIvdfweBvklscQ20lZQoulu_mO6RTOjiIyGyGH_7tJo389AMmglbDlk3oYf-2RjyTJ2Vo9l5_ZaZyMHHPx3QQZ9PzSJPqsO1C6UXQEUIvv2vw7EE5DRcfvFzO2RpCZVdiqrun9QDbpFh2_xiYNd7LbOmQ?width=656&height=108&cropmode=none" style="margin: 10px 0 10px">
+			<h2></h2>
+
+			<li>Global variables - Global variables are define outside a function.Global variables hold their values throughout the lifetime of your program and they can be accessed inside any of the functions defined for the program. <u>A global variable can be accessed by any function.</u>
+			</li><img src="https://9aplpw.bn1301.livefilestore.com/y3m26b5KOYAGtX5hQ5GadPITMD1nYoPSugKu8psn7W6uRCRwBd3O4aTyT25NsBVVO7lljgKIwzkBPONu_-OEPdEDd3hayEwLCWcKhEaEbXGJN3pfZq-980Vq701UwSEjiSScSZVeryTvXuUekD2ozZuZBYEtguz6X_RDK4HS605_Js?width=658&height=136&cropmode=none" style="margin: 10px 0 10px">
+			<h2></h2>
+		</ul>
+
+			<img src="https://9a8kmw.bn1301.livefilestore.com/y3mJq1-FkaR3jUB6LtbH9zFMViuvYIXdxbbDQU1LURdtXXMXjHtg6AhkgGp28zGGJhJfYQFN9aREgicJQO1aH36V5AApNf0D0PGjm1NiFNp6YGHkIXBrxswlvmY_qVqtlbNnHatzzxZ1VFY4467MpOmGyZxVjA76gMxbWgngQd0l0A?width=655&height=443&cropmode=none">
+			<img src="https://9aps7g.bn1301.livefilestore.com/y3mU5BBi9nbiY6MDBvpBNVOSeq5y4rsNyo0GXo7_B3fyN9BkAVwgivoWSoQOP9avJ2aGxQPd85pwhiIOpkBaKuzPTcNetAZcl00hETNwdQXJgI4tDDWUJwd-LujO6p3OqHUi0SRECs0c-rzfWVTqfb0mOMlfy_hmVlHQ7R0vq3_0mw?width=655&height=134&cropmode=none" style="margin: 10px 0 10px">
+
+			<p>In each function, the variable <b>i</b> is set to a different value and printed. But <b>i</b> doesn't change when other functions are called because they are local to those function, therefore they can not be changed. Each function call has its own version of the variable <b>i</b>. </p>
+
+			<p>Let's check out global functions.</p>
+			<img src="https://9a9aha.bn1301.livefilestore.com/y3m3ruGCPMfmKKO5lyCaOOFwmF16hXTq2w-8R7b8bWWMShSzstish693ch8KD_GqtOtBxGgJkii0Omo_UGX-wPTMSo2ne7V5qpbF4QND_c9WegxeDX2PiRo7SjvaMWRI5_DTg6baCYW4WP7Q5n-2Zydw-Hkf3DYCTBkCOrMiz09zdw?width=655&height=489&cropmode=none">
+			<img src="https://9aqbka.bn1301.livefilestore.com/y3mH__dyMujaKs9PtllLrRPfp_AGwDGMglBiK87lZVtjAsI4uY5xZxYjcuc7U6hfBgZAeO653ehwKbOO_cJeTB8xhU-idnYwvDeUW8KW34AKWsbyE2FXKzFmLAhQhVgrV0jDVxqqgc2LevF2T4He6UKQIuFEvyGV94zAsw4ofzmosU?width=658&height=139&cropmode=none">
+			<p>In the output, the global variable j is written to in func2() , and the change persists in all functions except func3() , which has its own local variable called j .The global variable j is just stored in memory, and every function is able to access that memory. The local variables for each function are each stored in their own places in memory, regardless of the identical names.</p> <p>Let's see this code in the debugger</p>
+			<p>If we disassemble main we can see the adding of 3 to i, the call to printf and the call to function1()</p>
+			<img src="https://wjuzeq.bn1301.livefilestore.com/y3m_l6H5zMAuK6nswS4teX0w2jFC5H2yIJTerWkoCTlpJ76y5XnMA42F2tJqw5QrT58C046PJ1v6ZyDw1Tb8CHTT-BIP93fx_nMDEhr3tCviqjJHAluOrU-RPzI40kzK-MTCVPjGhBFCwwvpYLUjpnIgPE3mxSfEKE74BikpvYxToQ?width=658&height=374&cropmode=none">
+
+			<img src="https://wjv3vq.bn1301.livefilestore.com/y3mNzKUS_gIJP_kTJZSQvKs3sz2ZNfdQc3z371bXeESRKIkf1RAIZHLoNDjfMe9cDb4KpjpnYvjTKfiDI3HPWy9Zj7uAzzoi9rs6aASifKCdQGqbRutfdiEf_o1gbUMonJTz5KlRQwgNm4HJoi6JEX2AweQs3DLCHMLpZNOj3c1nGI?width=659&height=661&cropmode=none">
+			<p>We are going to examine that instruction. That assembly instruction will move the value of 0x3 (3 in decimal) into memory located at the address stored in the RBP register, minus 0x4 (4). This is where the C variable <b>i</b> is stored in memory</p>
+			<p>Down below we check this process by going to the next instruction. At (..)0652 in main() we examine the memory, which at start is all 0's but and the next instruction (..)0659 in main() will have the value 3 in it</p>
+			<p></p>
+			<p>We can check this even closer with print. It stores the result in a temporary variable in the debugger <b>$2</b></p>
+			<img src="https://wjusmg.bn1301.livefilestore.com/y3mmOkKfXU3uqr_P0DbCpxhOxoqAeSL5P5XpceuPzYtFELcyMYvhv5ahCIjBkY8pqxuwbvlcZhwvYrIQNQUI7a6T3KFVGezKIQ9TNsvzy__zdqWyJGs0Q5YrM3XM0GmB9SlpEDDOvF3xH03YxUGdx8v8NC7DwRAE5PcwMVZxXfPsrI?width=653&height=74&cropmode=none">
+
+
+
+	</article>
+
+
+
+
+
+
+
+
+
+
+
+	<hr>
+
 	<article>
 		<h2>Typecasting</h2>
 		<p>Type casting is a way to convert a variable from one data type to another data type.</p>
@@ -97,6 +160,9 @@ also be typecast before doing pointer arithmetic. </li>
 		<img src="https://hqvqvw.bn1301.livefilestore.com/y3mB5DL4q_82UR-5xcMIY21yYnqmmPkg07xdL9ZOvkuiHFImm4tnEFDV3uhiEoljErJN_DUdjnM2NSxkHY1DcX9eg1uSYezsB9rS6Oa9KBrieBysOEfLqY0qkhDf3ULLP_bC_ofx_pVrsDb97lopieyUT_Vwjg4dOPxY_3yhcGf2ak?width=654&height=352&cropmode=none">
 		<img src="https://hqsgbw.bn1301.livefilestore.com/y3mnoSGr7qjXX4RmiUCxhUnhNNg6mFUFzb6s5D2RBLDhNOrtS1VwsX5sMWHOpRPcaPXwtPakY1axlPX4AjOg4tSjjDJ6KSmlVH3UWvHTrLYPSS0V7O-uk__DfRR5FL-46U1gyi9MKqRmPpxXsql5KJ-A5vA90EXZM2fPxOjGz-IcII?width=654&height=173&cropmode=none">
 
+		<p>The void pointer is really just holding the memory addresses, while the hard-coded typecasting is telling the compiler to use the proper types whenever the pointer is used. Since the type is taken care of by the typecasts, the void pointer is truly nothing more than a memory address. </p>
+
+		
 
 
 	</article>
