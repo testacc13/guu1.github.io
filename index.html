@@ -59,6 +59,174 @@ body {font-family: "Roboto", sans-serif}
 		<hr>
 
 	-->
+	<article>
+		<h2>Variable Scoping</h2>
+		<p>Each function has its own set of local variables, which are independent of everything else.</p>
+
+		<ul>
+			<li>Local Variables - Declared inside a function or block. They can be used only by statements that are iside that function or block of code. <u>Local variables are not known to functions outside their own.</u>
+			<h2></h2>
+			</li><img src="https://9a9hyw.bn1301.livefilestore.com/y3mKrb877PGUnWzLu5NpCRIvdfweBvklscQ20lZQoulu_mO6RTOjiIyGyGH_7tJo389AMmglbDlk3oYf-2RjyTJ2Vo9l5_ZaZyMHHPx3QQZ9PzSJPqsO1C6UXQEUIvv2vw7EE5DRcfvFzO2RpCZVdiqrun9QDbpFh2_xiYNd7LbOmQ?width=656&height=108&cropmode=none" style="margin: 10px 0 10px">
+			<h2></h2>
+
+			<li>Global variables - Global variables are define outside a function.Global variables hold their values throughout the lifetime of your program and they can be accessed inside any of the functions defined for the program. <u>A global variable can be accessed by any function.</u>
+			</li><img src="https://9aplpw.bn1301.livefilestore.com/y3m26b5KOYAGtX5hQ5GadPITMD1nYoPSugKu8psn7W6uRCRwBd3O4aTyT25NsBVVO7lljgKIwzkBPONu_-OEPdEDd3hayEwLCWcKhEaEbXGJN3pfZq-980Vq701UwSEjiSScSZVeryTvXuUekD2ozZuZBYEtguz6X_RDK4HS605_Js?width=658&height=136&cropmode=none" style="margin: 10px 0 10px">
+			<h2></h2>
+		</ul>
+
+			<img src="https://9a8kmw.bn1301.livefilestore.com/y3mJq1-FkaR3jUB6LtbH9zFMViuvYIXdxbbDQU1LURdtXXMXjHtg6AhkgGp28zGGJhJfYQFN9aREgicJQO1aH36V5AApNf0D0PGjm1NiFNp6YGHkIXBrxswlvmY_qVqtlbNnHatzzxZ1VFY4467MpOmGyZxVjA76gMxbWgngQd0l0A?width=655&height=443&cropmode=none">
+			<img src="https://9aps7g.bn1301.livefilestore.com/y3mU5BBi9nbiY6MDBvpBNVOSeq5y4rsNyo0GXo7_B3fyN9BkAVwgivoWSoQOP9avJ2aGxQPd85pwhiIOpkBaKuzPTcNetAZcl00hETNwdQXJgI4tDDWUJwd-LujO6p3OqHUi0SRECs0c-rzfWVTqfb0mOMlfy_hmVlHQ7R0vq3_0mw?width=655&height=134&cropmode=none" style="margin: 10px 0 10px">
+
+			<p>In each function, the variable <b>i</b> is set to a different value and printed. But <b>i</b> doesn't change when other functions are called because they are local to those function, therefore they can not be changed. Each function call has its own version of the variable <b>i</b>. </p>
+
+			<p>Let's check out global functions.</p>
+			<img src="https://9a9aha.bn1301.livefilestore.com/y3m3ruGCPMfmKKO5lyCaOOFwmF16hXTq2w-8R7b8bWWMShSzstish693ch8KD_GqtOtBxGgJkii0Omo_UGX-wPTMSo2ne7V5qpbF4QND_c9WegxeDX2PiRo7SjvaMWRI5_DTg6baCYW4WP7Q5n-2Zydw-Hkf3DYCTBkCOrMiz09zdw?width=655&height=489&cropmode=none">
+			<img src="https://9aqbka.bn1301.livefilestore.com/y3mH__dyMujaKs9PtllLrRPfp_AGwDGMglBiK87lZVtjAsI4uY5xZxYjcuc7U6hfBgZAeO653ehwKbOO_cJeTB8xhU-idnYwvDeUW8KW34AKWsbyE2FXKzFmLAhQhVgrV0jDVxqqgc2LevF2T4He6UKQIuFEvyGV94zAsw4ofzmosU?width=658&height=139&cropmode=none">
+			<p>In the output, the global variable j is written to in func2() , and the change persists in all functions except func3() , which has its own local variable called j .The global variable j is just stored in memory, and every function is able to access that memory. The local variables for each function are each stored in their own places in memory, regardless of the identical names.</p> <p>Let's see this code in the debugger</p>
+			<p>If we disassemble main we can see the adding of 3 to i, the call to printf and the call to function1()</p>
+			<img src="https://wjuzeq.bn1301.livefilestore.com/y3m_l6H5zMAuK6nswS4teX0w2jFC5H2yIJTerWkoCTlpJ76y5XnMA42F2tJqw5QrT58C046PJ1v6ZyDw1Tb8CHTT-BIP93fx_nMDEhr3tCviqjJHAluOrU-RPzI40kzK-MTCVPjGhBFCwwvpYLUjpnIgPE3mxSfEKE74BikpvYxToQ?width=658&height=374&cropmode=none">
+
+			<img src="https://wjv3vq.bn1301.livefilestore.com/y3mNzKUS_gIJP_kTJZSQvKs3sz2ZNfdQc3z371bXeESRKIkf1RAIZHLoNDjfMe9cDb4KpjpnYvjTKfiDI3HPWy9Zj7uAzzoi9rs6aASifKCdQGqbRutfdiEf_o1gbUMonJTz5KlRQwgNm4HJoi6JEX2AweQs3DLCHMLpZNOj3c1nGI?width=659&height=661&cropmode=none">
+			<p>We are going to examine that instruction. That assembly instruction will move the value of 0x3 (3 in decimal) into memory located at the address stored in the RBP register, minus 0x4 (4). This is where the C variable <b>i</b> is stored in memory</p>
+			<p>Down below we check this process by going to the next instruction. At (..)0652 in main() we examine the memory, which at start is all 0's but and the next instruction (..)0659 in main() will have the value 3 in it</p>
+			<p></p>
+			<p>We can check this even closer with print. It stores the result in a temporary variable in the debugger <b>$2</b></p>
+			<img src="https://wjusmg.bn1301.livefilestore.com/y3mmOkKfXU3uqr_P0DbCpxhOxoqAeSL5P5XpceuPzYtFELcyMYvhv5ahCIjBkY8pqxuwbvlcZhwvYrIQNQUI7a6T3KFVGezKIQ9TNsvzy__zdqWyJGs0Q5YrM3XM0GmB9SlpEDDOvF3xH03YxUGdx8v8NC7DwRAE5PcwMVZxXfPsrI?width=653&height=74&cropmode=none">
+
+
+
+	</article>
+
+
+
+
+
+
+
+
+
+
+
+	<hr>
+
+	<article>
+		<h2>Typecasting</h2>
+		<p>Type casting is a way to convert a variable from one data type to another data type.</p>
+		<p>Let's see this example.</p>
+		<img src="https://hqsntg.bn1301.livefilestore.com/y3mFljjbjgZ6Rdy5kxZzrt9EfN45rK_yfVGHi1kK3BMwQ_LzVFN5KZ3lGthSIsWYN2YBe__WxOvCZ9JyR5bxqxF5IhvzMYdi2MYYanS-HiN4aOeOvniQLqHbeWuvM0O6S2YXxJIAh02fdp-FWndA4ecs7GLtuQCVYIMwhpf5AqJ0hY?width=654&height=283&cropmode=none">
+		<img src="https://gpzxhq.bn1301.livefilestore.com/y3miGqHt5Muc5ksju4coZsGf42_c3_4AoLTWzr-dcSDrmVkYkClpVqlvpmL_V5zUDCvekYoBVh7yckoc-GSI0PK5qJ-M-uSN-gjCD2ra_B9HP6cSDdWW6BSuSUpHcKr822-5nJecvSREVypasrNym9zBupWzlZT-EMIf8agd6wO20M?width=654&height=72&cropmode=none">
+		<p>If you look at the output of the division using integers, we see that the result was rounded to the incorrect answer of 2, even if this value is being stored into a floating-point 
+variable. But, if these integer variables are typecast into floats, they will be treated as such, therefore we get the correct calculation of 2.6.</p>
+		<p>We'll look into typecasting with pointer variables.</p>
+		<p>Even though a pointer is just a memory address, the C compiler still demands a data type for every pointer. An integer pointer should only point to integer data, and a character pointer to a character data. Because if we look at pointer arithmetic, since an integer is four bytes (8 bytes if you're on a 64 bit system and 2 bytes on a 16 bit machine) and a character only takes up one byte.</p>
+
+		<img src="https://gpa8qa.bn1301.livefilestore.com/y3miO9-JSd7o7QEPemzWX-I5yfzZYiUijehpT-7VpIzEtlxq0m8IqG9s8r4lF8eFte18KSLeF1j9yuI4mcl5uvft8lxGl9MO9UW2ZEpnGA3vjz2uLDe-1s0jB55il2goMf-UxZwkCihM-DIPLwiPAZGtsSbeQizsiuzBJ41OnJxgPs?width=656&height=541&cropmode=none">
+
+		<p>The comments explain much of the code. Notice that in the loops, when the integer and character values Programming 53 are actually printed with the %d and %c format parameters, notice that the corresponding printf() arguments must dereference the pointer variables. Notice also that even though the same value of 1 is added to int_pointer and char_pointer in their respective loops, the compiler increments the pointer's addresses by different amounts.</p>
+		<img src="https://hqvxza.bn1301.livefilestore.com/y3maB29NxzIpnYY3bQD5Q4SfhDIFy8F9LnG9DQhJYEaEuWLHKtHXpqF3sxNF4PqQuy83XoZoue1KVgFQdb7rRSd_OZEhHt0B76yQhPZXPADHNuMVhQAFL8CNn0IyxpVPYJkneSgOUpx5y_fIKzPqShoPhnbHmqtHUPLg6kjvzawD0Q?width=656&height=145&cropmode=none">
+
+		<p>In this next example we make the pointers point to incompatible data types. In an attempt to prevent programming mistakes, the compiler gives warnings about this.</p> 
+
+		<img src="https://hqtrkg.bn1301.livefilestore.com/y3mPzCBuMV5e7-ykO78ArJKNs0rg8aOyg0nE9NgSl_A9yyqjhBfblMtNX1xCbTyA6H0MDhnrtAx8og4vkE7GdiP4PrXzMyP0H7xSYsD94GaQvcJEySH0deL76YDnW233-5A7qcPMDj9Np7tZfeusIzc0Llk6jGllv6DF_nrK7rYSsE?width=654&height=110&cropmode=none">
+		<p></p>
+
+		<img src="https://hqty2q.bn1301.livefilestore.com/y3mtKJKw94xhdhBEtdNe0vb4utw3WPHhKvlJxNmfMBQdpGCDpo9G15stnHqheFvmcafi3B1USLvgdocgVKF1ewOv-fh2AZjwEeyAILTVXyMsWa5TOeuUNpheCf5XJTqGrS4_TuDDY3hIEs6g9vRUdY-C2cO588XHJXtQ_DaFDnZC1o?width=657&height=290&cropmode=none">
+
+		<p>However, in the compiled code, a pointer is nothing more than a memory address, so the compiler will still compile the code if a pointer points to an incompatible data type.</p>
+
+		<p>Even though the int_pointer points to character data that only contains 5 bytes of data, it is still typed as an integer. This means that adding 1 to the pointer will increment the address by 4 each time. Similarly, the char_pointer's address is only incremented by 1 each time, stepping through the 20 bytes of integer data (five 4-byte integers), one byte at a time. Once again, the little- endian byte order of the integer data is apparent when the 4-byte integer is examined one byte at a time. The 4-byte value of 0x00000001 is actually stored in memory as 0x01 , 0x00 , 0x00 , 0x00 .</p>
+
+		<p>We can fix this by typecasting.</p>
+
+		<img src="https://hquhew.bn1301.livefilestore.com/y3m5O1XYnupx7rx1_zSi2Ygzd7Olhks46qpW03HbWwoIaMH6G6M9UMCFagJFJflNYmCijfHFcDDHMf6v2YuEOipeiNJcZSBkvsC7FsGbW2-jSQHSXbTn6zjMp5AZDmsxWqg-xkdAEwSb-qXrR7xvpx1uq1GpOgZeTjHEORuUgP5F94?width=656&height=548&cropmode=none">
+
+		<p>Here, when the pointers are initially set, the data is typecasted into the pointer's data type. This way the C compiler won't complain about the conflicting data types, however the pointer arirthmetic will still be incorrect. To fix that, we need to cast the correct data type when 1 is added to the pointer, that way the address is incremented by the correct amount.</p>
+
+		<img src="https://hqvqhq.bn1301.livefilestore.com/y3mkdVpI7hO9mg9WgW72BtWURbyM46p4K4J-Gm1DmVpKc7VvAdGktH32_MVSsPAWjfdZO7RvxHfKwUPUUfBF66jsjIGOXCM_clXjFylaxSO45umXt_HC_Av2LuDj2RqkMVHuShrtE_D_IJ072dC0CQPfcyRfIz3LKd3sssYX5tUjYk?width=654&height=177&cropmode=none">
+
+		<h6>Typeless Pointer</h6>
+		<p>In C, a void pointer is a typeless pointer, defined by the 
+void keyword.</p>
+		<ul>
+			<li>Pointers cannot be dereferenced unless they have a type.</li>
+			<li>Void pointers must 
+also be typecast before doing pointer arithmetic. </li>
+		</ul>
+		<p>In the next program a single void pointer is used by typecasting it to the proper type of pointer each time it's used. The compiler knows that a void pointer is typeless, so any type of pointer can be stored in a void pointer without typecasting. This also means a void pointer must always be typecast when dereferencing it</p>
+
+		<img src="https://hqvqvw.bn1301.livefilestore.com/y3mB5DL4q_82UR-5xcMIY21yYnqmmPkg07xdL9ZOvkuiHFImm4tnEFDV3uhiEoljErJN_DUdjnM2NSxkHY1DcX9eg1uSYezsB9rS6Oa9KBrieBysOEfLqY0qkhDf3ULLP_bC_ofx_pVrsDb97lopieyUT_Vwjg4dOPxY_3yhcGf2ak?width=654&height=352&cropmode=none">
+		<img src="https://hqsgbw.bn1301.livefilestore.com/y3mnoSGr7qjXX4RmiUCxhUnhNNg6mFUFzb6s5D2RBLDhNOrtS1VwsX5sMWHOpRPcaPXwtPakY1axlPX4AjOg4tSjjDJ6KSmlVH3UWvHTrLYPSS0V7O-uk__DfRR5FL-46U1gyi9MKqRmPpxXsql5KJ-A5vA90EXZM2fPxOjGz-IcII?width=654&height=173&cropmode=none">
+
+		<p>The void pointer is really just holding the memory addresses, while the hard-coded typecasting is telling the compiler to use the proper types whenever the pointer is used. Since the type is taken care of by the typecasts, the void pointer is truly nothing more than a memory address. </p>
+
+		
+
+
+	</article>
+	<hr>
+
+
+
+
+
+
+
+
+		<article>
+			<h2>Pointers</h2>
+			<p>The EIP register is a pointer that "points" to the current instruction during a program's execution by containing its memory address. Since the physical memory cannot actually be moved, the information in it must be copied. But doing so can be very expensive in terms of computationally, and also from a memory stand point since space for the new destination copy must be saved of allocated before the souce can be copied.</p>
+			<p>Pointers solve this, instead of copying a large block of memory, we can simply pass around the address of the begining of that block of memory.</p>
+			<p>Pointers in C can be defined and used like any other variable type.</p>
+
+		<img src="https://gpautq.bn1301.livefilestore.com/y3mfIe2eW0UIWJFTqK8nnjcu5q55t7i2C8AV_QrkyP_ONjQY_02F09rLQufd_cDiISNf7dJKY4sxXET_Rah5-m3kuyx7gtHyZEjc3EQtyiZeNaV11dmR6wUPh7gXhwc9YVaU42L6lgzO43qBGfcHRAjlmHsR4ws05-F6OX_VOChhFY?width=656&height=284&cropmode=none">
+		
+		<p>When you compile you are going to get this warning, so what is it?</p>
+		<img src="https://gpzlqw.bn1301.livefilestore.com/y3mwCOdE3rKpM9_QuPxok3xeaGi3N3fi_6iUm3VURFnjE0pykIZQnRYAJc3h25tGl1pA2_Y99lh0NeLCtqPLy47L3vu4Jm1tqELAYqOuxVCi--tH9GssWDWikREpW1QWZ0maytdTpI3vN8B-VgjBjfZQE1Yf-obyrrxdOf7qJxx62o?width=656&height=182&cropmode=none">
+		<p>This warning is gcc's way of telling you that it cannot verify the format string argument to the printf style function (printf, fprintf... etc). This warning is generated when the compiler can't manually peek into the string and ensure that everything will go as you intend during runtime.</p>
+		<p>You are taking a string generated at runtime and trying to print it. The warning you are getting is the compiler warning you that there could be a format specifier in the string. Say for eg "bad%sdata". In this case, the runtime will try to access a non-existent argument to match the %s. Even worse, this could be a user trying to exploit your program (causing it to read data that is not safe to read). -Sanjit Saluja</p>
+		<p>So let's fixed it.</p>
+		<img src="https://gpyvwg.bn1301.livefilestore.com/y3mCwaCBjZ4EgbnoZnzVLTnvwDgqu41KzMXhhJaNrQ1pQjtTmL8HIkfoTGE8Edsf10Utoav0pRuAOXRAAcB7xPj3BTRp-BV4GpvjfcS-aXENAbXy-Lo1o4i4rSlcdQ6vdlSzvPDNx41L4CA79zYn3iWt6C50fQ6FoXNAuutM6NGBxY?width=655&height=86&cropmode=none">
+		<p>Now let's take a look at this with GDB. We set a breakpoint after the "Hello, world!\n" string has been copied into the str_a buffer and the pointer variable is set to the beginning of it. </p>
+		<img src="https://gpbkng.bn1301.livefilestore.com/y3maagGTE0SvTWMrqvI8VythDAwRd6XcLUAwUfqqxF6Yc-VoIABKHZ32eSAbcNa5jdx3CplG8G-GXC8sD0zwR57DI995ApUtXyvqjPqm6qyL5hjvDGPMGbNGN6x4HzoWuem86ub27fbFWo9K9md23vYW5z4N09c0b_lFzcZHbDl1xw?width=653&height=503&cropmode=none">
+		<p>When the pointer is examined as a string, it's apparent that the given string is there and is located at memory address 0x6c6c6548 . Remember that the string itself isn't stored in the pointer variable-only the memory address 0x6c6c6548 is stored there. In order to see the actual data stored in the pointer variable, you must use the address-of operator. The address-of operator is a unary operator, which simply means it operates on a single argument. The ampersand (&). </p>
+
+		<img src="https://gpbd7w.bn1301.livefilestore.com/y3m8dijsGn96lwV6gG4Q2xN9CBqL5KRxH3yKmFVYBmkMSvjDQYYDbDHP2ptFknbs3DJbN41IBeuUsZj_ZqJAKDCejxspOJcAL1q2UvLlAXvuXOCIK0dEDeYZoYQfEDNvRXUVu5CYIJ3VU3IjR9sksQsLqF7qxcN8rIzMKJQ3Cf4Jqw?width=652&height=102&cropmode=none">
+
+		<p>We can see that the pointer variable is shown to be located at the address 0x7fffffffde00 in memory, and contains the address 0xffffde10</p>
+		<p></p>
+		<img src="https://gpb52a.bn1301.livefilestore.com/y3mSnTQSpPpTBYIyQdj9-ke_pWZvF9d7NgPmuKkAYJIx3Q4UBhwjreVZ-La0yeyHG9Ae-FnnzEfcp844rjWWdUJada8cfv_Ascao3eh8aGc_H5s-yzhcSmj5ZdSngj71zPT8Q7fz-lVsesSLCMg6V4gmnqjSFrjCpBo1jFiCSAItYY?width=655&height=391&cropmode=none">
+
+		<p>The first print command shows the value of int_var , and the second shows its address using the address-of operator. The next two print commands show that int_ptr contains the address of int_var , and they also show the address of the int_ptr</p>
+
+		<img src="">
+
+		<p>An additional unary operator called the dereference operator exists for use with pointers. This operator will return the data found in the address the pointer is pointing to, instead of the address itself.</p>
+
+		<img src="https://gpyoew.bn1301.livefilestore.com/y3mNVe6MBiGzCNC8Q38a-eO2chotie-tLFRNygBP3rvmv84BEW7TMtvFKOM1XrXaabdMc_gREcC4xffT9qxvvv_ucrsS75GhkLNW2XMKPQAcc4IsXdi12lgEOl3FKciUwhzUBNlv6lwfjNBLRmmcYbKBMyZZwd0Ou1p2XMfxEy0pSo?width=656&height=120&cropmode=none">
+
+
+		</article>
+		<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 		<article>
 		<h2>No Linux Ban
 		No wall
