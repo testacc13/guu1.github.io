@@ -40,7 +40,7 @@ body {font-family: "Roboto", sans-serif}
 
 	<div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
 	  <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
-	  <span id="myIntro" class="w3-hide">Home</span>
+	  <span id="myIntro" class="w3-hide">C and Assembly</span>
 	</div>
 
 	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
@@ -58,17 +58,17 @@ body {font-family: "Roboto", sans-serif}
 			<li>Heap</li>
 			<li>Stack</li>
 		</ul>
-		<p>As a program executes the EIP register is set to the first instruction in the text segment. The processor then follows an execution loop:</p>
+		<p>As a program executes the RIP register is set to the first instruction in the text segment. The processor then follows an execution loop:</p>
 
 		<ul>
-			<li>1 - Reads the instruction that EIP is pointing to</li>
-			<li>2 - Adds the byte length of the instruction to EIP</li>
+			<li>1 - Reads the instruction that RIP is pointing to</li>
+			<li>2 - Adds the byte length of the instruction to RIP</li>
 			<li>3 - Executes the instruction that was read in step 1</li>
 			<li>4 -Goes back to step 1</li>
 		</ul>
 
 		<p>Write permission is disabled in the text segment, as it is not used to store variables, only code. This prevents people from actually modifying the program code. Another advantage of this segment being read-only is that it can be shared among different copies of the program, allowing multiple executions of the program</p> <p>About the stack:</p>
-		<p> The stack segment also has variable size and is used as a temporary scratch pad to store local function variables and context during function calls. This is what GDB's backtrace command looks at. When a program calls a function, that function will have its own set of passed variables, and the function's code will be at a different memory location in the text (or code) segment. Since the context and the <b>EIP</b> must change when a function is called, the stack is used to remember all of the passed variables, the location the <b>EIP</b> should return to after the function is finished, and all the local variables used by that function. All of this information is stored together on the stack in what is collectively called a stack frame . The stack contains many stack frames. <u>It has first-in, last-out (FILO) ordering</u>, which means the first item that is put into a stack is the last item to come out of it. The stack segment of memory is, a stack data structure, which contains stack frames. <u>The ESP register is used to keep track of the address of the end of the stack</u>, which is constantly changing as items are pushed into and popped off of it. Since this is very dynamic behavior, it makes sense that the stack is also not of a fixed size. Opposite to the dynamic growth of the heap, as the stack changes in size, <u>it grows upward</u> in a visual listing of memory, toward lower memory addresses. The FILO nature of a stack might seem odd, but since the stack is used to store context, it's very useful. When a function is called, several things are pushed to the stack together in a stack frame . The EBP register- sometimes called the <b>frame pointer</b> (FP) or <b>local base</b> (LB) <b>pointer</b> - is used to <u>reference local function variables in the current stack frame</u>. Each stack frame contains the parameters to the function, its local variables, and two pointers that are nec- essary to put things back the way they were: <b>the saved frame pointer</b> (SFP) and the return address. <u>The SFP is used to restore EBP to its previous value, and the return address is used to restore <b>EIP</b> to the next instruction found after the function call</u>. This restores the functional context of the previous stack frame.</p>
+		<p> The stack segment also has variable size and is used as a temporary scratch pad to store local function variables and context during function calls. This is what GDB's backtrace command looks at. When a program calls a function, that function will have its own set of passed variables, and the function's code will be at a different memory location in the text (or code) segment. Since the context and the <b>RIP</b> must change when a function is called, the stack is used to remember all of the passed variables, the location the <b>RIP</b> should return to after the function is finished, and all the local variables used by that function. All of this information is stored together on the stack in what is collectively called a stack frame . The stack contains many stack frames. <u>It has first-in, last-out (FILO) ordering</u>, which means the first item that is put into a stack is the last item to come out of it. The stack segment of memory is, a stack data structure, which contains stack frames. <u>The ESP register is used to keep track of the address of the end of the stack</u>, which is constantly changing as items are pushed into and popped off of it. Since this is very dynamic behavior, it makes sense that the stack is also not of a fixed size. Opposite to the dynamic growth of the heap, as the stack changes in size, <u>it grows upward</u> in a visual listing of memory, toward lower memory addresses. The FILO nature of a stack might seem odd, but since the stack is used to store context, it's very useful. When a function is called, several things are pushed to the stack together in a stack frame . The EBP register- sometimes called the <b>frame pointer</b> (FP) or <b>local base</b> (LB) <b>pointer</b> - is used to <u>reference local function variables in the current stack frame</u>. Each stack frame contains the parameters to the function, its local variables, and two pointers that are nec- essary to put things back the way they were: <b>the saved frame pointer</b> (SFP) and the return address. <u>The SFP is used to restore EBP to its previous value, and the return address is used to restore <b>RIP</b> to the next instruction found after the function call</u>. This restores the functional context of the previous stack frame.</p>
 
 		<img src="">
 
