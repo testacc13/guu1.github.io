@@ -2,8 +2,7 @@
 <html>
 <title>Just python</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="../../w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
 body {font-family: "Roboto", sans-serif}
@@ -15,23 +14,21 @@ body {font-family: "Roboto", sans-serif}
   <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
   <a href="javascript:void(0)" onclick="w3_close()" 
   class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="../../index.html" class="w3-light-grey w3-medium">Home</a>
-  <a href="just-python.html">Python</a>
+  <a href="index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+  <a href="Code/Python/just-python.html"><i class="fa fa-code" aria-hidden="true"></i> Python</a>
     <div class="w3-accordion">
-    <a onclick="myAccordion('demo')" href="javascript:void(0)">Networking <i class="fa fa-caret-down"></i></a>
+    <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
     <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
-      <a href="../Networking/protocols.html">Protocols</a>
-      <a href="../Networking/apache.html">Apache</a>
-      <a href="#">Link 3</a>
+      <a href="Code/Networking/protocols.html">Protocols</a>
+      <a href="Code/Networking/apache.html">Apache</a>
+      
     </div>
   </div>
-  <a href="../Casm/casm.html">C/ASM</a>
-  <a href="../Linux/linux.html">Linux</a>
-  <a href="../../posts.html">Photography</a>
-  <a href="../../Gaming/gaming.html">Gaming</a>
-
-
-  <a href="../../about.html">About</a>
+  <a href="Code/Casm/casm.html" ><i class="fa fa-code" aria-hidden="true"></i> C/ASM</a>
+  <a href="Code/Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
+  <a href="posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
+  <a href="Gaming/gaming.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
+  
 </nav>
 
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
@@ -45,158 +42,164 @@ body {font-family: "Roboto", sans-serif}
 
 	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
 	  <h1 class="w3-xxxlarge w3-padding-16">Just python</h1>
-	  <a href="https://twitter.com/awdasdqwert">My Twitter Bot</a>
+	  <a style="text-decoration: none; font-family: Verdana;" href="https://twitter.com/awdasdqwert">My Twitter Bot  <span></a><i class="fa fa-twitter" aria-hidden="true"></i>
+
 	</header>
 
 	<div class="w3-container w3-padding-32" style="padding-left:32px">
 	
 	<article>
 		<h2>Socket chat</h2>
-		<p>Terminal based socket chat (for linux) for multiple client connections. I'm thinking about implemented in here to create some sort of chat. </p>
+		<p>Terminal based socket chat (for linux) for multiple client connections. I'm thinking about implementing it in here to create some sort of chat. </p>
 		<h3> Server </h3>
-		<pre  style="background-color:#111; color:white; font-size: 13px; margin: 50px 0px 50px;border: 5px solid darkgray; " >
-	import socket, argparse, threading
-
-	 # Accept a new socket and receive the nickname
-	def socket_accept():
-		
-		conn, address = s.accept() # Three-way handshake - This is a TCP connection with the server
-		# Receive the nickname
-		nickname = conn.recv(1024)
-		# Append address in clients list
-		if address not in clients:
-			#clients.append((address[0]+':'+str(address[1])))
-			clients.append(conn)
-		print("Connection has been established | " + "IP " + address[0] + \
-			" | Port " + str(address[1]) + ' ' + nickname)
-		#client(conn)
-		#conn.close()
-		# Go for data
-		# Start a thread to keep receiving client data
-		thread_client = threading.Thread(target = data, args=[nickname, conn])
-		thread_client.start()
-
-	def data(nickname, conn):
-		while True:	
-			# Reveive the data from client
-			data = conn.recv(4096)
-			#conn.sendall(data)
-			if data:
-				print("%s said %s" % (nickname, repr(data)))
-				bcast(conn, data, nickname) # Call for broadcast
-							    # I tried to put this function here instead of
-							    # calling it but it don't work because it's
-							    # always on the same client socket and we 
-							    # need to change socket to send to other clients
-							    # sendto(data, address) also didn't work
-			if not data:	
-				break
-
-	 # Broadcast 
-	def bcast(client_socket, message, client_nickname):
-		# We don't want to receive what we sent	
-		for i in clients:
-			if i == client_socket:
-				pass
-			# Sent my message to other clients
-			else:
-				print(clients)
-				#i.sendall(client_nickname)
-				#i.sendall()
-				# New line on the client side
-				i.sendall(client_nickname + ': ' + message)	
-
-	if __name__ == '__main__':
-		# Args for host and port
-		parser = argparse.ArgumentParser(description='My TCP server')
-		parser.add_argument('host',  help='Interface the server listens at')
-		parser.add_argument('-p', metavar='PORT', type=int, help='TCP PORT (default 9999)')	
-		args = parser.parse_args()
-		host = args.host
-		port = args.p
-
-		 # Client List	
-		clients = []
-
-		 # Create socket
-		try:
-			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-			s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
-		except socket.error as msg:
-			print("Socket creation error: " + str(msg))
-
-		 # Bind the sockets
-		try:
-			print("Binding socket to port: " + str(port))
-			s.bind((host, port))
-			s.listen(5) #number of connections
-		except socket.error as msg:
-			print("Socket binding error: " + str(msg) + "\n" + "Retrying...")
+		<pre>
 
 
-		
-		while True:
-			socket_accept()
+		import socket, argparse, threading
+
+		 # Accept a new socket and receive the nickname
+		def socket_accept():
+			
+			conn, address = s.accept() # Three-way handshake - This is a TCP connection with the server
+			# Receive the nickname
+			nickname = conn.recv(1024)
+			# Append address in clients list
+			if address not in clients:
+				#clients.append((address[0]+':'+str(address[1])))
+				clients.append(conn)
+			print("Connection has been established | " + "IP " + address[0] + \
+				" | Port " + str(address[1]) + ' ' + nickname)
+			#client(conn)
+			#conn.close()
+			# Go for data
+			# Start a thread to keep receiving client data
+			thread_client = threading.Thread(target = data, args=[nickname, conn])
+			thread_client.start()
+
+		def data(nickname, conn):
+			while True:	
+				# Reveive the data from client
+				data = conn.recv(4096)
+				#conn.sendall(data)
+				if data:
+					print("%s said %s" % (nickname, repr(data)))
+					bcast(conn, data, nickname) # Call for broadcast
+								    # I tried to put this function here instead of
+								    # calling it but it don't work because it's
+								    # always on the same client socket and we 
+								    # need to change socket to send to other clients
+								    # sendto(data, address) also didn't work
+				if not data:	
+					break
+
+		 # Broadcast 
+		def bcast(client_socket, message, client_nickname):
+			# We don't want to receive what we sent	
+			for i in clients:
+				if i == client_socket:
+					pass
+				# Sent my message to other clients
+				else:
+					print(clients)
+					#i.sendall(client_nickname)
+					#i.sendall()
+					# New line on the client side
+					i.sendall(client_nickname + ': ' + message)	
+
+		if __name__ == '__main__':
+			# Args for host and port
+			parser = argparse.ArgumentParser(description='My TCP server')
+			parser.add_argument('host',  help='Interface the server listens at')
+			parser.add_argument('-p', metavar='PORT', type=int, help='TCP PORT (default 9999)')	
+			args = parser.parse_args()
+			host = args.host
+			port = args.p
+
+			 # Client List	
+			clients = []
+
+			 # Create socket
+			try:
+				s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+				s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
+			except socket.error as msg:
+				print("Socket creation error: " + str(msg))
+
+			 # Bind the sockets
+			try:
+				print("Binding socket to port: " + str(port))
+				s.bind((host, port))
+				s.listen(5) #number of connections
+			except socket.error as msg:
+				print("Socket binding error: " + str(msg) + "\n" + "Retrying...")
+
+
+			
+			while True:
+				socket_accept()
 		</pre>
 		
 		<h3> Client </h3>
 
-		<pre style="background-color:#111; color:white; font-size: 13px; margin: 50px 0px 50px;border: 5px solid darkgray; " >
-	import socket, sys, argparse, threading
-
-	# Function to send data
-	def send():
-		global my_nickname
-		while True:
-			message = raw_input(my_nickname + ' :')
-			sock.sendall(message)
-			if message == 'quit':
-				#break
-				sock.close()
-				sys.stdout.flush()
-				sys.exiti(0)
-
-	# Function to receive data
-	def receive():
-		while True:
-			data = sock.recv(4096)
-			# New line for when receiving data from other clients
-			print('\n' + data)
-			if not data:
-				break
+		<pre>
 
 
+		import socket, sys, argparse, threading
 
-	if __name__ == '__main__':
+		# Function to send data
+		def send():
+			global my_nickname
+			while True:
+				message = raw_input(my_nickname + ' :')
+				sock.sendall(message)
+				if message == 'quit':
+					#break
+					sock.close()
+					sys.stdout.flush()
+					sys.exiti(0)
 
-		 # Args for host and port
-		parser = argparse.ArgumentParser(description='My TCP server')
-		parser.add_argument('host',  help='server to connect to')
-		parser.add_argument('-p', metavar='PORT', type=int, help='TCP PORT (default 9999)')      
-		args = parser.parse_args()
-		host = args.host
-		port = args.p
+		# Function to receive data
+		def receive():
+			while True:
+				data = sock.recv(4096)
+				# New line for when receiving data from other clients
+				print('\n' + data)
+				if not data:
+					break
 
-		 # Create the socket AF_INET the internet family of protocols IPv4
-		 # SOCK_STEAM TCP PROTOCOL
-		sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-		try:
-		sock.connect((host,port))
-		except:
-		print('Can\'t connect')
-		sock.close()
-		sys.exit()
 
-		# Sends nickname to server
-		my_nickname = raw_input('Choose nick: ')    
-		sock.sendall(my_nickname)
+		if __name__ == '__main__':
 
-		# A thread for send and receive
-		thread_send = threading.Thread(target = send)
-		thread_send.start()
-		thread_receive =  threading.Thread(target = receive)
-		thread_receive.start()
+			 # Args for host and port
+			parser = argparse.ArgumentParser(description='My TCP server')
+			parser.add_argument('host',  help='server to connect to')
+			parser.add_argument('-p', metavar='PORT', type=int, help='TCP PORT (default 9999)')      
+			args = parser.parse_args()
+			host = args.host
+			port = args.p
+
+			 # Create the socket AF_INET the internet family of protocols IPv4
+			 # SOCK_STEAM TCP PROTOCOL
+			sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+			try:
+			sock.connect((host,port))
+			except:
+			print('Can\'t connect')
+			sock.close()
+			sys.exit()
+
+			# Sends nickname to server
+			my_nickname = raw_input('Choose nick: ')    
+			sock.sendall(my_nickname)
+
+			# A thread for send and receive
+			thread_send = threading.Thread(target = send)
+			thread_send.start()
+			thread_receive =  threading.Thread(target = receive)
+			thread_receive.start()
+
 		</pre>
 	
 

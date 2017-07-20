@@ -11,7 +11,7 @@ dfn{font-style:italic}mark{background:#ff0;color:#000}
 small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
 sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}
 img{border-style:none}svg:not(:root){overflow:hidden}
-code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+code,kbd,samp{font-family:monospace,monospace;font-size:1em}
 hr{box-sizing:content-box;height:0;overflow:visible}
 button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}
 button,input{overflow:visible}button,select{text-transform:none}
@@ -370,3 +370,12 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 .w3-hover-theme:hover {color:#fff !important; background-color:#009688 !important}
 .w3-hover-text-theme:hover {color:#009688 !important}
 .w3-hover-border-theme:hover {border-color:#009688 !important}
+
+pre {
+	background-color: #1A1A1A;
+	color: white; 
+	font-size: 15px;
+	font-family: unset; 
+	margin: 50px 0px 50px;
+	border: 5px solid darkgray;
+}
