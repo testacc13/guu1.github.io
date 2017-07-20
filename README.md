@@ -1,5 +1,3 @@
-# newWebsite
-My new website. Trying our some frameworks
-
+# Site/Blog
 
 https://chickenmcheese.github.io/mysiteblog/
