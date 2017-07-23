@@ -56,24 +56,30 @@
           -->
         <article>
           <h2>CTF training</h2>
-          <p>The problem: having to loop through multiple folders and files, but since everything is a file in linux... You get the point. So, solution: bash script ofc.</p>
+          <p>The problem: having to loop through multiple folders and files, but since everything is a file in linux... You get the point. So, solution, bash script.</p>
           <pre>
-	#!/bin/bash
-	FILES=~/inhere/*
-	do 
-		echo "Processing $f file\n"
-		#to do
-		ls $f
-		for 	
-	done
-	</pre>
+
+          #!/bin/bash
+          FILES=~/inhere/*
+          do 
+          	echo "Processing $f file\n"
+          	#to do
+          	ls $f
+          	for 	
+          done
+
+		      </pre>
           <p>The output looks like so.</p>
-          <img src="">
           <p>But this doesn't solve anything. Now we have to <b>cat</b> each file.</p>
-          <p></p>
           <pre>
-	
-	</pre>
+
+          for f in $FILES
+          do
+            cd $f && cat -- *
+          done
+
+          </pre>
+
         </article>
         <hr>
         <article>
