@@ -270,31 +270,29 @@ also be typecast before doing pointer arithmetic. </li>
 			<p>Pointers solve this, instead of copying a large block of memory, we can simply pass around the address of the begining of that block of memory.</p>
 			<p>Pointers in C can be defined and used like any other variable type.</p>
 
-		<img src="https://gpautq.bn1301.livefilestore.com/y3mfIe2eW0UIWJFTqK8nnjcu5q55t7i2C8AV_QrkyP_ONjQY_02F09rLQufd_cDiISNf7dJKY4sxXET_Rah5-m3kuyx7gtHyZEjc3EQtyiZeNaV11dmR6wUPh7gXhwc9YVaU42L6lgzO43qBGfcHRAjlmHsR4ws05-F6OX_VOChhFY?width=656&height=284&cropmode=none">
+		<img src="Images/Pointers/pointers1.png">
 		
 		<p>When you compile you are going to get this warning, so what is it?</p>
-		<img src="https://gpzlqw.bn1301.livefilestore.com/y3mwCOdE3rKpM9_QuPxok3xeaGi3N3fi_6iUm3VURFnjE0pykIZQnRYAJc3h25tGl1pA2_Y99lh0NeLCtqPLy47L3vu4Jm1tqELAYqOuxVCi--tH9GssWDWikREpW1QWZ0maytdTpI3vN8B-VgjBjfZQE1Yf-obyrrxdOf7qJxx62o?width=656&height=182&cropmode=none">
+		<img src="Images/Pointers/2warning.png">
 		<p>This warning is gcc's way of telling you that it cannot verify the format string argument to the printf style function (printf, fprintf... etc). This warning is generated when the compiler can't manually peek into the string and ensure that everything will go as you intend during runtime.</p>
 		<p>You are taking a string generated at runtime and trying to print it. The warning you are getting is the compiler warning you that there could be a format specifier in the string. Say for eg "bad%sdata". In this case, the runtime will try to access a non-existent argument to match the %s. Even worse, this could be a user trying to exploit your program (causing it to read data that is not safe to read). -Sanjit Saluja</p>
 		<p>So let's fixed it.</p>
-		<img src="https://gpyvwg.bn1301.livefilestore.com/y3mCwaCBjZ4EgbnoZnzVLTnvwDgqu41KzMXhhJaNrQ1pQjtTmL8HIkfoTGE8Edsf10Utoav0pRuAOXRAAcB7xPj3BTRp-BV4GpvjfcS-aXENAbXy-Lo1o4i4rSlcdQ6vdlSzvPDNx41L4CA79zYn3iWt6C50fQ6FoXNAuutM6NGBxY?width=655&height=86&cropmode=none">
+		<img src="Images/Pointers/pointers2fix.png">
 		<p>Now let's take a look at this with GDB. We set a breakpoint after the "Hello, world!\n" string has been copied into the str_a buffer and the pointer variable is set to the beginning of it. </p>
-		<img src="https://gpbkng.bn1301.livefilestore.com/y3maagGTE0SvTWMrqvI8VythDAwRd6XcLUAwUfqqxF6Yc-VoIABKHZ32eSAbcNa5jdx3CplG8G-GXC8sD0zwR57DI995ApUtXyvqjPqm6qyL5hjvDGPMGbNGN6x4HzoWuem86ub27fbFWo9K9md23vYW5z4N09c0b_lFzcZHbDl1xw?width=653&height=503&cropmode=none">
+		<img src="Images/Pointers/pointers3.png">
 		<p>When the pointer is examined as a string, it's apparent that the given string is there and is located at memory address 0x6c6c6548 . Remember that the string itself isn't stored in the pointer variable-only the memory address 0x6c6c6548 is stored there. In order to see the actual data stored in the pointer variable, you must use the address-of operator. The address-of operator is a unary operator, which simply means it operates on a single argument. The ampersand (&). </p>
 
-		<img src="https://gpbd7w.bn1301.livefilestore.com/y3m8dijsGn96lwV6gG4Q2xN9CBqL5KRxH3yKmFVYBmkMSvjDQYYDbDHP2ptFknbs3DJbN41IBeuUsZj_ZqJAKDCejxspOJcAL1q2UvLlAXvuXOCIK0dEDeYZoYQfEDNvRXUVu5CYIJ3VU3IjR9sksQsLqF7qxcN8rIzMKJQ3Cf4Jqw?width=652&height=102&cropmode=none">
+		<img src="Images/Pointers/pointers4.png">
 
 		<p>We can see that the pointer variable is shown to be located at the address 0x7fffffffde00 in memory, and contains the address 0xffffde10</p>
 		<p></p>
-		<img src="https://gpb52a.bn1301.livefilestore.com/y3mSnTQSpPpTBYIyQdj9-ke_pWZvF9d7NgPmuKkAYJIx3Q4UBhwjreVZ-La0yeyHG9Ae-FnnzEfcp844rjWWdUJada8cfv_Ascao3eh8aGc_H5s-yzhcSmj5ZdSngj71zPT8Q7fz-lVsesSLCMg6V4gmnqjSFrjCpBo1jFiCSAItYY?width=655&height=391&cropmode=none">
+		<img src="Images/Pointers/pointers5.png">
 
 		<p>The first print command shows the value of int_var , and the second shows its address using the address-of operator. The next two print commands show that int_ptr contains the address of int_var , and they also show the address of the int_ptr</p>
 
-		<img src="">
-
 		<p>An additional unary operator called the dereference operator exists for use with pointers. This operator will return the data found in the address the pointer is pointing to, instead of the address itself.</p>
 
-		<img src="https://gpyoew.bn1301.livefilestore.com/y3mNVe6MBiGzCNC8Q38a-eO2chotie-tLFRNygBP3rvmv84BEW7TMtvFKOM1XrXaabdMc_gREcC4xffT9qxvvv_ucrsS75GhkLNW2XMKPQAcc4IsXdi12lgEOl3FKciUwhzUBNlv6lwfjNBLRmmcYbKBMyZZwd0Ou1p2XMfxEy0pSo?width=656&height=120&cropmode=none">
+		<img src="Images/Pointers/pointers6.png">
 
 
 		</article>
