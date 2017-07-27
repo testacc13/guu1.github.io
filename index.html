@@ -54,6 +54,29 @@
           <hr>
           
           -->
+          <article>
+          <h2>Curl</h2>
+          <p>I'm learning about <b>curl</b>. Very powerful tool. I'm also going to talk about <b>split</b> and <b>BeautifulSoup</b>. Let's start with split.</p>
+          <h3>Split</h3>
+          <p>In this example, I start with a simple string, and what split can do to that string is, as the name says, split it. And you can do so simply but using <b>.split()</b> as I did in the beginning. But we can take this one step further. So let's say we want to grab whatever is in front of 'example'. We can do so buy spliting 'example' of the string and picking whats in front of it, hence the <b>[1]</b>. And that would be it. Now let's pick just the word phrase 'phrase'. Like previously, we get whats in front of 'example' but now we split twice. The last split is to remove the '.'</p>
+          <img src="Code/Linux/Images/split1.png">
+          <h3>BeautifulSoup</h3>
+          <p>This gets very useful when parsing specific text in a html page as we will see soon. So let's talk about BeautifulSoup. To use this you need to install the bs4 module. For this example i used the main page of Hack Forums and grabed the names of online users.</p>
+          <p>This code uses bs4 to grab specific tags like tbody and td. Also <b>find_all()</b> allows us to grab tags with a certain class. Bs4 does much, much more. In the end we use <b>text=True</b> to grab our names. We could have used split.</p>
+          <p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Bs4 docs</a></p>
+          <img src="Code/Linux/Images/tbody.png">
+          <img src="Code/Linux/Images/bs.png">
+          <p>Running our code we can see the span tags and the final result the names. All of this output is done by our get_names() function.</p>
+          <img src="Code/Linux/Images/bsoutput.png">
+          <h2>Curl</h2>
+          <p>So, what is curl? If we look at our man pages we get a pretty straight answser. Curl is a tool to transfer data from or to a server, using several protocols like HTTP FTP IMAP and many others. Curl offers proxy support, user authentication, SSL connections, cookies etc. Let's write a small script to get timings of connections. For this I'm running apache2 on localhost. Very easy to setup <b>POST SCRIPT</b></p>
+          <img src="Code/Linux/Images/curl1.png">
+          <img src="Code/Linux/Images/curloutput.png">
+          <p>To be updated...</p>
+
+
+        </article>
+
         <article>
           <h2>CTF training</h2>
           <p>The problem: having to loop through multiple folders and files, but since everything is a file in linux... You get the point. So, solution, bash script.</p>
