@@ -392,3 +392,20 @@ main()
 		
 
 		</article>
+
+
+
+		          <h2>Changing groups</h2>
+          <p>first we check the groups using $groups</p>
+          <img src="https://kctjdw.bn1301.livefilestore.com/y3mX7DKHnWhbT2cndPZtX1AM8K_jSJxXGjPBS--FBc4WDT2FVbE0K333RjXYb_8WAeuZt8xSfaCC15IkTt1oJK-acl2m2wEgeQRzR_acTJ5bpX8S5lGsMP1T3LjhZUaSBNta1C-6o8-tr0rWQYbWmWNVbpJlqvnydiECTyCIo0XfXg?width=656&height=30&cropmode=none">
+          <p>sudo chown -R username:group directory</p>
+          <p>Let's check out chown with $man chown</p>
+          <p>we can see what the arg -R stands for:</p>
+          <img src="https://kcrwkq.bn1301.livefilestore.com/y3mcvzDmvJUA_-M0doRjVtzb71-AAgaU8szMLYwtGs3QoBcqHRBV2_lWWvmmE7iqrDLwHAGx8nH_f2cUjDwmOGR2nEkRwVtw5pTPMV_qyxVRaQh8-VhaxZrXb_RX5350G3GY2KOKgNuxu1Il3OWlRT7MIufpbTHfSxjUOLXZG2Zn30?width=655&height=22&cropmode=none" >
+          <p>And if we look at the bottom, cool it has some examples:</p>
+          <img src="https://kctxbq.bn1301.livefilestore.com/y3m8QPXHO0ODpxnGLUWAJALkrrTj1tdvuRK0pzEi0nLGKWzW92OxnHsvFbh2gp1-0mG9Pd5FgoEjB6tjCL-4EMZ_t9aCl0XhN7V_dTd4CVn4CLJ70JAHuvrOlUbcoSiPeDgYtct_iAm4Gv9-EbzG0RdRhu3GscG5E4cdqfZYVXSVk4?width=653&height=74&cropmode=none" >
+          <p>So now let's change our squid file permitions and group.</p>
+          <img src="https://kcqgqa.bn1301.livefilestore.com/y3mHectkeg27pIWhtCxdnMwSXUhi887tE2AkhfF7lDU62u5ThDiAAyI1paqD44DSlyc6Pon0dNyTmVjmBIG21dJMhqTc3q4uZc7B80pI6Wtbd5DO23dw1O4iErkKSF3yR791NV7mSBxwOLZd2P9wM44M2bwT90uYDdPkmxOnBVbXFM?width=655&height=62&cropmode=none" >
+          <p>Obviously we need root permissions to do so.</p>
+          <p>Now if we check ours files again we can see that the owner and the group changed.</p>
+          <img src="https://k5ks1g.bn1301.livefilestore.com/y3mRtID8qiuzIpjkav-ekCtJwxY_-J1SRShuLKZKVRRPAicj2c322W0M55DHfRMqfvyhuyicHyJEmP-0bgohfNCnsYqjriANkAjUmswRRDjtOVSARePR9hOeBH1yH24PDHjP37BTbq08mqWoSBMU4HZFwn58MnYi1HskXE1eon_Ghc?width=655&height=160&cropmode=none" >

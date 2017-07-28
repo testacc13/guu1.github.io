@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<title>C and assembler</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+body {font-family: "Roboto", sans-serif}
+.w3-sidenav a {padding:16px;font-weight:bold}
+</style>
+<body>
+
+<nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
+  <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
+  <a href="javascript:void(0)" onclick="w3_close()" 
+  class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
+  <a href="../../index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+  <a href="../Python/just-python.html"><i class="fa fa-code" aria-hidden="true"></i> Python</a>
+    <div class="w3-accordion">
+    <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
+    <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
+      <a href="../Networking/protocols.html">Protocols</a>
+      <!--<a href="../Networking/apache.html">Apache</a>-->
+      
+    </div>
+  </div>
+
+  	<div class="w3-accordion">
+  		<a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> C/ASM <i class="fa fa-caret-down"></i></a>
+  		<div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
+      		<a href="../Casm/asm.html">ASM</a>
+      		<a href="../Casm/see.html">C</a> 
+    	</div>
+    </div>
+
+  <a href="../Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
+  <a href="../../posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
+  <a href="../../Gaming/gaming.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
+  <a href="../../about.html"><i class="fa fa-user-circle" aria-hidden="true"></i> About</a>
+
+</nav>
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:250px;">
+
+	<div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
+	  <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
+	  <span id="myIntro" class="w3-hide">C and Assembly</span>
+	</div>
+
+	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
+	  <h1 class="w3-xxxlarge w3-padding-16">C / ASM</h1>
+	</header>
+
+	<div class="w3-container w3-padding-32" style="padding-left:32px">
+
+	<!--
+	create a new article:
+
+	<article>
+	<h2></h2>
+	<p></p>
+	<img src="">
+	
+
+	</article>
+	<hr>
+
+	-->
+
+
+	<article>
+
+		<h2>Memory Segmentation</h2>
+		<p>When a program its compiled, it's memory is divided into five segments:</p>
+		<ul>
+			<li>Text - The text segment, also called the code segment. This is where the assmbled machine language instructions of the program are located.</li>
+			<li>Data and Bss - The data and bss segments are used to store global and static program variables. The data segment is filled with the initialized global and static variables, while the bss segment is filled with their uninitialized counterparts. Although these segments are writable, they also have a fixed size</li>
+			<li>Heap</li>
+			<li>Stack</li>
+		</ul>
+		<p>As a program executes the RIP register is set to the first instruction in the text segment. The processor then follows an execution loop:</p>
+
+		<ul>
+			<li>1 - Reads the instruction that RIP is pointing to</li>
+			<li>2 - Adds the byte length of the instruction to RIP</li>
+			<li>3 - Executes the instruction that was read in step 1</li>
+			<li>4 -Goes back to step 1</li>
+		</ul>
+
+		<p>Write permission is disabled in the text segment, as it is not used to store variables, only code. This prevents people from actually modifying the program code. Another advantage of this segment being read-only is that it can be shared among different copies of the program, allowing multiple executions of the program</p> <p>About the stack:</p>
+		<p> The stack segment also has variable size and is used as a temporary scratch pad to store local function variables and context during function calls. This is what GDB's backtrace command looks at. When a program calls a function, that function will have its own set of passed variables, and the function's code will be at a different memory location in the text (or code) segment. Since the context and the <b>RIP</b> must change when a function is called, the stack is used to remember all of the passed variables, the location the <b>RIP</b> should return to after the function is finished, and all the local variables used by that function. All of this information is stored together on the stack in what is collectively called a stack frame . The stack contains many stack frames. <u>It has first-in, last-out (FILO) ordering</u>, which means the first item that is put into a stack is the last item to come out of it. The stack segment of memory is, a stack data structure, which contains stack frames. <u>The ESP register is used to keep track of the address of the end of the stack</u>, which is constantly changing as items are pushed into and popped off of it. Since this is very dynamic behavior, it makes sense that the stack is also not of a fixed size. Opposite to the dynamic growth of the heap, as the stack changes in size, <u>it grows upward</u> in a visual listing of memory, toward lower memory addresses. The FILO nature of a stack might seem odd, but since the stack is used to store context, it's very useful. When a function is called, several things are pushed to the stack together in a stack frame . The EBP register- sometimes called the <b>frame pointer</b> (FP) or <b>local base</b> (LB) <b>pointer</b> - is used to <u>reference local function variables in the current stack frame</u>. Each stack frame contains the parameters to the function, its local variables, and two pointers that are nec- essary to put things back the way they were: <b>the saved frame pointer</b> (SFP) and the return address. <u>The SFP is used to restore EBP to its previous value, and the return address is used to restore <b>RIP</b> to the next instruction found after the function call</u>. This restores the functional context of the previous stack frame.</p>
+
+	</article>
+
+
+
+	<article>
+		<h1><b>CPU</b></h1>
+	
+		<p>We are going to look at the intel 8085. The 8085 is a conventional von Neumann design based on the Intel 8080. Is a 8-bit microprocessor and can address, with it's 16 lines, up to 64K memory positions (2^16 = 65536bytes or 64Kb). It has 6200 transistors. Like every processor, it needs a clock or oscillator to synchronize the operations. The 8085 has a clock that generates a digital signal with 3,125 MHz.</p>
+
+		<h2>8085 Terminals </h2>
+		<img src="https://7mj97g.bn1301.livefilestore.com/y3mfaWNWjx5GEsN8RXpKYgLSwXPSesoRQiTeZZ0Y8Y0Q92PZd1lUTmjwfi33yJ92hOXUu_O31ItvaM9vw_IzXuUnBXF9pj3ISZ2db93YWiB511P1Ri0EKcszoaRuqEAS0vOLS8zwSJQjPnoBX3lymMhdue7VfZSFz3V98EZa-pqOUg?width=386&height=496&cropmode=none">
+		<!--
+		<p>A8-A15 Exits of the 8 most significant bits of the address bus</p>
+		<p>Ad0-AD7 </p>
+		<p>ALE Adress latch enable</p>
+		<p>S0-S1 Information about the stat of the data bus. Indicate whether</p>
+		<p>RD Read</p>
+		<p>WR Write</p>
+		<p>READY</p>
+		-->
+
+		<p>Each CPU contains basicaly the following blocks:</p>
+		<li>Program Counter</li>
+		<li>Arithmetic and logic unit</li>
+		<li>Instruction Decoder</li>
+		<li>General-purpose registers</li>
+
+		<p>The CPU begins by looking at the <b>program counter</b>, and fetching whatever number
+		is stored in memory at the location specified. It is then passed on to the
+		<b>instruction decoder</b>
+		which figures out what the instruction means. This includes what process
+		needs to take place (addition, subtraction, multiplication, data movement, etc.) and
+		what memory locations are going to be involved in this process. Computer
+		instructions usually consist of both the actual instruction and the list of memory
+		locations that are used to carry it out.
+		Now the computer uses the
+		<b>data bus</b>
+		to fetch the memory locations to be used in
+		the calculation. The data bus is the connection between the CPU and memory.
+		In addition to the memory on the outside of the processor, the processor itself has
+		some special, high-speed memory locations called <b>registers</b>.</p>
+
+		<p>The 8085 has several registers: </p>
+		<li><b>General-purpose registers</b> - There are 6 general purpose registers in 8085 processor, i.e. B, C, D, E, H and L. Each register can hold 8-bit data.
+		These registers can work in pair to hold 16-bit data and their pairing combination is like B-C, D-E and H-L.</li>
+
+		<p></p><li><b>Program counter</b> - It is a 16-bit register used to store the memory address location of the next instruction to be executed. Microprocessor increments the program whenever an instruction is being executed, so that the program counter points to the memory address of the next instruction that is going to be executed.</li>
+		<p></p>
+		<li><b>Stack pointer</b> - It is also a 16-bit register works like stack, which is always incremented/decremented by 2 during push and pop operations.</li>
+		<p></p>
+		<li><b>Temporary register</b> - It is an 8-bit register, which holds the temporary data of arithmetic and logical operations.</li>
+		<p></p>
+		<li><b>Flag register</b> - It is an 8-bit register having five 1-bit flip-flops, which holds either 0 or 1 depending upon the result stored in the accumulator.
+		There are 5 flip-flops:
+				<p></p>
+				<li>Sign (S)</li>
+				<li>Zero (Z)</li>
+				<li>Auxiliary Carry (AC)</li>
+				<li>Parity (P)</li>
+				<li>Carry (C)</li>
+				</li>
+				<p></p>
+		<li><b>Instruction register and decoder</b> - It is an 8-bit register. When an instruction is fetched from memory then it is stored in the Instruction register. Instruction decoder decodes the information present in the Instruction register.</li>
+
+		<p>Now that the CPU has retrieved all of the data it needs, it passes on the data and
+		the decoded instruction to the arithmetic and logic unit for further processing. <u>Here the instruction is actually executed.</u> After the results of the computation have
+		been calculated, the results are then placed on the data bus and sent to the
+		appropriate location in memory or in a register, as specified by the instruction.</p>
+
+		<h2>8085 Architecture</h2>
+		<img src="https://id117w.bn1301.livefilestore.com/y3mb7EiDK4BAo5nXXYseC9z9KtP4Vzrl024jxwIh8pvvNt-SSUm_Te8AEBPVsbcCBt0CRqBdxKYocWb-LtoVZLCRxhkgN_sn2sWgzJEJBzMbyYDORR9oJ_Kp_DNN0fG8lCinbuYIJd4votKac2U5JhYGtkfpjeaqf6gRUguh64DSUs?width=709&height=517&cropmode=none">
+		<hr></hr>
+		<h2>Instruction Set</h2>
+		<img src="https://k5livw.bn1301.livefilestore.com/y3m_-Ul4dX9hZSz9rRC-JSKQfNyVO3ED-VOnshm6BN0AXfIauc5fMbBQIrMKwXb6H9YKMWtnu02LEdZD4F7W2v6LDNg71oM86MN87JNIi5QKR1PQQ9ykuv4ykT92XZFhjmcPaLBHdCR5h7iIw2UiUApAo984tLjsyQU5ORp5LgnMQs?width=989&height=299&cropmode=none" width="100%">
+		<p>Let's look at instructions. An instruction is a binary pattern designed inside a cpu to perform a specific function. The size of 8085 instructions can be 1 byte, 2 bytes or 3 bytes. The 8085 has 246 instructions, each instruction is represented by an 8-bit binary value. These 8-bits of binary value is called Op-code or instruction Byte.
+		    <li>The 1-byte instruction has an opcode alone.</li>
+		    <p></p>
+
+		    <li>The 2 bytes instruction has an opcode followed by an eight-bit address or data.</li>
+		    <p></p>
+
+		    <li>The 3 bytes instruction has an opcode followed by 16 bit address or data. While storing the 3 bytes instruction in memory, the sequence of storage is, opcode first followed by low byte of address or data and then high byte of address or data.</li> </p>
+
+
+		</article>
+
+		<br>
+		</div>
+
+			<footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
+		  		<address style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>
+		  	</footer>   
+	</div>
+
+	<script>
+	// Open and close the sidenav on medium and small screens
+	function w3_open() {
+	    document.getElementById("mySidenav").style.display = "block";
+	    document.getElementById("myOverlay").style.display = "block";
+	}
+	function w3_close() {
+	    document.getElementById("mySidenav").style.display = "none";
+	    document.getElementById("myOverlay").style.display = "none";
+	}
+
+	// Change style of top container on scroll
+	window.onscroll = function() {myFunction()};
+	function myFunction() {
+	    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+	        document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+	        document.getElementById("myIntro").classList.add("w3-show-inline-block");
+	    } else {
+	        document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+	        document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+	    }
+	}
+
+	// Accordions
+	function myAccordion(id) {
+	    var x = document.getElementById(id);
+	    if (x.className.indexOf("w3-show") == -1) {
+	        x.className += " w3-show";
+	        x.previousElementSibling.className += " w3-theme";
+	    } else { 
+	        x.className = x.className.replace("w3-show", "");
+	        x.previousElementSibling.className = 
+	        x.previousElementSibling.className.replace(" w3-theme", "");
+	    }
+	}
+	</script>
+     
+</body>
+</html> 

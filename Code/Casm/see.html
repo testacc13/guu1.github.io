@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<title>C and assembler</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+body {font-family: "Roboto", sans-serif}
+.w3-sidenav a {padding:16px;font-weight:bold}
+</style>
+<body>
+
+<nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
+  <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
+  <a href="javascript:void(0)" onclick="w3_close()" 
+  class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
+  <a href="../../index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+  <a href="../Python/just-python.html"><i class="fa fa-code" aria-hidden="true"></i> Python</a>
+    <div class="w3-accordion">
+    <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
+    <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
+      <a href="../Networking/protocols.html">Protocols</a>
+      <!--<a href="../Networking/apache.html">Apache</a>-->
+      
+    </div>
+  </div>
+
+  	<div class="w3-accordion">
+  		<a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> C/ASM <i class="fa fa-caret-down"></i></a>
+  		<div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
+      		<a href="../Casm/asm.html">ASM</a>
+      		<a href="../Casm/see.html">C</a> 
+    	</div>
+    </div>
+
+  <a href="../Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
+  <a href="../../posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
+  <a href="../../Gaming/gaming.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
+  <a href="../../about.html"><i class="fa fa-user-circle" aria-hidden="true"></i> About</a>
+
+</nav>
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:250px;">
+
+	<div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
+	  <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
+	  <span id="myIntro" class="w3-hide">C and Assembly</span>
+	</div>
+
+	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
+	  <h1 class="w3-xxxlarge w3-padding-16">C / ASM</h1>
+	</header>
+
+	<div class="w3-container w3-padding-32" style="padding-left:32px">
+
+	<!--
+	create a new article:
+
+	<article>
+	<h2></h2>
+	<p></p>
+	<img src="">
+	
+
+	</article>
+	<hr>
+
+	-->
+
+
+	<hr>
+
+	<article>
+		<h2>Variable Scoping</h2>
+		<p>Each function has its own set of local variables, which are independent of everything else.</p>
+
+		<ul>
+			<li>Local Variables - Declared inside a function or block. They can be used only by statements that are iside that function or block of code. <u>Local variables are not known to functions outside their own.</u>
+			<h2></h2>
+			</li><img src="Images/Scope/scope1.png" style="margin: 10px 0 10px">
+			<h2></h2>
+
+			<li>Global variables - Global variables are define outside a function.Global variables hold their values throughout the lifetime of your program and they can be accessed inside any of the functions defined for the program. <u>A global variable can be accessed by any function.</u>
+			</li><img src="Images/Scope/scope2.png" style="margin: 10px 0 10px">
+			<h2></h2>
+		</ul>
+
+			<img src="Images/Scope/scope3.png">
+			<img src="Images/Scope/scope3.5.png" style="margin: 10px 0 10px">
+
+			<p>In each function, the variable <b>i</b> is set to a different value and printed. But <b>i</b> doesn't change when other functions are called because they are local to those function, therefore they can not be changed. Each function call has its own version of the variable <b>i</b>. </p>
+
+			<p>Let's check out global functions.</p>
+			<img src="Images/Scope/scope4.png">
+			<img src="Images/Scope/scope4.5.png">
+			<p>In the output, the global variable j is written to in func2() , and the change persists in all functions except func3() , which has its own local variable called j .The global variable j is just stored in memory, and every function is able to access that memory. The local variables for each function are each stored in their own places in memory, regardless of the identical names.</p> <p>Let's see this code in the debugger</p>
+			<p>If we disassemble main we can see the adding of 3 to i, the call to printf and the call to function1()</p>
+			<img src="Images/radare/radare2.png">
+
+			<img src="Images/radare/rbp.png">
+			<p>We are going to examine that instruction. That assembly instruction will move the value of 0x3 (3 in decimal) into memory located at the address stored in the RBP register, minus 0x4 (4). This is where the C variable <b>i</b> is stored in memory</p>
+			<p>Down below we check this process by going to the next instruction. At (..)0652 in main() we examine the memory, which at start is all 0's but and the next instruction (..)0659 in main() will have the value 3 in it</p>
+			<p></p>
+			<p>We can check this even closer with print. It stores the result in a temporary variable in the debugger <b>$2</b></p>
+			<img src="Images/radare/printrbp.png">
+
+			<p>Checking the memory addresses for each variable.</p>
+			<img src="Images/Scope/different.png">
+			<p>Here, we can see that the variable <b>j</b> used in function3() is different than the <b>j</b> used in other functions. <b>i</b> on the other hand, is on a different memory address for each function.</p>
+
+			<h5>Static Variables</h5>
+			<p>Like the name says static variables are variables that are local within a particular function context, and that keeps its value between invocations.</p>
+			<img src="Images/Scope/static.png">
+			<img src="Images/Scope/staticout.png">
+			<p></p>
+
+
+	</article>
+
+
+
+
+
+
+
+
+
+
+
+	<hr>
+
+	<article>
+		<h2>Typecasting</h2>
+		<p>Type casting is a way to convert a variable from one data type to another data type.</p>
+		<p>Let's see this example.</p>
+		<img src="Images/typecasting/typecasting1code.png">
+		<img src="Images/typecasting/typecasting1.png">
+		<p>If you look at the output of the division using integers, we see that the result was rounded to the incorrect answer of 2, even if this value is being stored into a floating-point 
+variable. But, if these integer variables are typecast into floats, they will be treated as such, therefore we get the correct calculation of 2.6.</p>
+		<p>We'll look into typecasting with pointer variables.</p>
+		<p>Even though a pointer is just a memory address, the C compiler still demands a data type for every pointer. An integer pointer should only point to integer data, and a character pointer to a character data. Because if we look at pointer arithmetic, since an integer is four bytes (8 bytes if you're on a 64 bit system and 2 bytes on a 16 bit machine) and a character only takes up one byte.</p>
+
+		<img src="Images/typecasting/typecasting2.1.png">
+
+		<p>The comments explain much of the code. Notice that in the loops, when the integer and character values Programming 53 are actually printed with the %d and %c format parameters, notice that the corresponding printf() arguments must dereference the pointer variables. Notice also that even though the same value of 1 is added to int_pointer and char_pointer in their respective loops, the compiler increments the pointer's addresses by different amounts.</p>
+		<img src="Images/typecasting/typecasting2.2.png">
+
+		<p>In this next example we make the pointers point to incompatible data types. In an attempt to prevent programming mistakes, the compiler gives warnings about this.</p> 
+
+		<img src="Images/typecasting/typecasting3.png">
+		<p></p>
+
+		<img src="Images/typecasting/typecasting3.5.png">
+
+		<p>However, in the compiled code, a pointer is nothing more than a memory address, so the compiler will still compile the code if a pointer points to an incompatible data type.</p>
+
+		<p>Even though the int_pointer points to character data that only contains 5 bytes of data, it is still typed as an integer. This means that adding 1 to the pointer will increment the address by 4 each time. Similarly, the char_pointer's address is only incremented by 1 each time, stepping through the 20 bytes of integer data (five 4-byte integers), one byte at a time. Once again, the little- endian byte order of the integer data is apparent when the 4-byte integer is examined one byte at a time. The 4-byte value of 0x00000001 is actually stored in memory as 0x01 , 0x00 , 0x00 , 0x00 .</p>
+
+		<p>We can fix this by typecasting.</p>
+
+		<img src="Images/typecasting/typecasting4.png">
+
+		<p>Here, when the pointers are initially set, the data is typecasted into the pointer's data type. This way the C compiler won't complain about the conflicting data types, however the pointer arirthmetic will still be incorrect. To fix that, we need to cast the correct data type when 1 is added to the pointer, that way the address is incremented by the correct amount.</p>
+
+		<img src="Images/typecasting/typecasting4.5.png">
+		<p></p>
+
+		<h5>Typeless Pointer</h5>
+		<p>In C, a void pointer is a typeless pointer, defined by the 
+void keyword.</p>
+		<ul>
+			<li>Pointers cannot be dereferenced unless they have a type.</li>
+			<li>Void pointers must 
+also be typecast before doing pointer arithmetic. </li>
+		</ul>
+		<p>In the next program a single void pointer is used by typecasting it to the proper type of pointer each time it's used. The compiler knows that a void pointer is typeless, so any type of pointer can be stored in a void pointer without typecasting. This also means a void pointer must always be typecast when dereferencing it</p>
+
+		<img src="Images/typecasting/typecasting5.png">
+		<img src="Images/typecasting/typecasting5.5.png">
+
+		<p>The void pointer is really just holding the memory addresses, while the hard-coded typecasting is telling the compiler to use the proper types whenever the pointer is used. Since the type is taken care of by the typecasts, the void pointer is truly nothing more than a memory address. </p>
+
+		
+
+
+	</article>
+	<hr>
+
+
+
+		<article>
+			<h2>Pointers</h2>
+			<p>The EIP register is a pointer that "points" to the current instruction during a program's execution by containing its memory address. Since the physical memory cannot actually be moved, the information in it must be copied. But doing so can be very expensive in terms of computationally, and also from a memory stand point since space for the new destination copy must be saved of allocated before the souce can be copied.</p>
+			<p>Pointers solve this, instead of copying a large block of memory, we can simply pass around the address of the begining of that block of memory.</p>
+			<p>Pointers in C can be defined and used like any other variable type.</p>
+
+		<img src="Images/Pointers/pointers1.png">
+		
+		<p>When you compile you are going to get this warning, so what is it?</p>
+		<img src="Images/Pointers/2warning.png">
+		<p>This warning is gcc's way of telling you that it cannot verify the format string argument to the printf style function (printf, fprintf... etc). This warning is generated when the compiler can't manually peek into the string and ensure that everything will go as you intend during runtime.</p>
+		<p>You are taking a string generated at runtime and trying to print it. The warning you are getting is the compiler warning you that there could be a format specifier in the string. Say for eg "bad%sdata". In this case, the runtime will try to access a non-existent argument to match the %s. Even worse, this could be a user trying to exploit your program (causing it to read data that is not safe to read). -Sanjit Saluja</p>
+		<p>So let's fixed it.</p>
+		<img src="Images/Pointers/pointers2fix.png">
+		<p>Now let's take a look at this with GDB. We set a breakpoint after the "Hello, world!\n" string has been copied into the str_a buffer and the pointer variable is set to the beginning of it. </p>
+		<img src="Images/Pointers/pointers3.png">
+		<p>When the pointer is examined as a string, it's apparent that the given string is there and is located at memory address 0x6c6c6548 . Remember that the string itself isn't stored in the pointer variable-only the memory address 0x6c6c6548 is stored there. In order to see the actual data stored in the pointer variable, you must use the address-of operator. The address-of operator is a unary operator, which simply means it operates on a single argument. The ampersand (&). </p>
+
+		<img src="Images/Pointers/pointers4.png">
+
+		<p>We can see that the pointer variable is shown to be located at the address 0x7fffffffde00 in memory, and contains the address 0xffffde10</p>
+		<p></p>
+		<img src="Images/Pointers/pointers5.png">
+
+		<p>The first print command shows the value of int_var , and the second shows its address using the address-of operator. The next two print commands show that int_ptr contains the address of int_var , and they also show the address of the int_ptr</p>
+
+		<p>An additional unary operator called the dereference operator exists for use with pointers. This operator will return the data found in the address the pointer is pointing to, instead of the address itself.</p>
+
+		<img src="Images/Pointers/pointers6.png">
+
+
+		</article>
+		<hr>
+
+
+
+
+
+
+	<br>
+	</div>
+
+		<footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
+	  		<address style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>
+	  	</footer>   
+</div>
+
+<script>
+// Open and close the sidenav on medium and small screens
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Change style of top container on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+        document.getElementById("myIntro").classList.add("w3-show-inline-block");
+    } else {
+        document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+        document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+    }
+}
+
+// Accordions
+function myAccordion(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme";
+    } else { 
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-theme", "");
+    }
+}
+</script>
+     
+</body>
+</html> 
