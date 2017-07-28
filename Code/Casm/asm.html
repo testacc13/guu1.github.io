@@ -59,10 +59,10 @@ body {font-family: "Roboto", sans-serif}
 	create a new article:
 
 	<article>
-	<h2></h2>
-	<p></p>
-	<img src="">
-	
+		<h2></h2>
+		<p></p>
+		<img src="">
+		
 
 	</article>
 	<hr>
@@ -73,15 +73,81 @@ body {font-family: "Roboto", sans-serif}
 	        <h2>I'm finally learning Assembly!</h2>
 	        <p>
 	        Some many where the times that I wanted to learn real assembly programming but ended up quitting because of the lack of documentation. But that's not true, if you really want to you will always search a little deeper and find something! I will post here everything I learn and do with assembly.</p>
+	        <p>A big shout out for this dude and his tutorials. <a href="https://www.youtube.com/user/khoraski/videos">kupala</a></p>
+	        <h3>Hello World</h3>
 	        <p> This will be on x86 and x86_64 not sure how it will go but my goal is to learn both. Let's start with a simple hello world. <b>64bit</b>
 	        <img src="Images/hello.png">
 	        <p> To compile the code i made a simple bash script. Make sure to make it executable with <b>chmod +x</b></p>
 	        <img src="Images/makefile.png">
 	        <img src="Images/hellocompile.png">
-        <img src="Images/hellooutput.png">
+        	<img src="Images/hellooutput.png">
+        	<p>Let's break it down. So, i already talked about the different segments of memory. In the <b>data</b> section we are defining what we want to print to the screen our <b>Hello, World!</b>. The <b>text</b> section is where we put our code, in this case just our main function. In our main function we are making a <b>system call</b> to print our text to the screen and and a system call to exit the program.</p>
 
 
-        </article>
+     </article>
+
+     <article>
+		<h2>System calls</h2>
+		<p>A system call of a <b>syscall</b> is when a program requests a service from the <b>kernel</b>. Therefore a system call is the fundamental interface between an application and the Operating System kernel. There are many syscalls available in the current version of the Linux kernel.</b></p>
+		<p>Let's look at the <b>sys_write()</b> syscall.</p>
+		<p>For every syscall it needs to passed arguments.</p>
+		<h3>Syscalls inputs by Register</h3>
+		<table style="width: 300px; border-collapse: collapse; margin-bottom: 20px;" border="2px solid black" >
+			<tbody>
+				<tr>
+					<th><center>Argument</center></th>
+					<th><center>Register</center></th>
+				</tr>
+				<tr>
+					<td><center>ID</center></td>
+					<td><center>rax</td>
+				</tr>
+				<tr>
+					<td><center>1</center></td>
+					<td><center>rdi</td>
+				</tr>
+				<tr>
+					<td><center>2</center></td>
+					<td><center>rsi</center></td>
+				</tr>
+				<tr>
+					<td><center>3</center></td>
+					<td><center>rdx</center></td>
+				</tr>
+				<tr>
+					<td><center>4</center></td>
+					<td><center>r10</center></td>
+				</tr>
+				<tr>
+					<td><center>5</center></td>
+					<td><center>r8</center></td>
+				</tr>
+				<tr>
+					<td><center>6</center></td>
+					<td><center>r9</center></td>
+				</tr>
+			</tbody>
+		</table>
+		<table border="2px solid black" style="width: 500px; border-collapse: collapse; margin-bottom: 20px;">
+		<tbody >
+		<tr>
+		<th><center>Argument Type</th><th><center>Argument Description</th>
+		<tr><td><center>(1) File Descriptor</td>
+			<td>
+				<p><center>0 (Standard Input)</center></p>
+				<p><center>1 (Standard Output)</center></p>
+				<p><center>2 (Standard Error)</center></p>
+			</td>
+
+
+		<tr><td><center>(2) Buffer</td><td><center>Location of the String to write</td></tr><tr><td><center>(3) Count</td><td><center>Length of the string</td></tr></tbody></table>
+		<p>Another table showing the registers used to pass the system call arguments.</p>
+		<img src="Images/syscalls1.PNG">
+		<p>Now there are various ways of making the call. In the x86_64 architeture the instruction is <b>syscall</b>.</p>
+		<img src="Images/syscall.PNG">
+		
+
+	</article>
 
 
 	<article>
@@ -103,7 +169,7 @@ body {font-family: "Roboto", sans-serif}
 			<li>4 -Goes back to step 1</li>
 		</ul>
 
-		<p>Write permission is disabled in the text segment, as it is not used to store variables, only code. This prevents people from actually modifying the program code. Another advantage of this segment being read-only is that it can be shared among different copies of the program, allowing multiple executions of the program</p> <p>About the stack:</p>
+		<p>Write permission is disabled in the text segment, as it is not used to store variables, only code. This prevents people from actually modifying the program code. Another advantage of this segment being read-only is that it can be shared among different copies of the program, allowing multiple executions of the program.</p> <p>About the stack:</p>
 		<p> The stack segment also has variable size and is used as a temporary scratch pad to store local function variables and context during function calls. This is what GDB's backtrace command looks at. When a program calls a function, that function will have its own set of passed variables, and the function's code will be at a different memory location in the text (or code) segment. Since the context and the <b>RIP</b> must change when a function is called, the stack is used to remember all of the passed variables, the location the <b>RIP</b> should return to after the function is finished, and all the local variables used by that function. All of this information is stored together on the stack in what is collectively called a stack frame . The stack contains many stack frames. <u>It has first-in, last-out (FILO) ordering</u>, which means the first item that is put into a stack is the last item to come out of it. The stack segment of memory is, a stack data structure, which contains stack frames. <u>The ESP register is used to keep track of the address of the end of the stack</u>, which is constantly changing as items are pushed into and popped off of it. Since this is very dynamic behavior, it makes sense that the stack is also not of a fixed size. Opposite to the dynamic growth of the heap, as the stack changes in size, <u>it grows upward</u> in a visual listing of memory, toward lower memory addresses. The FILO nature of a stack might seem odd, but since the stack is used to store context, it's very useful. When a function is called, several things are pushed to the stack together in a stack frame . The EBP register- sometimes called the <b>frame pointer</b> (FP) or <b>local base</b> (LB) <b>pointer</b> - is used to <u>reference local function variables in the current stack frame</u>. Each stack frame contains the parameters to the function, its local variables, and two pointers that are nec- essary to put things back the way they were: <b>the saved frame pointer</b> (SFP) and the return address. <u>The SFP is used to restore EBP to its previous value, and the return address is used to restore <b>RIP</b> to the next instruction found after the function call</u>. This restores the functional context of the previous stack frame.</p>
 
 	</article>
