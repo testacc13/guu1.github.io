@@ -11,7 +11,7 @@ body {font-family: "Roboto", sans-serif}
 <body>
 
 <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
-  <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
+  <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.PNG" style="width:80%;"></a>-->
   <a href="javascript:void(0)" onclick="w3_close()" 
   class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
   <a href="../../index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
@@ -79,41 +79,41 @@ body {font-family: "Roboto", sans-serif}
 		<ul>
 			<li>Local Variables - Declared inside a function or block. They can be used only by statements that are iside that function or block of code. <u>Local variables are not known to functions outside their own.</u>
 			<h2></h2>
-			</li><img src="Images/Scope/scope1.png" style="margin: 10px 0 10px">
+			</li><img src="Images/Scope/scope1.PNG" style="margin: 10px 0 10px">
 			<h2></h2>
 
 			<li>Global variables - Global variables are define outside a function.Global variables hold their values throughout the lifetime of your program and they can be accessed inside any of the functions defined for the program. <u>A global variable can be accessed by any function.</u>
-			</li><img src="Images/Scope/scope2.png" style="margin: 10px 0 10px">
+			</li><img src="Images/Scope/scope2.PNG" style="margin: 10px 0 10px">
 			<h2></h2>
 		</ul>
 
-			<img src="Images/Scope/scope3.png">
-			<img src="Images/Scope/scope3.5.png" style="margin: 10px 0 10px">
+			<img src="Images/Scope/scope3.PNG">
+			<img src="Images/Scope/scope3.5.PNG" style="margin: 10px 0 10px">
 
 			<p>In each function, the variable <b>i</b> is set to a different value and printed. But <b>i</b> doesn't change when other functions are called because they are local to those function, therefore they can not be changed. Each function call has its own version of the variable <b>i</b>. </p>
 
 			<p>Let's check out global functions.</p>
-			<img src="Images/Scope/scope4.png">
-			<img src="Images/Scope/scope4.5.png">
+			<img src="Images/Scope/scope4.PNG">
+			<img src="Images/Scope/scope4.5.PNG">
 			<p>In the output, the global variable j is written to in func2() , and the change persists in all functions except func3() , which has its own local variable called j .The global variable j is just stored in memory, and every function is able to access that memory. The local variables for each function are each stored in their own places in memory, regardless of the identical names.</p> <p>Let's see this code in the debugger</p>
 			<p>If we disassemble main we can see the adding of 3 to i, the call to printf and the call to function1()</p>
-			<img src="Images/radare/radare2.png">
+			<img src="Images/radare/radare2.PNG">
 
-			<img src="Images/radare/rbp.png">
+			<img src="Images/radare/rbp.PNG">
 			<p>We are going to examine that instruction. That assembly instruction will move the value of 0x3 (3 in decimal) into memory located at the address stored in the RBP register, minus 0x4 (4). This is where the C variable <b>i</b> is stored in memory</p>
 			<p>Down below we check this process by going to the next instruction. At (..)0652 in main() we examine the memory, which at start is all 0's but and the next instruction (..)0659 in main() will have the value 3 in it</p>
 			<p></p>
 			<p>We can check this even closer with print. It stores the result in a temporary variable in the debugger <b>$2</b></p>
-			<img src="Images/radare/printrbp.png">
+			<img src="Images/radare/printrbp.PNG">
 
 			<p>Checking the memory addresses for each variable.</p>
-			<img src="Images/Scope/different.png">
+			<img src="Images/Scope/different.PNG">
 			<p>Here, we can see that the variable <b>j</b> used in function3() is different than the <b>j</b> used in other functions. <b>i</b> on the other hand, is on a different memory address for each function.</p>
 
 			<h5>Static Variables</h5>
 			<p>Like the name says static variables are variables that are local within a particular function context, and that keeps its value between invocations.</p>
-			<img src="Images/Scope/static.png">
-			<img src="Images/Scope/staticout.png">
+			<img src="Images/Scope/static.PNG">
+			<img src="Images/Scope/staticout.PNG">
 			<p></p>
 
 
@@ -135,24 +135,24 @@ body {font-family: "Roboto", sans-serif}
 		<h2>Typecasting</h2>
 		<p>Type casting is a way to convert a variable from one data type to another data type.</p>
 		<p>Let's see this example.</p>
-		<img src="Images/typecasting/typecasting1code.png">
-		<img src="Images/typecasting/typecasting1.png">
+		<img src="Images/typecasting/typecasting1code.PNG">
+		<img src="Images/typecasting/typecasting1.PNG">
 		<p>If you look at the output of the division using integers, we see that the result was rounded to the incorrect answer of 2, even if this value is being stored into a floating-point 
 variable. But, if these integer variables are typecast into floats, they will be treated as such, therefore we get the correct calculation of 2.6.</p>
 		<p>We'll look into typecasting with pointer variables.</p>
 		<p>Even though a pointer is just a memory address, the C compiler still demands a data type for every pointer. An integer pointer should only point to integer data, and a character pointer to a character data. Because if we look at pointer arithmetic, since an integer is four bytes (8 bytes if you're on a 64 bit system and 2 bytes on a 16 bit machine) and a character only takes up one byte.</p>
 
-		<img src="Images/typecasting/typecasting2.1.png">
+		<img src="Images/typecasting/typecasting2.1.PNG">
 
 		<p>The comments explain much of the code. Notice that in the loops, when the integer and character values Programming 53 are actually printed with the %d and %c format parameters, notice that the corresponding printf() arguments must dereference the pointer variables. Notice also that even though the same value of 1 is added to int_pointer and char_pointer in their respective loops, the compiler increments the pointer's addresses by different amounts.</p>
-		<img src="Images/typecasting/typecasting2.2.png">
+		<img src="Images/typecasting/typecasting2.2.PNG">
 
 		<p>In this next example we make the pointers point to incompatible data types. In an attempt to prevent programming mistakes, the compiler gives warnings about this.</p> 
 
-		<img src="Images/typecasting/typecasting3.png">
+		<img src="Images/typecasting/typecasting3.PNG">
 		<p></p>
 
-		<img src="Images/typecasting/typecasting3.5.png">
+		<img src="Images/typecasting/typecasting3.5.PNG">
 
 		<p>However, in the compiled code, a pointer is nothing more than a memory address, so the compiler will still compile the code if a pointer points to an incompatible data type.</p>
 
@@ -160,11 +160,11 @@ variable. But, if these integer variables are typecast into floats, they will be
 
 		<p>We can fix this by typecasting.</p>
 
-		<img src="Images/typecasting/typecasting4.png">
+		<img src="Images/typecasting/typecasting4.PNG">
 
 		<p>Here, when the pointers are initially set, the data is typecasted into the pointer's data type. This way the C compiler won't complain about the conflicting data types, however the pointer arirthmetic will still be incorrect. To fix that, we need to cast the correct data type when 1 is added to the pointer, that way the address is incremented by the correct amount.</p>
 
-		<img src="Images/typecasting/typecasting4.5.png">
+		<img src="Images/typecasting/typecasting4.5.PNG">
 		<p></p>
 
 		<h5>Typeless Pointer</h5>
@@ -177,8 +177,8 @@ also be typecast before doing pointer arithmetic. </li>
 		</ul>
 		<p>In the next program a single void pointer is used by typecasting it to the proper type of pointer each time it's used. The compiler knows that a void pointer is typeless, so any type of pointer can be stored in a void pointer without typecasting. This also means a void pointer must always be typecast when dereferencing it</p>
 
-		<img src="Images/typecasting/typecasting5.png">
-		<img src="Images/typecasting/typecasting5.5.png">
+		<img src="Images/typecasting/typecasting5.PNG">
+		<img src="Images/typecasting/typecasting5.5.PNG">
 
 		<p>The void pointer is really just holding the memory addresses, while the hard-coded typecasting is telling the compiler to use the proper types whenever the pointer is used. Since the type is taken care of by the typecasts, the void pointer is truly nothing more than a memory address. </p>
 
@@ -196,29 +196,29 @@ also be typecast before doing pointer arithmetic. </li>
 			<p>Pointers solve this, instead of copying a large block of memory, we can simply pass around the address of the begining of that block of memory.</p>
 			<p>Pointers in C can be defined and used like any other variable type.</p>
 
-		<img src="Images/Pointers/pointers1.png">
+		<img src="Images/Pointers/pointers1.PNG">
 		
 		<p>When you compile you are going to get this warning, so what is it?</p>
-		<img src="Images/Pointers/2warning.png">
+		<img src="Images/Pointers/2warning.PNG">
 		<p>This warning is gcc's way of telling you that it cannot verify the format string argument to the printf style function (printf, fprintf... etc). This warning is generated when the compiler can't manually peek into the string and ensure that everything will go as you intend during runtime.</p>
 		<p>You are taking a string generated at runtime and trying to print it. The warning you are getting is the compiler warning you that there could be a format specifier in the string. Say for eg "bad%sdata". In this case, the runtime will try to access a non-existent argument to match the %s. Even worse, this could be a user trying to exploit your program (causing it to read data that is not safe to read). -Sanjit Saluja</p>
 		<p>So let's fixed it.</p>
-		<img src="Images/Pointers/pointers2fix.png">
+		<img src="Images/Pointers/pointers2fix.PNG">
 		<p>Now let's take a look at this with GDB. We set a breakpoint after the "Hello, world!\n" string has been copied into the str_a buffer and the pointer variable is set to the beginning of it. </p>
-		<img src="Images/Pointers/pointers3.png">
+		<img src="Images/Pointers/pointers3.PNG">
 		<p>When the pointer is examined as a string, it's apparent that the given string is there and is located at memory address 0x6c6c6548 . Remember that the string itself isn't stored in the pointer variable-only the memory address 0x6c6c6548 is stored there. In order to see the actual data stored in the pointer variable, you must use the address-of operator. The address-of operator is a unary operator, which simply means it operates on a single argument. The ampersand (&). </p>
 
-		<img src="Images/Pointers/pointers4.png">
+		<img src="Images/Pointers/pointers4.PNG">
 
 		<p>We can see that the pointer variable is shown to be located at the address 0x7fffffffde00 in memory, and contains the address 0xffffde10</p>
 		<p></p>
-		<img src="Images/Pointers/pointers5.png">
+		<img src="Images/Pointers/pointers5.PNG">
 
 		<p>The first print command shows the value of int_var , and the second shows its address using the address-of operator. The next two print commands show that int_ptr contains the address of int_var , and they also show the address of the int_ptr</p>
 
 		<p>An additional unary operator called the dereference operator exists for use with pointers. This operator will return the data found in the address the pointer is pointing to, instead of the address itself.</p>
 
-		<img src="Images/Pointers/pointers6.png">
+		<img src="Images/Pointers/pointers6.PNG">
 
 
 		</article>
