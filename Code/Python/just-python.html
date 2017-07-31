@@ -12,29 +12,31 @@ body {font-family: "Roboto", sans-serif}
 
 <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
   <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
-  <a href="javascript:void(0)" onclick="w3_close()" 
+  <a href="javascript:void(0)" onclick="w3_close()"
   class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
 
   <a href="../../index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-  <a href="../Python/just-python.html"><i class="fa fa-code" aria-hidden="true"></i> Python</a>
+
     <div class="w3-accordion">
     <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
     <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
       <a href="../Networking/protocols.html">Protocols</a>
-      <!--<a href="../Networking/apache.html">Apache</a>-->
-      
+      <a href="../Networking/networking.html">Networking</a>
+
     </div>
   </div>
-  
+
   	<div class="w3-accordion">
-  		<a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> C/ASM <i class="fa fa-caret-down"></i></a>
+  		<a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
   		<div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
       		<a href="../Casm/asm.html">ASM</a>
-      		<a href="../Casm/see.html">C</a> 
+      		<a href="../Casm/see.html">C</a>
+            <a href="../Python/just-python.html">Python</a>
     	</div>
     </div>
 
   <a href="../Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
+  <a href=""><i class="fa fa-terminal" aria-hidden="true"></i> Hacking</a>
   <a href="../../posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
   <a href="../../Gaming/gaming.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
   <a href="../../about.html"><i class="fa fa-user-circle" aria-hidden="true"></i> About</a>
@@ -52,13 +54,13 @@ body {font-family: "Roboto", sans-serif}
 	</div>
 
 	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
-	  <h1 class="w3-xxxlarge w3-padding-16">Just python</h1>
-	  <a style="text-decoration: none; font-family: Verdana;" href="https://twitter.com/awdasdqwert">My Twitter Bot  <span></a><i class="fa fa-twitter" aria-hidden="true"></i>
+	  <h1 class="w3-xxxlarge w3-padding-16">Python</h1>
+	  <a style="text-decoration: none; font-family: Verdana;" target="_blank" href="https://twitter.com/awdasdqwert">My Twitter Bot  <span></a><i class="fa fa-twitter" aria-hidden="true"></i>
 
 	</header>
 
 	<div class="w3-container w3-padding-32" style="padding-left:32px">
-	
+
 	<article>
 		<h2>Socket chat</h2>
 		<p>Terminal based socket chat (for linux) for multiple client connections. I'm thinking about implementing it in here to create some sort of chat. </p>
@@ -70,7 +72,7 @@ body {font-family: "Roboto", sans-serif}
 
 		 # Accept a new socket and receive the nickname
 		def socket_accept():
-			
+
 			conn, address = s.accept() # Three-way handshake - This is a TCP connection with the server
 			# Receive the nickname
 			nickname = conn.recv(1024)
@@ -88,7 +90,7 @@ body {font-family: "Roboto", sans-serif}
 			thread_client.start()
 
 		def data(nickname, conn):
-			while True:	
+			while True:
 				# Reveive the data from client
 				data = conn.recv(4096)
 				#conn.sendall(data)
@@ -97,15 +99,15 @@ body {font-family: "Roboto", sans-serif}
 					bcast(conn, data, nickname) # Call for broadcast
 								    # I tried to put this function here instead of
 								    # calling it but it don't work because it's
-								    # always on the same client socket and we 
+								    # always on the same client socket and we
 								    # need to change socket to send to other clients
 								    # sendto(data, address) also didn't work
-				if not data:	
+				if not data:
 					break
 
-		 # Broadcast 
+		 # Broadcast
 		def bcast(client_socket, message, client_nickname):
-			# We don't want to receive what we sent	
+			# We don't want to receive what we sent
 			for i in clients:
 				if i == client_socket:
 					pass
@@ -115,18 +117,18 @@ body {font-family: "Roboto", sans-serif}
 					#i.sendall(client_nickname)
 					#i.sendall()
 					# New line on the client side
-					i.sendall(client_nickname + ': ' + message)	
+					i.sendall(client_nickname + ': ' + message)
 
 		if __name__ == '__main__':
 			# Args for host and port
 			parser = argparse.ArgumentParser(description='My TCP server')
 			parser.add_argument('host',  help='Interface the server listens at')
-			parser.add_argument('-p', metavar='PORT', type=int, help='TCP PORT (default 9999)')	
+			parser.add_argument('-p', metavar='PORT', type=int, help='TCP PORT (default 9999)')
 			args = parser.parse_args()
 			host = args.host
 			port = args.p
 
-			 # Client List	
+			 # Client List
 			clients = []
 
 			 # Create socket
@@ -145,11 +147,11 @@ body {font-family: "Roboto", sans-serif}
 				print("Socket binding error: " + str(msg) + "\n" + "Retrying...")
 
 
-			
+
 			while True:
 				socket_accept()
 		</pre>
-		
+
 		<h3> Client </h3>
 
 		<pre>
@@ -185,7 +187,7 @@ body {font-family: "Roboto", sans-serif}
 			 # Args for host and port
 			parser = argparse.ArgumentParser(description='My TCP server')
 			parser.add_argument('host',  help='server to connect to')
-			parser.add_argument('-p', metavar='PORT', type=int, help='TCP PORT (default 9999)')      
+			parser.add_argument('-p', metavar='PORT', type=int, help='TCP PORT (default 9999)')
 			args = parser.parse_args()
 			host = args.host
 			port = args.p
@@ -202,7 +204,7 @@ body {font-family: "Roboto", sans-serif}
 			sys.exit()
 
 			# Sends nickname to server
-			my_nickname = raw_input('Choose nick: ')    
+			my_nickname = raw_input('Choose nick: ')
 			sock.sendall(my_nickname)
 
 			# A thread for send and receive
@@ -212,7 +214,7 @@ body {font-family: "Roboto", sans-serif}
 			thread_receive.start()
 
 		</pre>
-	
+
 
 	</article>
 	<hr>
@@ -227,13 +229,13 @@ body {font-family: "Roboto", sans-serif}
 
 
 		<hr>
-			
+
 	<br>
 	</div>
 
 		<footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
 	  		<address style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>
-	  	</footer>   
+	  	</footer>
 </div>
 
 <script>
@@ -265,13 +267,13 @@ function myAccordion(id) {
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
         x.previousElementSibling.className += " w3-theme";
-    } else { 
+    } else {
         x.className = x.className.replace("w3-show", "");
-        x.previousElementSibling.className = 
+        x.previousElementSibling.className =
         x.previousElementSibling.className.replace(" w3-theme", "");
     }
 }
 </script>
-     
+
 </body>
-</html> 
+</html>

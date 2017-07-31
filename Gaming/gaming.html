@@ -12,28 +12,30 @@ body {font-family: "Roboto", sans-serif}
 
 <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
   <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
-  <a href="javascript:void(0)" onclick="w3_close()" 
+  <a href="javascript:void(0)" onclick="w3_close()"
   class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
   <a href="../index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-  <a href="../Code/Python/just-python.html"><i class="fa fa-code" aria-hidden="true"></i> Python</a>
+
     <div class="w3-accordion">
     <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
     <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
       <a href="../Code/Networking/protocols.html">Protocols</a>
-      <!--<a href="../Networking/apache.html">Apache</a>-->
-      
+      <a href="../Code/Networking/networking.html">Networking</a>
+
     </div>
   </div>
-  
+
     <div class="w3-accordion">
-      <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> C/ASM <i class="fa fa-caret-down"></i></a>
+      <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i>Programming <i class="fa fa-caret-down"></i></a>
       <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
           <a href="../Code/Casm/asm.html">ASM</a>
-          <a href="../Code/Casm/see.html">C</a> 
+          <a href="../Code/Casm/see.html">C</a>
+          <a href="../Code/Python/just-python.html">Python</a>
       </div>
     </div>
 
   <a href="../Code/Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
+  <a href=""><i class="fa fa-terminal" aria-hidden="true"></i> Hacking</a>
   <a href="../posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
   <a href="#"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
   <a href="../about.html"><i class="fa fa-user-circle" aria-hidden="true"></i> About</a>
@@ -61,13 +63,13 @@ body {font-family: "Roboto", sans-serif}
       <img src="https://id2q2a.bn1301.livefilestore.com/y3moEFuBetb0Mxperh0BSMMpZYaJBI0fW36CpBcOUbz24ivtm_7XyehZ2n8uxvJq7nINi8fDcQirgdgTcgN97rHAOiVRJMSnHWX2fr35dYiELjtQRcKzTuGzkPtqw5OyoRFyvX89K79Cu0uORE-dRaVbjNhv5A-exnfa2182s7rDZk?width=604&height=168&cropmode=none">
 			<hr>
       <img src="https://k5mkgg.bn1301.livefilestore.com/y3mJanLJVbYDUq9w1NOsIJ9C3HNkcLtKmHfAbVvkO1Fvkvnkf3NBTst81YIu_9bImZdozPo0VsYe6DwJpBWRyn3HX6cyPEgioCq8KZPMCDd63-hdQ5hGiPgCjbILo5IZcijwWhe5Gd1WXV7f0g_OKNpX15E1WK31sTQagbY0_EMrTA?width=798&height=137&cropmode=none">
-			
+
 	<br>
 	</div>
 
 		<footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
 	  		<address style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>
-	  	</footer>   
+	  	</footer>
 </div>
 
 <script>
@@ -99,13 +101,13 @@ function myAccordion(id) {
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
         x.previousElementSibling.className += " w3-theme";
-    } else { 
+    } else {
         x.className = x.className.replace("w3-show", "");
-        x.previousElementSibling.className = 
+        x.previousElementSibling.className =
         x.previousElementSibling.className.replace(" w3-theme", "");
     }
 }
 </script>
-     
+
 </body>
-</html> 
+</html>

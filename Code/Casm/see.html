@@ -12,28 +12,30 @@ body {font-family: "Roboto", sans-serif}
 
 <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
   <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.PNG" style="width:80%;"></a>-->
-  <a href="javascript:void(0)" onclick="w3_close()" 
+  <a href="javascript:void(0)" onclick="w3_close()"
   class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
   <a href="../../index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-  <a href="../Python/just-python.html"><i class="fa fa-code" aria-hidden="true"></i> Python</a>
+
     <div class="w3-accordion">
     <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
     <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
       <a href="../Networking/protocols.html">Protocols</a>
-      <!--<a href="../Networking/apache.html">Apache</a>-->
-      
+      <a href="../Networking/networking.html">Networking</a>
+
     </div>
   </div>
 
   	<div class="w3-accordion">
-  		<a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> C/ASM <i class="fa fa-caret-down"></i></a>
+        <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
   		<div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
       		<a href="../Casm/asm.html">ASM</a>
-      		<a href="../Casm/see.html">C</a> 
+      		<a href="../Casm/see.html">C</a>
+            <a href="../Python/just-python.html">Python</a>
     	</div>
     </div>
 
   <a href="../Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
+  <a href=""><i class="fa fa-terminal" aria-hidden="true"></i> Hacking</a>
   <a href="../../posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
   <a href="../../Gaming/gaming.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
   <a href="../../about.html"><i class="fa fa-user-circle" aria-hidden="true"></i> About</a>
@@ -46,7 +48,7 @@ body {font-family: "Roboto", sans-serif}
 
 	<div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
 	  <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
-	  <span id="myIntro" class="w3-hide">C and Assembly</span>
+	  <span id="myIntro" class="w3-hide">C Language</span>
 	</div>
 
 	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
@@ -62,7 +64,7 @@ body {font-family: "Roboto", sans-serif}
 	<h2></h2>
 	<p></p>
 	<img src="">
-	
+
 
 	</article>
 	<hr>
@@ -137,7 +139,7 @@ body {font-family: "Roboto", sans-serif}
 		<p>Let's see this example.</p>
 		<img src="Images/typecasting/typecasting1code.PNG">
 		<img src="Images/typecasting/typecasting1.PNG">
-		<p>If you look at the output of the division using integers, we see that the result was rounded to the incorrect answer of 2, even if this value is being stored into a floating-point 
+		<p>If you look at the output of the division using integers, we see that the result was rounded to the incorrect answer of 2, even if this value is being stored into a floating-point
 variable. But, if these integer variables are typecast into floats, they will be treated as such, therefore we get the correct calculation of 2.6.</p>
 		<p>We'll look into typecasting with pointer variables.</p>
 		<p>Even though a pointer is just a memory address, the C compiler still demands a data type for every pointer. An integer pointer should only point to integer data, and a character pointer to a character data. Because if we look at pointer arithmetic, since an integer is four bytes (8 bytes if you're on a 64 bit system and 2 bytes on a 16 bit machine) and a character only takes up one byte.</p>
@@ -147,7 +149,7 @@ variable. But, if these integer variables are typecast into floats, they will be
 		<p>The comments explain much of the code. Notice that in the loops, when the integer and character values Programming 53 are actually printed with the %d and %c format parameters, notice that the corresponding printf() arguments must dereference the pointer variables. Notice also that even though the same value of 1 is added to int_pointer and char_pointer in their respective loops, the compiler increments the pointer's addresses by different amounts.</p>
 		<img src="Images/typecasting/typecasting2.2.PNG">
 
-		<p>In this next example we make the pointers point to incompatible data types. In an attempt to prevent programming mistakes, the compiler gives warnings about this.</p> 
+		<p>In this next example we make the pointers point to incompatible data types. In an attempt to prevent programming mistakes, the compiler gives warnings about this.</p>
 
 		<img src="Images/typecasting/typecasting3.PNG">
 		<p></p>
@@ -168,11 +170,11 @@ variable. But, if these integer variables are typecast into floats, they will be
 		<p></p>
 
 		<h5>Typeless Pointer</h5>
-		<p>In C, a void pointer is a typeless pointer, defined by the 
+		<p>In C, a void pointer is a typeless pointer, defined by the
 void keyword.</p>
 		<ul>
 			<li>Pointers cannot be dereferenced unless they have a type.</li>
-			<li>Void pointers must 
+			<li>Void pointers must
 also be typecast before doing pointer arithmetic. </li>
 		</ul>
 		<p>In the next program a single void pointer is used by typecasting it to the proper type of pointer each time it's used. The compiler knows that a void pointer is typeless, so any type of pointer can be stored in a void pointer without typecasting. This also means a void pointer must always be typecast when dereferencing it</p>
@@ -182,7 +184,7 @@ also be typecast before doing pointer arithmetic. </li>
 
 		<p>The void pointer is really just holding the memory addresses, while the hard-coded typecasting is telling the compiler to use the proper types whenever the pointer is used. Since the type is taken care of by the typecasts, the void pointer is truly nothing more than a memory address. </p>
 
-		
+
 
 
 	</article>
@@ -197,7 +199,7 @@ also be typecast before doing pointer arithmetic. </li>
 			<p>Pointers in C can be defined and used like any other variable type.</p>
 
 		<img src="Images/Pointers/pointers1.PNG">
-		
+
 		<p>When you compile you are going to get this warning, so what is it?</p>
 		<img src="Images/Pointers/2warning.PNG">
 		<p>This warning is gcc's way of telling you that it cannot verify the format string argument to the printf style function (printf, fprintf... etc). This warning is generated when the compiler can't manually peek into the string and ensure that everything will go as you intend during runtime.</p>
@@ -234,7 +236,7 @@ also be typecast before doing pointer arithmetic. </li>
 
 		<footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
 	  		<address style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>
-	  	</footer>   
+	  	</footer>
 </div>
 
 <script>
@@ -266,13 +268,13 @@ function myAccordion(id) {
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
         x.previousElementSibling.className += " w3-theme";
-    } else { 
+    } else {
         x.className = x.className.replace("w3-show", "");
-        x.previousElementSibling.className = 
+        x.previousElementSibling.className =
         x.previousElementSibling.className.replace(" w3-theme", "");
     }
 }
 </script>
-     
+
 </body>
-</html> 
+</html>

@@ -12,28 +12,30 @@ body {font-family: "Roboto", sans-serif}
 
 <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
   <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
-  <a href="javascript:void(0)" onclick="w3_close()" 
+  <a href="javascript:void(0)" onclick="w3_close()"
   class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
   <a href="../../index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-  <a href="../Python/just-python.html"><i class="fa fa-code" aria-hidden="true"></i> Python</a>
+
     <div class="w3-accordion">
     <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
     <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
       <a href="../Networking/protocols.html">Protocols</a>
-      <!--<a href="../Networking/apache.html">Apache</a>-->
-      
+      <a href="../Networking/networking.html">Networking</a>
+
     </div>
   </div>
 
   	<div class="w3-accordion">
-  		<a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> C/ASM <i class="fa fa-caret-down"></i></a>
+        <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
   		<div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
       		<a href="../Casm/asm.html">ASM</a>
-      		<a href="../Casm/see.html">C</a> 
+      		<a href="../Casm/see.html">C</a>
+            <a href="../Python/just-python.html">Python</a>
     	</div>
     </div>
 
   <a href="../Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
+  <a href=""><i class="fa fa-terminal" aria-hidden="true"></i> Hacking</a>
   <a href="../../posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
   <a href="../../Gaming/gaming.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
   <a href="../../about.html"><i class="fa fa-user-circle" aria-hidden="true"></i> About</a>
@@ -46,7 +48,7 @@ body {font-family: "Roboto", sans-serif}
 
 	<div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
 	  <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
-	  <span id="myIntro" class="w3-hide">C and Assembly</span>
+	  <span id="myIntro" class="w3-hide">Assembly Language</span>
 	</div>
 
 	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
@@ -62,14 +64,14 @@ body {font-family: "Roboto", sans-serif}
 		<h2></h2>
 		<p></p>
 		<img src="">
-		
+
 
 	</article>
 	<hr>
 
 	-->
 	 <article>
-	 
+
 	        <h2>I'm finally learning Assembly!</h2>
 	        <p>
 	        Some many where the times that I wanted to learn real assembly programming but ended up quitting because of the lack of documentation. But that's not true, if you really want to you will always search a little deeper and find something! I will post here everything I learn and do with assembly.</p>
@@ -145,7 +147,7 @@ body {font-family: "Roboto", sans-serif}
 		<img src="Images/syscalls1.png">
 		<p>Now there are various ways of making the call. In the x86_64 architeture the instruction is <b>syscall</b>.</p>
 		<img src="Images/syscall.png">
-		
+
 
 	</article>
 
@@ -178,7 +180,7 @@ body {font-family: "Roboto", sans-serif}
 
 	<article>
 		<h1><b>CPU</b></h1>
-	
+
 		<p>We are going to look at the intel 8085. The 8085 is a conventional von Neumann design based on the Intel 8080. Is a 8-bit microprocessor and can address, with it's 16 lines, up to 64K memory positions (2^16 = 65536bytes or 64Kb). It has 6200 transistors. Like every processor, it needs a clock or oscillator to synchronize the operations. The 8085 has a clock that generates a digital signal with 3,125 MHz.</p>
 
 		<h2>8085 Terminals </h2>
@@ -263,7 +265,7 @@ body {font-family: "Roboto", sans-serif}
 
 			<footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
 		  		<address style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>
-		  	</footer>   
+		  	</footer>
 	</div>
 
 	<script>
@@ -295,13 +297,13 @@ body {font-family: "Roboto", sans-serif}
 	    if (x.className.indexOf("w3-show") == -1) {
 	        x.className += " w3-show";
 	        x.previousElementSibling.className += " w3-theme";
-	    } else { 
+	    } else {
 	        x.className = x.className.replace("w3-show", "");
-	        x.previousElementSibling.className = 
+	        x.previousElementSibling.className =
 	        x.previousElementSibling.className.replace(" w3-theme", "");
 	    }
 	}
 	</script>
-     
+
 </body>
-</html> 
+</html>

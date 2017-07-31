@@ -14,7 +14,7 @@
   <body>
     <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
       <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
-      <a href="javascript:void(0)" onclick="w3_close()" 
+      <a href="javascript:void(0)" onclick="w3_close()"
         class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
       <a href="../../index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
       <a href="../Python/just-python.html"><i class="fa fa-code" aria-hidden="true"></i> Python</a>
@@ -22,17 +22,18 @@
         <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
         <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
           <a href="../Networking/protocols.html">Protocols</a>
-          <!--<a href="../Networking/apache.html">Apache</a>-->
+          <a href="../Networking/networking.html">Networking</a>
         </div>
       </div>
-      
-      
+
+
     <div class="w3-accordion">
-      <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> C/ASM <i class="fa fa-caret-down"></i></a>
-      <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
-          <a href="../Casm/asm.html">ASM</a>
-          <a href="../Casm/see.html">C</a> 
-      </div>
+        <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
+        <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
+            <a href="../Casm/asm.html">ASM</a>
+            <a href="../Casm/see.html">C</a>
+            <a href="../Python/just-python.html">Python</a>
+        </div>
     </div>
 
       <a href="#"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
@@ -52,25 +53,25 @@
       <div class="w3-container w3-padding-32" style="padding-left:32px">
         <!--
           create a new article:
-          
+
             <article>
             <h2></h2>
             <p></p>
             <img src="">
-            
-          
+
+
             </article>
             <hr>
-          
+
           -->
         <article>
-		
+
             <article>
               <h2>Bash Commands</h2>
         	    <h3>alias</h3>
         	    <p>Very cool command. Used to create an alias of another command.</p>
               <img src="Images/alias.png">
-                    
+
         	    <h3>apropos</h3>
         	    <p>Used to search the manual page names and descriptions. This search is done by using <i>keywords</i>.</p>
               <img src="Images/apropos1.png">
@@ -143,7 +144,7 @@
           <img src="https://k5lbea.bn1301.livefilestore.com/y3myTa6XcU8zSgLHlZ4hiNDXb5YR1v3wm7PzZ9m7_RotmF8OY95nFDkppzOOQCsq9INnk-31IWbaIwx6N17R997nLFymPocLHCkNsU1g6gOsiq3i-PZ2eB1Aodq5yCeWA2rwYM8xyzAdtHIOtRjIld-vydCWwpBlRWctVtSo0yVIE0?width=653&height=146&cropmode=none" width="653" height="146" />
           <p>Here we see that the file (squid) is a directory, users (joji) can read, write, and execute but the group dip can only read and execute (r-x).</p>
           <img src="https://k5mryq.bn1301.livefilestore.com/y3mk2-5dvmQIFseIi2qbmgq-4Ru4vGcoqVvq-uJopnjY_QvN7_ljQqS0morY2aYhS-3X16gtxOB0j_7Yp1wmvDX6fRqfopz6yoORStGkdxCnRZ9dzkw1Xc4IzO6041Od8QBlTIub8Z_-XRTh5ghqKwENkx3RmYuIqRWHJ3lowOjA2o?width=653&height=160&cropmode=none">
-          <p>Here i created a new file and we can see that it is not a directory and that joji can only read and write so does the group also joji.</p>     
+          <p>Here i created a new file and we can see that it is not a directory and that joji can only read and write so does the group also joji.</p>
         </article>
         <hr>
 
@@ -198,7 +199,7 @@
           document.getElementById("mySidenav").style.display = "none";
           document.getElementById("myOverlay").style.display = "none";
       }
-      
+
       // Change style of top container on scroll
       window.onscroll = function() {myFunction()};
       function myFunction() {
@@ -210,20 +211,19 @@
               document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
           }
       }
-      
+
       // Accordions
       function myAccordion(id) {
           var x = document.getElementById(id);
           if (x.className.indexOf("w3-show") == -1) {
               x.className += " w3-show";
               x.previousElementSibling.className += " w3-theme";
-          } else { 
+          } else {
               x.className = x.className.replace("w3-show", "");
-              x.previousElementSibling.className = 
+              x.previousElementSibling.className =
               x.previousElementSibling.className.replace(" w3-theme", "");
           }
       }
     </script>
   </body>
 </html>
-
