@@ -13,7 +13,7 @@
   <body>
     <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
       <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
-      <a href="javascript:void(0)" onclick="w3_close()" 
+      <a href="javascript:void(0)" onclick="w3_close()"
         class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
       <a href="index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
       <a href="Code/Python/just-python.html"><i class="fa fa-code" aria-hidden="true"></i> Python</a>
@@ -21,14 +21,14 @@
         <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
         <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
           <a href="Code/Networking/protocols.html">Protocols</a>
-          <a href="Code/Networking/apache.html">Apache</a>
+          <a href="Code/Networking/networking.html">Networking</a>
         </div>
       </div>
       <div class="w3-accordion">
       <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> C/ASM <i class="fa fa-caret-down"></i></a>
       <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
           <a href="Code/Casm/asm.html">ASM</a>
-          <a href="Code/Casm/see.html">C</a> 
+          <a href="Code/Casm/see.html">C</a>
       </div>
     </div>
       <a href="Code/Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
@@ -49,16 +49,16 @@
       <div class="w3-container w3-padding-32" style="padding-left:32px">
         <!--
           create a new article:
-          
+
           <article>
           <h2></h2>
           <p></p>
           <img src="">
-          
-          
+
+
           </article>
           <hr>
-          
+
           -->
           <article>
           <h2>Curl</h2>
@@ -83,386 +83,9 @@
 
         </article>
 
-        <article>
-          <h2>CTF training</h2>
-          <p>The problem: having to loop through multiple folders and files, but since everything is a file in linux... You get the point. So, solution, bash script.</p>
-          <pre>
 
-          #!/bin/bash
-          FILES=~/inhere/*
-          do 
-          	echo "Processing $f file\n"
-          	#to do
-          	ls $f
-          	for 	
-          done
-
-		      </pre>
-          <p>The output looks like so.</p>
-          <p>But this doesn't solve anything. Now we have to <b>cat</b> each file.</p>
-          <pre>
-
-          for f in $FILES
-          do
-            cd $f && cat -- *
-          done
-
-          </pre>
-
-        </article>
-        <hr>
-        <article>
-          <h3>Found some old hardware</h3>
-          <h5>KM-T5-T1</h5>
-          <img src="https://k5nspq.bn1301.livefilestore.com/y3magwUUe7Yi1NPfYjikQKUFucp94lruqAg9vSVkPyEUDW4tU7U-O6dtczW6FtBqnTbGpqoKamDZ623MWdzVxjgy6eF2tH531nbNmfEw2S81xb5p503DURqEmV4xy9UiS52dfCr5b8XrAL1U4PDn2nW8bnyVeLYxCHSoC2QGIKn2I4?width=5184&height=3456&cropmode=none">
-          <h5>Camaro</h5>
-          <img src="https://7mgbng.bn1301.livefilestore.com/y3mGPLC8DBpPdJZLkId6UT_z-J6jx9Dkiwfo19tigkrXuDmW0KQ2nhQzcj7X7uKF5UwMt3e90VYW_W-z7C5PqRUeAEBRaCxJOvIEuqkdnxmRVpkGnKcy6rDZyaHkAjTMPQS1CVImdPr2rbdQYxy0kr-o6ZN93ghi9tQEM9Anbdvf7o?width=5184&height=3456&cropmode=none">
-          <h5>Intel Pentium 4</h5>
-          <img src="https://7mhfeg.bn1301.livefilestore.com/y3mQfuoI_gedrxjJX7gJnQcrZcoh7IRH7JRWdVHJsfRuE0_f05LSJAGpPd_qz6RreSPAZC-87Bm24aKhbSHc3HJHqfPG4UMpxf2Y6ah5aqOF2RxTedKqnjNeUfDznkyevEHyzeZcsTBgSHIhhDfgy9nxvuKOQNKAoVfWADavAus0DE?width=5184&height=3456&cropmode=none">
-          <h5>AMD K6-233ANR</h5>
-          <img src="https://7mivyw.bn1301.livefilestore.com/y3mWJpEU_LNKHlJlz4BDv6WfXz5SXIeV80goOGsDgiedGDwi0tjxpYWJq-GAd_uQcXO6eGdNLgLwA-j4lCDCVaWCYiO2M9GAuW1TuQ78bLAyq7NzCvDiTpMhLxt54hyISA8yYFSTt5a6kYDFT7uv9cVxQQtlEO65nNGiMDj95de_ic?width=5184&height=3456&cropmode=none">
-          <img src="https://7mjebq.bn1301.livefilestore.com/y3m5qimcrvaBfisPQ4sDtxcgalmLYvwjvTDz0RrvMzBUxOtoN6h5Tg2OeKpw3QcMAuqIdGN6gTIgejHYZ8EyX9iXfqlw1gA-TeS4QKPvPNJYPFNLaMnlOIQYmAQKKoISS4bVPVOdaj2505YTUArkKDbTYcBzgPR-YfzpRhslCxHGaY?width=5184&height=3456&cropmode=none">
-          <h5>AMD K6-2</h5>
-          <img src="https://7mj67g.bn1301.livefilestore.com/y3mbg0vOC8AulmJXOrvCNweN0s7-g_dx6CZC8tbV2qtJY19JDDJTyIC2UF40OleCd4D3T5M7OAUbbvpVRTrCgQPSOE8wxG3uz4G4DmKOHBzc8GoE7LBnX4vUE3aJMthaVUZM7Qpk0RmT6HAV49kAvLuXANenxvfJEO2CpeAGvgI5fg?width=5184&height=3456&cropmode=none">
-          <h5>RAM</h5>
-          <img src="https://hqvwza.bn1301.livefilestore.com/y3mdU1CuhU8fEERwmwDvkheCNHMgR6EGcUwRiYT7Lp5VGDlbLNoWKy4NEKdgniGxKTGmjTq2kCwXS6ixCg8PB3aV2mSR33YjWPUaNLF3yMTZujQuD_v9wURlAs7sGpDrdc7k-KEPAd99-7jD0nuNmbXvSQUIY990asN5ur44VZHgRQ?width=5184&height=3456&cropmode=none">
-          <img src="https://hqsmtg.bn1301.livefilestore.com/y3m0N-Y7xMghiNiBxYPqZORLJTyONepJ21NBQaSg7Ueky8KYa-_EHQSzmqMOucZXVT5eyYHZIKO2gEevn6SKPROdEjnfJbSI3ZWW4npirusf_4pPRFYux1hxDJZ3co5FZL7xh6gKEK66NGw2OLg1KSEWXJHb7DlWwbhO_AcPYYGqO0?width=5184&height=3456&cropmode=none">
-          <h5></h5>
-          <img src="https://hqtx2q.bn1301.livefilestore.com/y3mPOrlUh3CRrzRLvUGJjWVtYYB2YD4K590M119U5rk2yNQYzIdHhN9YqttmQEG5q58-Bk_MdCO3Zs--8hQazAcIghTrAiS-OR9CeZzwUWlGAgsjKpsbKlJbUCwXpL_-E77GZr35tQV4RWCk67VqysCgUB75lwHXa-y2cfRpVO-8KI?width=5184&height=3456&cropmode=none">
-          <h5></h5>
-          <img src="https://hqugew.bn1301.livefilestore.com/y3mWMYNCZA7i2zAY3iRdz_XRubaV5cqLLUn-asUVOE33HQpW4uNVFBLXa35Zjj41GNh0HOOvYaPXAB5nSqHf7XV840JGrdpTb6p-l2CPWdJja3uhpNy55dItWOYqAlpbXWkSt_sQJjmPObrNy7GggrBYbXL--K5BYH2c4Z3-R_b_uY?width=5184&height=3456&cropmode=none">
-        </article>
-        <article>
-          <h3>Endless screaming</h3>
-          <img src="https://gpzdza.bn1301.livefilestore.com/y3mUe_s5RI8eVa9AsPje3YJg35ovRfcGbwyx0Rp2ZjEDu9KlOiWBNEg_PLP639ar_h-99My0fLld0YEnDtBj8pcaeRSsWPm8bRXgIzYGMFIfRY6zm_4tPyewl5OkLfHFjisHbmin_SVnrQ4iH0sHoHVQ_lp1uMiz43f_ZX66wR9Yk8?width=674&height=548&cropmode=none">
-          <p>python</p>
-          <img src="https://gpb42a.bn1301.livefilestore.com/y3mPDCWq_fsOVVmeGJ6iqZvLkHZ3C-Hg2nEye7d4emrcnvm5PNXiSGP22d7gpIm-hb6VVh-JNyB_1_4w-gnkS7Utuk3xUQzGQBqhMeU_YVbCkigAPmSh2ayUoKAaXlAEcTJuk4SZNCgFNoeMvsMLQ1EHMXsyadm6_m-_8RjRFDYH5k?width=670&height=185&cropmode=none">
-        </article>
-        <article>
-          <h3>Oh gee</h3>
-          <img src="https://id0hhq.bn1301.livefilestore.com/y3mmmtRFONYaq0qjWbZJ2VEf8fhd-79FPNHMvlLsPs3rN6jW8hzlN0paZiHaKM-SQr99-iTX0AErC158mzpjQda7PIi7AsznFHLJ22NowycGee75Je5mqPfYb0hdkH0kLvR1PaZSkrS3INUFtuuaS-FGzfE6vYLlNrOqLbt-62VzfM?width=5184&height=3456&cropmode=none" style="width: 800px;">
-          <img src="https://k5kq1g.bn1301.livefilestore.com/y3mc98xYYQF1ankSWNBxrfbWxDl6MSSnGwskyw1p6AI1BoInpqvRA-LWEzNe_U7rckYLqFcNMLMb2eqLGR6WXeAWD7vFHr6bdndGl2GtHc4GlpY0CJhPvR8PuVm0cE4tgpJkknJ4-z0o9TkSSfh1Y_WBEZWKEhIEeP1shhZE2O9E1M?width=5184&height=3456&cropmode=none" style="width: 800px;">
-          <img src="https://k5lzea.bn1301.livefilestore.com/y3m0sae7oMCa5nOLpbMrAfWPGfEDXxWltKtReFgsynqzvm9_WB6kg_0IumiLF_uXRcNMxLAhRaYKgaaWqApHE6S34DgklRuk_PAUUwpYE2-0D9HVqMygXqcL94K9ujglgq1dW99_-bbN-zGS0u4fyJejG_U7Ruk693VGPO7aiFIjws?width=5184&height=3456&cropmode=none" style="width: 800px;">
-        </article>
-        <hr>
-        <article>
-          <h2>First one</h2>
-          <p>This took me some time but i finally got it!</p>
-          <img src="https://kctovg.bn1301.livefilestore.com/y3mdHzrO2j1VOUd_9jtRufTYfsAOqxTvhP25kLryIW51K7tN91fLq6AsaSGlzWgNfD3n64Zm3hRAvB1QOhLgJcSjQTkw0JBoGDpXdQWboi_tzviwOtLuDm-DnoX2u5__zr4EdcIscppjPjXkAc_YbmAmTDOL-N64l8XMjVNTQV1XpQ?width=679&height=352&cropmode=none">
-        </article>
-        <hr>
-        <article>
-          <h2>Variable Scoping</h2>
-          <p>Each function has its own set of local variables, which are independent of everything else.</p>
-          <ul>
-            <li>
-              Local Variables - Declared inside a function or block. They can be used only by statements that are iside that function or block of code. <u>Local variables are not known to functions outside their own.</u>
-              <h2></h2>
-            </li>
-            <img src="https://9a9hyw.bn1301.livefilestore.com/y3mKrb877PGUnWzLu5NpCRIvdfweBvklscQ20lZQoulu_mO6RTOjiIyGyGH_7tJo389AMmglbDlk3oYf-2RjyTJ2Vo9l5_ZaZyMHHPx3QQZ9PzSJPqsO1C6UXQEUIvv2vw7EE5DRcfvFzO2RpCZVdiqrun9QDbpFh2_xiYNd7LbOmQ?width=656&height=108&cropmode=none" style="margin: 10px 0 10px">
-            <h2></h2>
-            <li>Global variables - Global variables are define outside a function.Global variables hold their values throughout the lifetime of your program and they can be accessed inside any of the functions defined for the program. <u>A global variable can be accessed by any function.</u>
-            </li>
-            <img src="https://9aplpw.bn1301.livefilestore.com/y3m26b5KOYAGtX5hQ5GadPITMD1nYoPSugKu8psn7W6uRCRwBd3O4aTyT25NsBVVO7lljgKIwzkBPONu_-OEPdEDd3hayEwLCWcKhEaEbXGJN3pfZq-980Vq701UwSEjiSScSZVeryTvXuUekD2ozZuZBYEtguz6X_RDK4HS605_Js?width=658&height=136&cropmode=none" style="margin: 10px 0 10px">
-            <h2></h2>
-          </ul>
-          <img src="https://9a8kmw.bn1301.livefilestore.com/y3mJq1-FkaR3jUB6LtbH9zFMViuvYIXdxbbDQU1LURdtXXMXjHtg6AhkgGp28zGGJhJfYQFN9aREgicJQO1aH36V5AApNf0D0PGjm1NiFNp6YGHkIXBrxswlvmY_qVqtlbNnHatzzxZ1VFY4467MpOmGyZxVjA76gMxbWgngQd0l0A?width=655&height=443&cropmode=none">
-          <img src="https://9aps7g.bn1301.livefilestore.com/y3mU5BBi9nbiY6MDBvpBNVOSeq5y4rsNyo0GXo7_B3fyN9BkAVwgivoWSoQOP9avJ2aGxQPd85pwhiIOpkBaKuzPTcNetAZcl00hETNwdQXJgI4tDDWUJwd-LujO6p3OqHUi0SRECs0c-rzfWVTqfb0mOMlfy_hmVlHQ7R0vq3_0mw?width=655&height=134&cropmode=none" style="margin: 10px 0 10px">
-          <p>In each function, the variable <b>i</b> is set to a different value and printed. But <b>i</b> doesn't change when other functions are called because they are local to those function, therefore they can not be changed. Each function call has its own version of the variable <b>i</b>. </p>
-          <p>Let's check out global functions.</p>
-          <img src="https://9a9aha.bn1301.livefilestore.com/y3m3ruGCPMfmKKO5lyCaOOFwmF16hXTq2w-8R7b8bWWMShSzstish693ch8KD_GqtOtBxGgJkii0Omo_UGX-wPTMSo2ne7V5qpbF4QND_c9WegxeDX2PiRo7SjvaMWRI5_DTg6baCYW4WP7Q5n-2Zydw-Hkf3DYCTBkCOrMiz09zdw?width=655&height=489&cropmode=none">
-          <img src="https://9aqbka.bn1301.livefilestore.com/y3mH__dyMujaKs9PtllLrRPfp_AGwDGMglBiK87lZVtjAsI4uY5xZxYjcuc7U6hfBgZAeO653ehwKbOO_cJeTB8xhU-idnYwvDeUW8KW34AKWsbyE2FXKzFmLAhQhVgrV0jDVxqqgc2LevF2T4He6UKQIuFEvyGV94zAsw4ofzmosU?width=658&height=139&cropmode=none">
-          <p>In the output, the global variable j is written to in func2() , and the change persists in all functions except func3() , which has its own local variable called j .The global variable j is just stored in memory, and every function is able to access that memory. The local variables for each function are each stored in their own places in memory, regardless of the identical names.</p>
-          <p>Let's see this code in the debugger</p>
-          <p>If we disassemble main we can see the adding of 3 to i, the call to printf and the call to function1()</p>
-          <img src="https://wjuzeq.bn1301.livefilestore.com/y3m_l6H5zMAuK6nswS4teX0w2jFC5H2yIJTerWkoCTlpJ76y5XnMA42F2tJqw5QrT58C046PJ1v6ZyDw1Tb8CHTT-BIP93fx_nMDEhr3tCviqjJHAluOrU-RPzI40kzK-MTCVPjGhBFCwwvpYLUjpnIgPE3mxSfEKE74BikpvYxToQ?width=658&height=374&cropmode=none">
-          <img src="https://wjv3vq.bn1301.livefilestore.com/y3mNzKUS_gIJP_kTJZSQvKs3sz2ZNfdQc3z371bXeESRKIkf1RAIZHLoNDjfMe9cDb4KpjpnYvjTKfiDI3HPWy9Zj7uAzzoi9rs6aASifKCdQGqbRutfdiEf_o1gbUMonJTz5KlRQwgNm4HJoi6JEX2AweQs3DLCHMLpZNOj3c1nGI?width=659&height=661&cropmode=none">
-          <p>We are going to examine that instruction. That assembly instruction will move the value of 0x3 (3 in decimal) into memory located at the address stored in the RBP register, minus 0x4 (4). This is where the C variable <b>i</b> is stored in memory</p>
-          <p>Down below we check this process by going to the next instruction. At (..)0652 in main() we examine the memory, which at start is all 0's but and the next instruction (..)0659 in main() will have the value 3 in it</p>
-          <p></p>
-          <p>We can check this even closer with print. It stores the result in a temporary variable in the debugger <b>$2</b></p>
-          <img src="https://wjusmg.bn1301.livefilestore.com/y3mmOkKfXU3uqr_P0DbCpxhOxoqAeSL5P5XpceuPzYtFELcyMYvhv5ahCIjBkY8pqxuwbvlcZhwvYrIQNQUI7a6T3KFVGezKIQ9TNsvzy__zdqWyJGs0Q5YrM3XM0GmB9SlpEDDOvF3xH03YxUGdx8v8NC7DwRAE5PcwMVZxXfPsrI?width=653&height=74&cropmode=none">
-        </article>
-        <hr>
-        <article>
-          <h2>Typecasting</h2>
-          <p>Type casting is a way to convert a variable from one data type to another data type.</p>
-          <p>Let's see this example.</p>
-          <img src="https://hqsntg.bn1301.livefilestore.com/y3mFljjbjgZ6Rdy5kxZzrt9EfN45rK_yfVGHi1kK3BMwQ_LzVFN5KZ3lGthSIsWYN2YBe__WxOvCZ9JyR5bxqxF5IhvzMYdi2MYYanS-HiN4aOeOvniQLqHbeWuvM0O6S2YXxJIAh02fdp-FWndA4ecs7GLtuQCVYIMwhpf5AqJ0hY?width=654&height=283&cropmode=none">
-          <img src="https://gpzxhq.bn1301.livefilestore.com/y3miGqHt5Muc5ksju4coZsGf42_c3_4AoLTWzr-dcSDrmVkYkClpVqlvpmL_V5zUDCvekYoBVh7yckoc-GSI0PK5qJ-M-uSN-gjCD2ra_B9HP6cSDdWW6BSuSUpHcKr822-5nJecvSREVypasrNym9zBupWzlZT-EMIf8agd6wO20M?width=654&height=72&cropmode=none">
-          <p>If you look at the output of the division using integers, we see that the result was rounded to the incorrect answer of 2, even if this value is being stored into a floating-point 
-            variable. But, if these integer variables are typecast into floats, they will be treated as such, therefore we get the correct calculation of 2.6.
-          </p>
-          <p>We'll look into typecasting with pointer variables.</p>
-          <p>Even though a pointer is just a memory address, the C compiler still demands a data type for every pointer. An integer pointer should only point to integer data, and a character pointer to a character data. Because if we look at pointer arithmetic, since an integer is four bytes (8 bytes if you're on a 64 bit system and 2 bytes on a 16 bit machine) and a character only takes up one byte.</p>
-          <img src="https://gpa8qa.bn1301.livefilestore.com/y3miO9-JSd7o7QEPemzWX-I5yfzZYiUijehpT-7VpIzEtlxq0m8IqG9s8r4lF8eFte18KSLeF1j9yuI4mcl5uvft8lxGl9MO9UW2ZEpnGA3vjz2uLDe-1s0jB55il2goMf-UxZwkCihM-DIPLwiPAZGtsSbeQizsiuzBJ41OnJxgPs?width=656&height=541&cropmode=none">
-          <p>The comments explain much of the code. Notice that in the loops, when the integer and character values Programming 53 are actually printed with the %d and %c format parameters, notice that the corresponding printf() arguments must dereference the pointer variables. Notice also that even though the same value of 1 is added to int_pointer and char_pointer in their respective loops, the compiler increments the pointer's addresses by different amounts.</p>
-          <img src="https://hqvxza.bn1301.livefilestore.com/y3maB29NxzIpnYY3bQD5Q4SfhDIFy8F9LnG9DQhJYEaEuWLHKtHXpqF3sxNF4PqQuy83XoZoue1KVgFQdb7rRSd_OZEhHt0B76yQhPZXPADHNuMVhQAFL8CNn0IyxpVPYJkneSgOUpx5y_fIKzPqShoPhnbHmqtHUPLg6kjvzawD0Q?width=656&height=145&cropmode=none">
-          <p>In this next example we make the pointers point to incompatible data types. In an attempt to prevent programming mistakes, the compiler gives warnings about this.</p>
-          <img src="https://hqtrkg.bn1301.livefilestore.com/y3mPzCBuMV5e7-ykO78ArJKNs0rg8aOyg0nE9NgSl_A9yyqjhBfblMtNX1xCbTyA6H0MDhnrtAx8og4vkE7GdiP4PrXzMyP0H7xSYsD94GaQvcJEySH0deL76YDnW233-5A7qcPMDj9Np7tZfeusIzc0Llk6jGllv6DF_nrK7rYSsE?width=654&height=110&cropmode=none">
-          <p></p>
-          <img src="https://hqty2q.bn1301.livefilestore.com/y3mtKJKw94xhdhBEtdNe0vb4utw3WPHhKvlJxNmfMBQdpGCDpo9G15stnHqheFvmcafi3B1USLvgdocgVKF1ewOv-fh2AZjwEeyAILTVXyMsWa5TOeuUNpheCf5XJTqGrS4_TuDDY3hIEs6g9vRUdY-C2cO588XHJXtQ_DaFDnZC1o?width=657&height=290&cropmode=none">
-          <p>However, in the compiled code, a pointer is nothing more than a memory address, so the compiler will still compile the code if a pointer points to an incompatible data type.</p>
-          <p>Even though the int_pointer points to character data that only contains 5 bytes of data, it is still typed as an integer. This means that adding 1 to the pointer will increment the address by 4 each time. Similarly, the char_pointer's address is only incremented by 1 each time, stepping through the 20 bytes of integer data (five 4-byte integers), one byte at a time. Once again, the little- endian byte order of the integer data is apparent when the 4-byte integer is examined one byte at a time. The 4-byte value of 0x00000001 is actually stored in memory as 0x01 , 0x00 , 0x00 , 0x00 .</p>
-          <p>We can fix this by typecasting.</p>
-          <img src="https://hquhew.bn1301.livefilestore.com/y3m5O1XYnupx7rx1_zSi2Ygzd7Olhks46qpW03HbWwoIaMH6G6M9UMCFagJFJflNYmCijfHFcDDHMf6v2YuEOipeiNJcZSBkvsC7FsGbW2-jSQHSXbTn6zjMp5AZDmsxWqg-xkdAEwSb-qXrR7xvpx1uq1GpOgZeTjHEORuUgP5F94?width=656&height=548&cropmode=none">
-          <p>Here, when the pointers are initially set, the data is typecasted into the pointer's data type. This way the C compiler won't complain about the conflicting data types, however the pointer arirthmetic will still be incorrect. To fix that, we need to cast the correct data type when 1 is added to the pointer, that way the address is incremented by the correct amount.</p>
-          <img src="https://hqvqhq.bn1301.livefilestore.com/y3mkdVpI7hO9mg9WgW72BtWURbyM46p4K4J-Gm1DmVpKc7VvAdGktH32_MVSsPAWjfdZO7RvxHfKwUPUUfBF66jsjIGOXCM_clXjFylaxSO45umXt_HC_Av2LuDj2RqkMVHuShrtE_D_IJ072dC0CQPfcyRfIz3LKd3sssYX5tUjYk?width=654&height=177&cropmode=none">
-          <h6>Typeless Pointer</h6>
-          <p>In C, a void pointer is a typeless pointer, defined by the 
-            void keyword.
-          </p>
-          <ul>
-            <li>Pointers cannot be dereferenced unless they have a type.</li>
-            <li>Void pointers must 
-              also be typecast before doing pointer arithmetic. 
-            </li>
-          </ul>
-          <p>In the next program a single void pointer is used by typecasting it to the proper type of pointer each time it's used. The compiler knows that a void pointer is typeless, so any type of pointer can be stored in a void pointer without typecasting. This also means a void pointer must always be typecast when dereferencing it</p>
-          <img src="https://hqvqvw.bn1301.livefilestore.com/y3mB5DL4q_82UR-5xcMIY21yYnqmmPkg07xdL9ZOvkuiHFImm4tnEFDV3uhiEoljErJN_DUdjnM2NSxkHY1DcX9eg1uSYezsB9rS6Oa9KBrieBysOEfLqY0qkhDf3ULLP_bC_ofx_pVrsDb97lopieyUT_Vwjg4dOPxY_3yhcGf2ak?width=654&height=352&cropmode=none">
-          <img src="https://hqsgbw.bn1301.livefilestore.com/y3mnoSGr7qjXX4RmiUCxhUnhNNg6mFUFzb6s5D2RBLDhNOrtS1VwsX5sMWHOpRPcaPXwtPakY1axlPX4AjOg4tSjjDJ6KSmlVH3UWvHTrLYPSS0V7O-uk__DfRR5FL-46U1gyi9MKqRmPpxXsql5KJ-A5vA90EXZM2fPxOjGz-IcII?width=654&height=173&cropmode=none">
-          <p>The void pointer is really just holding the memory addresses, while the hard-coded typecasting is telling the compiler to use the proper types whenever the pointer is used. Since the type is taken care of by the typecasts, the void pointer is truly nothing more than a memory address. </p>
-        </article>
-        <hr>
-        <article>
-          <h2>Pointers</h2>
-          <p>The EIP register is a pointer that "points" to the current instruction during a program's execution by containing its memory address. Since the physical memory cannot actually be moved, the information in it must be copied. But doing so can be very expensive in terms of computationally, and also from a memory stand point since space for the new destination copy must be saved of allocated before the souce can be copied.</p>
-          <p>Pointers solve this, instead of copying a large block of memory, we can simply pass around the address of the begining of that block of memory.</p>
-          <p>Pointers in C can be defined and used like any other variable type.</p>
-          <img src="https://gpautq.bn1301.livefilestore.com/y3mfIe2eW0UIWJFTqK8nnjcu5q55t7i2C8AV_QrkyP_ONjQY_02F09rLQufd_cDiISNf7dJKY4sxXET_Rah5-m3kuyx7gtHyZEjc3EQtyiZeNaV11dmR6wUPh7gXhwc9YVaU42L6lgzO43qBGfcHRAjlmHsR4ws05-F6OX_VOChhFY?width=656&height=284&cropmode=none">
-          <p>When you compile you are going to get this warning, so what is it?</p>
-          <img src="https://gpzlqw.bn1301.livefilestore.com/y3mwCOdE3rKpM9_QuPxok3xeaGi3N3fi_6iUm3VURFnjE0pykIZQnRYAJc3h25tGl1pA2_Y99lh0NeLCtqPLy47L3vu4Jm1tqELAYqOuxVCi--tH9GssWDWikREpW1QWZ0maytdTpI3vN8B-VgjBjfZQE1Yf-obyrrxdOf7qJxx62o?width=656&height=182&cropmode=none">
-          <p>This warning is gcc's way of telling you that it cannot verify the format string argument to the printf style function (printf, fprintf... etc). This warning is generated when the compiler can't manually peek into the string and ensure that everything will go as you intend during runtime.</p>
-          <p>You are taking a string generated at runtime and trying to print it. The warning you are getting is the compiler warning you that there could be a format specifier in the string. Say for eg "bad%sdata". In this case, the runtime will try to access a non-existent argument to match the %s. Even worse, this could be a user trying to exploit your program (causing it to read data that is not safe to read). -Sanjit Saluja</p>
-          <p>So let's fixed it.</p>
-          <img src="https://gpyvwg.bn1301.livefilestore.com/y3mCwaCBjZ4EgbnoZnzVLTnvwDgqu41KzMXhhJaNrQ1pQjtTmL8HIkfoTGE8Edsf10Utoav0pRuAOXRAAcB7xPj3BTRp-BV4GpvjfcS-aXENAbXy-Lo1o4i4rSlcdQ6vdlSzvPDNx41L4CA79zYn3iWt6C50fQ6FoXNAuutM6NGBxY?width=655&height=86&cropmode=none">
-          <p>Now let's take a look at this with GDB. We set a breakpoint after the "Hello, world!\n" string has been copied into the str_a buffer and the pointer variable is set to the beginning of it. </p>
-          <img src="https://gpbkng.bn1301.livefilestore.com/y3maagGTE0SvTWMrqvI8VythDAwRd6XcLUAwUfqqxF6Yc-VoIABKHZ32eSAbcNa5jdx3CplG8G-GXC8sD0zwR57DI995ApUtXyvqjPqm6qyL5hjvDGPMGbNGN6x4HzoWuem86ub27fbFWo9K9md23vYW5z4N09c0b_lFzcZHbDl1xw?width=653&height=503&cropmode=none">
-          <p>When the pointer is examined as a string, it's apparent that the given string is there and is located at memory address 0x6c6c6548 . Remember that the string itself isn't stored in the pointer variable-only the memory address 0x6c6c6548 is stored there. In order to see the actual data stored in the pointer variable, you must use the address-of operator. The address-of operator is a unary operator, which simply means it operates on a single argument. The ampersand (&). </p>
-          <img src="https://gpbd7w.bn1301.livefilestore.com/y3m8dijsGn96lwV6gG4Q2xN9CBqL5KRxH3yKmFVYBmkMSvjDQYYDbDHP2ptFknbs3DJbN41IBeuUsZj_ZqJAKDCejxspOJcAL1q2UvLlAXvuXOCIK0dEDeYZoYQfEDNvRXUVu5CYIJ3VU3IjR9sksQsLqF7qxcN8rIzMKJQ3Cf4Jqw?width=652&height=102&cropmode=none">
-          <p>We can see that the pointer variable is shown to be located at the address 0x7fffffffde00 in memory, and contains the address 0xffffde10</p>
-          <p></p>
-          <img src="https://gpb52a.bn1301.livefilestore.com/y3mSnTQSpPpTBYIyQdj9-ke_pWZvF9d7NgPmuKkAYJIx3Q4UBhwjreVZ-La0yeyHG9Ae-FnnzEfcp844rjWWdUJada8cfv_Ascao3eh8aGc_H5s-yzhcSmj5ZdSngj71zPT8Q7fz-lVsesSLCMg6V4gmnqjSFrjCpBo1jFiCSAItYY?width=655&height=391&cropmode=none">
-          <p>The first print command shows the value of int_var , and the second shows its address using the address-of operator. The next two print commands show that int_ptr contains the address of int_var , and they also show the address of the int_ptr</p>
-          <img src="">
-          <p>An additional unary operator called the dereference operator exists for use with pointers. This operator will return the data found in the address the pointer is pointing to, instead of the address itself.</p>
-          <img src="https://gpyoew.bn1301.livefilestore.com/y3mNVe6MBiGzCNC8Q38a-eO2chotie-tLFRNygBP3rvmv84BEW7TMtvFKOM1XrXaabdMc_gREcC4xffT9qxvvv_ucrsS75GhkLNW2XMKPQAcc4IsXdi12lgEOl3FKciUwhzUBNlv6lwfjNBLRmmcYbKBMyZZwd0Ou1p2XMfxEy0pSo?width=656&height=120&cropmode=none">
-        </article>
-        <hr>
-        <article>
-          <h2>No Linux Ban
-            No wall
-          </h2>
-          <p></p>
-          <img src="https://id1tqa.bn1301.livefilestore.com/y3mJBgAfd4syb0zA_rOtkO9m2NONp4NzGlyMGcnTYFxEU877BZHqR8Lsn7ACUbdNQLcE2GQqgsLXEF93N2g9y7A_0rTyWT1rgxRZBXQzZx812_sP-avQIYmYrBmJuoEwxvbTaCL1IgLNy3NtIlYc7JAVi38zkJ5jZtM0aiWKL1ZfhA?width=762&height=161&cropmode=none">
-          <img src="https://id0pbg.bn1301.livefilestore.com/y3mTWAv1qcjSaMq_qrvTtPyW3mXo85htGOCoHjd1KfE6snaxI1tQgquECeWCL-km6LozUrq_Ma-sNy6r5baHqCb6gHqzuBGDCRMbz1G4tFnBgYofsDGVlS_5DsM-rpZ8zGzHTmJqbnOn1Q2TYIEFGoCNX-5OiwpEsL-AiL6tkX5agk?width=660&height=171&cropmode=none">
-          <img src="https://id0b1g.bn1301.livefilestore.com/y3m0anpLDNfZcdKDJPoOMe3a7FBmpwbhvdraO1W-QKBVeJ1Wn3F2FNk3XRDNAOv_iLJwqaY85O4H7FW5Aj7vSX4GBF1JyegozbeQS9u3aNRiy8WrM1Z2J3gj2choCdvVpQ7vw_LKRe4S1-jw0oMtF3_tFgSyw73EJBHgqUWQkzjj4o?width=780&height=520&cropmode=none">
-        </article>
-        <hr>
-        <article>
-          <h2>Major topic on iptables</h2>
-          <h4>
-          Description</h2>
-          <p>Iptables  and  ip6tables  are used to set up, maintain, and inspect the tables of IPv4 and IPv6 packet filter rules in the Linux kernel.  Several different tables may be defined.  Each table contains a number of built-in chains and may also contain user-defined chains. Each chain is a list of rules which can match a set of packets.  Each rule specifies what to do with a packet that matches.  This  is  called  a  'target', which may be a jump to a user-defined chain in the same table.</p>
-          <h4>Targets</h4>
-          <p> A firewall rule specifies criteria for a packet and a target.  If the packet does not match, the next rule in the chain is examined; if it does match, then the next rule is specified by the value of the target, which can be the name of a user-defined chain, one  of  the  targets  described  in iptables-extensions(8), or one of the special values ACCEPT, DROP or RETURN.</p>
-          <ul>
-            <li>ACCEPT -  means  to let the packet through.</li>
-            <li> DROP - means to drop the packet on the floor.</li>
-            <li> RETURN - means stop traversing this chain and resume at the next rule in the previous (calling) chain. If the end of a built-in chain is reached or a rule in a built-in chain with target RETURN is matched, the target specified by the chain policy determines the fate of the packet.</li>
-          </ul>
-          <h4>Tables and Chains</h4>
-          <ul>
-            <li>
-              Filter Tables - Filter is default table. It contains the built-in chains <b>INPUT</b> (for packets destined to local sockets), <b>FORWARD</b> (for packets being routed through the box) and <b>OUTPUT</b> (for locally generated packets)
-              <p></p>
-              <ul>
-                <li>INPUT chain -  Incoming to firewall. For packets coming to the local server.</li>
-                <li>OUTPUT chain -  Outgoing from firewall. For packets generated locally and going out of the local server.</li>
-                <li>FORWARD chain -  Packet for another NIC (Network interface controller) on the local server. For packets routed through the local server.</li>
-                <p></p>
-              </ul>
-              <img src="https://kcsz1q.bn1301.livefilestore.com/y3mrOkID5d-1nKmEuSsRUsxq40ADOPqYE0hX_89qgjXDJqbsXzYw7yhY7Q6rTzERqWF6t6fK3PvSsiE5nAV8KSosUFA4HiXrqn5N2hb8QYFOuTwPV_FQPeg12uKNm_31F3Y248dnC1_7aftPcLX99Ij3vU2NSpPo12vsX2G82Nz7ho?width=663&height=145&cropmode=none" style="margin: 20px 0px 20px; ">
-            </li>
-            <p></p>
-            <li>
-              NAT table - This table is consulted when a packet that creates a new connection is encountered. It consists of three built-ins: <b>PREROUTING</b> (for altering packets as soon as they <u>come in</u>), <b>OUTPUT</b> (for altering locally -generated packets <u>before routing</u>), and <b>POSTROUTING</b> (for altering packets as they are about to <u>go out</u>).
-              <ul>
-                <p></p>
-                <li>PREROUTING chain - Alters packets before routing. i.e Packet translation happens immediately after the packet comes to the system (and before routing). This helps to translate the destination ip address of the packets to something that matches the routing on the local server. This is used for DNAT (destination NAT).</li>
-                <li>OUTPUT chain - NAT for locally generated packets on the firewall.</li>
-                <li>POSTROUTING chain - Alters packets after routing. i.e Packet translation happens when the packets are leaving the system. This helps to translate the source ip address of the packets to something that might match the routing on the desintation server. This is used for SNAT (source NAT).</li>
-              </ul>
-              <img src="https://7mgy2a.bn1301.livefilestore.com/y3mIJSlx-G1WSayA_g93zB5oXsvy0RdjqJZXGgYkAa2ebjn2J8_OQ_xSvFV--ayyQwnt8vP7hGqLwtV_AfcYqiZ1gARaUMpisvWpY7A9oUfKShRJuSyW_p7qE1u9kPCjIk6B_vXGinhxhbWpgttJz63MkSPZvQAdDfG4LntOc_i4xU?width=660&height=212&cropmode=none" style="margin: 20px 0px 20px; ">
-            </li>
-            <p></p>
-            <li>
-              Mangle table - This table is used for specialized packet alteration. It has the following built-in chains: 
-              <ul>
-                <p></p>
-                <li>PREROUTING chain - for altering incoming packets before  routing</li>
-                <li>OUTPUT chain - for altering locally-generated packets before routing</li>
-                <li>FORWARD chain - for altering packets being routed through the  box</li>
-                <li>INPUT chain - for packets coming into the box itself</li>
-                <li>POSTROUTING chain - for altering packets as they are about to go out</li>
-              </ul>
-              <img src="https://7mjgbq.bn1301.livefilestore.com/y3mY0pp-cK_YtV51j6jCBLEd4u3I6tMNLKaI6ingqTH8W8nUYZWhoQhnBnhkjXJwjMQKaFRK4nPpBNQQavwDz5MzUqUq43Hb7YW_du6axS9zAFDaFBhz8txdmC-MOeQ4xsRy1tYcEZjvUaOQ-nK16PwO50eue-ruBf6JoHkrNMt_Bk?width=659&height=258&cropmode=none" style="margin: 20px 0px 20px; ">
-            </li>
-            <p></p>
-            <li>
-              Raw table - This table is used for configuration excemptions. It has the following built-in chains:
-              <ul>
-                <li>PREROUTING chain</li>
-                <li>OUTPUT chain</li>
-              </ul>
-            </li>
-            <img src="https://7mgdng.bn1301.livefilestore.com/y3ma8MFc2kIDhLHsukiCpziu8pvWey8jljNU4n5xFsw-JimPqXOrfAYknW9hvo3o-ydZNQKpZLZSbRHxa16yWuJupYxV6XEuuRk347bqMrPSay4tYMIQEL34JAedKSQrNm3Im3IyeU1vaFph3UPN26hYveMd0ecGQsokEk1g4OyOFs?width=660&height=113&cropmode=none" style="margin: 20px 0px 20px; ">
-          </ul>
-          <h4>Table Chain and Rule Structure</h4>
-          <img src="https://7mixyw.bn1301.livefilestore.com/y3mAZK0PfG8BfiJZSsMnw7G9GSGVBqW-_K3LeaYqt7qUoHd7feUMY-uK41UL2HXFowMY1rSDUwprf5JjeA5t1gIP5Mz6IBJqobHAugcjzy7ryDUuCBrG_J9FEY7YhInXrMQrFi0fUxrazpoMNwJOog1Ser_zyHGMzXLin_PnLi8XNY?width=233&height=463&cropmode=none">
-          <h4>Edit iptable rules</h4>
-          <ul>
-            <ul>
-              <img src="https://7mj87g.bn1301.livefilestore.com/y3miD6uCYJ9CYsRkPPNEDlTaXO7ayQAWKJfzpowUV_alMTC_MJKzshRsNV8kKSzXEtZ2DMAZu02Us-2Ay7moSvzK2vot2OaZ9F6X872KNcDU7o47oJKcekXa-1v5EbLD6pBDyOK49SCWp3So0OjkLZ4k-kRgNgtV4iWVgxxoub_RQw?width=572&height=52&cropmode=none" style="margin: 20px 0px 20px; ">
-              <li>target - Special target variable (ACCEPT; DROP; REJECT; etc)</li>
-              <li>prot - Protocols. (TCP; UDP; ICMP; etc)</li>
-              <li>opt - Special options for that specific rule.</li>
-              <li>source - Source ip-address of the packet.</li>
-              <li>destination - Destination ip-address for the packet</li>
-            </ul>
-            <ul>
-              <p>Let's append a rule to the INPUT chain. This will allow incoming SSH (port 22) traffic:</p>
-              <img src="https://7mj1pw.bn1301.livefilestore.com/y3mRJA_aA7xwxR87UT2yM3kqgyHpm0x9bvTEH9CRaGloJKeDGIG9qQbfx8LmlBGUI4uHYJYwtgzAPxCOpjuE8Gtdd6YAsmP_Dlge3zLgM4PqU8tyNfWB1LAYMeK75IN6RdfnocrHC5zrj2UduR0Ouf3lnBvju0cEDAunOQ-ZkQdnrk?width=570&height=20&cropmode=none" style="margin: 20px 0px 20px; ">
-              <p>What just happened</p>
-              <li><b>-A INPUT</b> - Append a rule to the INPUT chain</li>
-              <li><b>-p tcp</b> - Apply the rule to the tcp protocol</li>
-              <li><b>--dport ssh</b> - Apply the rule to the port used by SSH (port 22)</li>
-              <li><b>-j ACCEPT</b> - Set it to accept traffic to the input chain when using tcp on the ssh port</li>
-            </ul>
-            <h4>Basic Iptables Options</h4>
-            <p><b>- A</b> - Append this rule to a rule chain. Valid chains for what we're doing are INPUT, FORWARD and OUTPUT, but we mostly deal with INPUT in this tutorial, which affects only incoming traffic. </p>
-            <p><b>- L</b> - List the current filter rules. </p>
-            <p><b>- m conntrack</b> - Allow filter rules to match based on connection state. Permits the use of the --ctstate option. </p>
-            <p><b>- -ctstate</b> - Define the list of states for the rule to match on. Valid states are:</p>
-            <ul>
-              <li><b>NEW</b> - The connection has not yet been seen.</li>
-              <li><b>RELATED</b> - The connection is new, but is related to another connection already permitted.</li>
-              <li><b>ESTABLISHED</b> - The connection is already established.</li>
-              <li><b>INVALID</b> - The traffic couldn't be identified for some reason.</li>
-            </ul>
-            <p><b>- m limit</b> - Require the rule to match only a limited number of times. Allows the use of the --limit option. Useful for limiting logging rules. </p>
-            <ul>
-              <li><b> - -limit</b> - The maximum matching rate, given as a number followed by "/second", "/minute", "/hour", or "/day" depending on how often you want the rule to match. If this option is not used and -m limit is used, the default is "3/hour". </li>
-              <img src="https://7mhamw.bn1301.livefilestore.com/y3m1rSbTcmgMfQCRdLmnWkPP3kClgJbalkKY2Vicadqn6_nYO3wy1NDNaQHtcaH4Z0u3gAMfn1q_ACIrObZ8kPcR45N2FFY_1vHoJYTVb805dP05cm_XN4vGLP_VYghxQzaclFpy7jnXq_BunpD0_sV8NucX9wh0bqZgqR8qpSC9-k?width=733&height=49&cropmode=none" style="margin: 20px 0px 20px; ">
-            </ul>
-            <p><b>- p</b> - The connection protocol used. </p>
-            <p><b>- -dport</b> - The destination port(s) required for this rule. A single port may be given, or a range may be given as start:end, which will match all ports from start to end, inclusive. </p>
-            <p><b>- j</b> - Jump to the specified target. By default, iptables allows four targets: </p>
-            <ul>
-              <li>ACCEPT - Accept the packet and stop processing rules in this chain. </li>
-              <li>REJECT - Reject the packet and notify the sender that we did so, and stop processing rules in this chain. </li>
-              <li>DROP - Silently ignore the packet, and stop processing rules in this chain. </li>
-              <li>LOG - Log the packet, and continue processing more rules in this chain. Allows the use of the --log-prefix and --log-level options.	</li>
-            </ul>
-            <p>
-            <p><b>- -log-prefix</b> - When logging, put this text before the log message. Use double quotes around the text to use. </p>
-            <p><b>- -log-level</b> - Log using the specified syslog level. 7 is a good choice unless you specifically need something else. </p>
-            <img src="https://id107w.bn1301.livefilestore.com/y3mt2clXAYHZwNVBfjq5qVVvdvOmphc5LIFSnq3qI4coEoKHoh6q7O_lnkCImz5DiMyefXfmd8GQUM78WseK_ltWhCYm_lxMI6r8a0JZwwQwKer3nL93ZQP-VWHWJOM6pPq_YL0nzQBdlpGFxXIJdlk5401Rox0N50lZV4vplJmbB8?width=852&height=96&cropmode=none" style="margin: 20px 0px 20px; ">
-            <p>Checking logs:</p>
-            <img src="https://id0ihq.bn1301.livefilestore.com/y3mNyDPjErn3rui5IggUU3UQ1wk8ttURRNMT3TFJYf6uViwUfsJbxqWnFoub9JUygnuhSq92wS3kzPnxSvQCyrlOHVCkymlXhVSd6V5Ru8uatGY1tMP5imHUyoACmqBQAFJecQZNhRwTtXmimbzGrkMsj9nJnOVWVx_8t42HLWng8Q?width=1024&height=113&cropmode=none" style="margin: 20px 0px 20px; ">
-            </p>
-            <p><b>- I</b> - Inserts a rule. Takes two options, the chain to insert the rule into, and the rule number it should be. </p>
-            <ul>
-              <li>-I INPUT 5 would insert the rule into the INPUT chain and make it the 5th rule in the list. </li>
-            </ul>
-            <p><b>- v</b> - Display more information in the output. Useful for if you have rules that look similar without using -v. </p>
-            <p><b>- s - -source</b> - address[/mask] source specification </p>
-            <img src="https://id0pza.bn1301.livefilestore.com/y3mgz9TlfFUCUsHTDBOBQOQHBA0l7g5dKQh_Z3azUslprsMzJS0OFsU_QEO77e9UkddhvwtVnrFzCJRwUXXCCiIu4gYLpbN3oyKnFS1t4aAnJYRCfQmN23YpbO2YbxuVW1T_6IRC4VsfxhI7Drnh7Sw4aRx8xFQnKry5em8doWZfEs?width=698&height=62&cropmode=none" style="margin: 20px 0px 20px; ">
-            <p><b>- d - -destination</b></p>
-            <p><b>- o - -out-interface</b> - output name[+] network interface name ([+] for wildcard) </p>
-            <p><b>- i</b> - Only match if the packet is coming in on the specified interface. </p>
-            <img src="https://id3zeg.bn1301.livefilestore.com/y3mwwunV8y3vf6RN5orAnf09dJ5nsRGsoUcTF29kuuhDtYQ9Vr-jTJXH4w3N0Ndb4cpgSGlU081MpzoUZ2vDmu4Q85mKzcdOVSiYkjeQuQw39ECiqq84r5roE-iSIi1J2KNzr-uE9nFvilNb6Cx00uLeHDhKC5ZQ2-49TEx3C4uKlY?width=723&height=65&cropmode=none" style="margin: 20px 0px 20px; ">
-          </ul>
-          </ul>
-        </article>
-        <hr>
-        <article>
-          <h2>Free</h2>
-          <p>free - Display amount of free and used memory in the system</p>
-          <p>free displays the total amount of free and used physical and swap memory in the system, as well as the buffers used by the kernel.  The shared memory column represents
-            either  the MemShared value (2.4 series kernels) or the Shmem value (2.6 series kernels and later) taken from the /proc/meminfo file. The value is zero if none of  the
-            entries is exported by the kernel.
-          </p>
-          <img src="https://9a861q.bn1301.livefilestore.com/y3mEjqoL2mWsfuShxwX6md-ZwtFaE9YBR0wuyhXQL6fgY8LOYqgXfF5_ylq_RzJMidyYPSV677WEDV941wRSoEwo5RBJgp4k9qKlpqXyMjBnUs-z2ksERfrbqgN9PD0Yys9iJPMrUlrmICVs23SZ9L9Nt4fn4fFbrgb3NvFMFRdei8?width=587&height=338&cropmode=none">
-          <img src="https://k5ngsg.bn1301.livefilestore.com/y3mgfnHIq1xpzqlHPtQYQLz26CatG5kr1MO6RkTjXgyCNjMlJk4bnHZJ4E3qiGOPRy_opoUHSkpWKxX1SN3piJYskefjMIxHbe2cLDfx-xuRJM1_tPFQssTbstAx2GHBHC2vieQkDV8aVrT26cAgxtJkMpkm8fa9zow_gT4ALAxsJ8?width=590&height=54&cropmode=none">
-          <img src="https://kcqfqa.bn1301.livefilestore.com/y3mM25l_l_6sow7pJTjonNAO3qZRe3A6WZI_Lm-Igfs9tIlGEgu1X7zlkZSD6VMelan9xxARw-AGDe7Xowx1067OwhBF7BxFQulssCqBdAGwfqfYXLU_fvoD8nusJidEC2QG6gpkL_Okuho86ukYybkAlVYz2I_h9EtqOXuU3-91Gg?width=583&height=52&cropmode=none">
-          <img src="https://kcqfqa.bn1301.livefilestore.com/y3mM25l_l_6sow7pJTjonNAO3qZRe3A6WZI_Lm-Igfs9tIlGEgu1X7zlkZSD6VMelan9xxARw-AGDe7Xowx1067OwhBF7BxFQulssCqBdAGwfqfYXLU_fvoD8nusJidEC2QG6gpkL_Okuho86ukYybkAlVYz2I_h9EtqOXuU3-91Gg?width=583&height=52&cropmode=none">
-          <img src="https://k5n8mw.bn1301.livefilestore.com/y3mDv6__CZezJEeyjd_dGDItqeFKiECDnR_0PsFedMefmQvjJidQT2T4MYAXj5rJXza27ZKF2c32imLXH4MrorA7pLayugp5PeAnXkxGv_y10rup7kCd3EEcivLgWaudi6P96xFzGsN7143WVtusAKl1AlDXajzxSaMXAl1kSoG3p8?width=594&height=54&cropmode=none">
-        </article>
-        <hr>
-        <article>
-          <h2>Uptime</h2>
-          <img src="https://kctidw.bn1301.livefilestore.com/y3mizYnriAHwI0AG7G1eQopXon2SyCM3IwTzuwmEcjTOuJLsHdpFVcYlJo1gpS6D13ES-lRP5oDbRhaqVs65GRwwafQby-vKxCHK4CpA_nxlSGxshjQFyuqeZ91t28M9JniDKCTdjGy8ASnPJ1Ic62O-PlCAS4o6-MOU5B_Rei_1UI?width=591&height=32&cropmode=none">
-        </article>
-        <hr>
-        <article>
-          <img src="https://hqvyza.bn1301.livefilestore.com/y3ms-_eycNMab_yDNuN_agdy0EqF7ngNyJtJ0b4YwUUKAVWlmmsCgwEE8Bhp7xQ-tsQpxLh4VTaXnjGsQk7nJt-VP959h620KRWfWN7JZYVSpS3DtFdsfLYsXiCh_jCC6f5Z52QVXGKpYJZxwLvmWzwjH037BJrGjO6CohI7L9KFyg?width=4512&height=1299&cropmode=none" style="width:100%;">
-        </article>
-        <hr>
-        <article>
-          <h2>Checking permissions: ls -l</h2>
-          <img src="https://k5lbea.bn1301.livefilestore.com/y3myTa6XcU8zSgLHlZ4hiNDXb5YR1v3wm7PzZ9m7_RotmF8OY95nFDkppzOOQCsq9INnk-31IWbaIwx6N17R997nLFymPocLHCkNsU1g6gOsiq3i-PZ2eB1Aodq5yCeWA2rwYM8xyzAdtHIOtRjIld-vydCWwpBlRWctVtSo0yVIE0?width=653&height=146&cropmode=none" width="653" height="146" />
-          <p>Here we see that the file (squid) is a directory, users (joji) can read, write, and execute but the group dip can only read and execute (r-x).</p>
-          <img src="https://k5mryq.bn1301.livefilestore.com/y3mk2-5dvmQIFseIi2qbmgq-4Ru4vGcoqVvq-uJopnjY_QvN7_ljQqS0morY2aYhS-3X16gtxOB0j_7Yp1wmvDX6fRqfopz6yoORStGkdxCnRZ9dzkw1Xc4IzO6041Od8QBlTIub8Z_-XRTh5ghqKwENkx3RmYuIqRWHJ3lowOjA2o?width=653&height=160&cropmode=none">
-          <p>Here i created a new file and we can see that it is not a directory and that joji can only read and write so does the group also joji.</p>
-          <h2>Changing groups</h2>
-          <p>first we check the groups using $groups</p>
-          <img src="https://kctjdw.bn1301.livefilestore.com/y3mX7DKHnWhbT2cndPZtX1AM8K_jSJxXGjPBS--FBc4WDT2FVbE0K333RjXYb_8WAeuZt8xSfaCC15IkTt1oJK-acl2m2wEgeQRzR_acTJ5bpX8S5lGsMP1T3LjhZUaSBNta1C-6o8-tr0rWQYbWmWNVbpJlqvnydiECTyCIo0XfXg?width=656&height=30&cropmode=none">
-          <p>sudo chown -R username:group directory</p>
-          <p>Let's check out chown with $man chown</p>
-          <p>we can see what the arg -R stands for:</p>
-          <img src="https://kcrwkq.bn1301.livefilestore.com/y3mcvzDmvJUA_-M0doRjVtzb71-AAgaU8szMLYwtGs3QoBcqHRBV2_lWWvmmE7iqrDLwHAGx8nH_f2cUjDwmOGR2nEkRwVtw5pTPMV_qyxVRaQh8-VhaxZrXb_RX5350G3GY2KOKgNuxu1Il3OWlRT7MIufpbTHfSxjUOLXZG2Zn30?width=655&height=22&cropmode=none" >
-          <p>And if we look at the bottom, cool it has some examples:</p>
-          <img src="https://kctxbq.bn1301.livefilestore.com/y3m8QPXHO0ODpxnGLUWAJALkrrTj1tdvuRK0pzEi0nLGKWzW92OxnHsvFbh2gp1-0mG9Pd5FgoEjB6tjCL-4EMZ_t9aCl0XhN7V_dTd4CVn4CLJ70JAHuvrOlUbcoSiPeDgYtct_iAm4Gv9-EbzG0RdRhu3GscG5E4cdqfZYVXSVk4?width=653&height=74&cropmode=none" >
-          <p>So now let's change our squid file permitions and group.</p>
-          <img src="https://kcqgqa.bn1301.livefilestore.com/y3mHectkeg27pIWhtCxdnMwSXUhi887tE2AkhfF7lDU62u5ThDiAAyI1paqD44DSlyc6Pon0dNyTmVjmBIG21dJMhqTc3q4uZc7B80pI6Wtbd5DO23dw1O4iErkKSF3yR791NV7mSBxwOLZd2P9wM44M2bwT90uYDdPkmxOnBVbXFM?width=655&height=62&cropmode=none" >
-          <p>Obviously we need root permissions to do so.</p>
-          <p>Now if we check ours files again we can see that the owner and the group changed.</p>
-          <img src="https://k5ks1g.bn1301.livefilestore.com/y3mRtID8qiuzIpjkav-ekCtJwxY_-J1SRShuLKZKVRRPAicj2c322W0M55DHfRMqfvyhuyicHyJEmP-0bgohfNCnsYqjriANkAjUmswRRDjtOVSARePR9hOeBH1yH24PDHjP37BTbq08mqWoSBMU4HZFwn58MnYi1HskXE1eon_Ghc?width=655&height=160&cropmode=none" >
-        </article>
-        <hr>
-        <article>
-          <h2>Some Linux commands</h2>
-          <p>Append text to a file: echo "content" >> </p>
-          <img src="https://kcs7ha.bn1301.livefilestore.com/y3mAFjPQjOGzhdF0FT-W0mom1GeFAy7C9gAdM24Wgg88Gs8Z3a0lHPobc8cQgR5F9Mmj_aZMJZgGLjm-VEd4V0xNTepErQIaLl6PYNGswdq82MrUi1j3W3iwZidkHBYQy7eA5JotymMOVX4XKQKsY9uleeRp14jdSf3Ce_IPvi4nl0?width=571&height=111&cropmode=none">
-          <p>Overwrite a file's content: echo "content" > </p>
-          <img src="https://kcs7ha.bn1301.livefilestore.com/y3mAFjPQjOGzhdF0FT-W0mom1GeFAy7C9gAdM24Wgg88Gs8Z3a0lHPobc8cQgR5F9Mmj_aZMJZgGLjm-VEd4V0xNTepErQIaLl6PYNGswdq82MrUi1j3W3iwZidkHBYQy7eA5JotymMOVX4XKQKsY9uleeRp14jdSf3Ce_IPvi4nl0?width=571&height=111&cropmode=none">
-          <p>Redirect (append) standard output to a file: ls -la >> </p>
-          <img src="https://7mjota.bn1301.livefilestore.com/y3mrXXfPk5jjydvbcnxoMo4JhNHYpeZ67NC0-rkN4-nwDLy2rfuO3SSY7J6JGPVFqNncwbZ6vWqQP2Pc5ahB0rU891DvRk4YUssq0slL1MJagiXkoWqCGKiilb-bhf9WMHZgo6NUGH6jxdiShuaBgl9_SOU1xUVsGa5l35xrl2nwmU?width=570&height=227&cropmode=none">
-          <p>View who is logged on: $who </p>
-          <img src="https://7mj2pw.bn1301.livefilestore.com/y3m7d61-iAaw8yd7fURTkr_QvMXsOjYDRepyvgUGgRjNqTUtraFf1hIjmSSHNvcWtXmRtnoI6vQ-pOsgXemwfPaxQWIiUzr4Sc4tcoqRC5BIMVPqc2Vq4N2vVHs7e_pZVpNhJbnehUspVILQ7ElFX0oR9vi5k_ktJIxSG2_J_QrfEE?width=588&height=49&cropmode=none">
-          <p>View the last 10 lines of a file's content: tail -10 </p>
-          <img src="https://7mgeng.bn1301.livefilestore.com/y3m16-VpesLigU1fvHYd1F-Uu9HNkpkVG61Qky4pdhqLkiJ0BaXHhayoW56sNZuKlkehyh0Ve9tVubQdTnZ-xDVWP1pNTx6gxT0lJQ-2dD8OGiYNs8FwLCKTMTLNv6C31m2v-mUPVyDoMRoiv7RFLRBAjHLLcj1RAyrVxf9zTxse9M?width=585&height=250&cropmode=none">
-          <p>View the first 10 lines of a file's content: head -10 </p>
-          <img src="https://kcriaw.bn1301.livefilestore.com/y3mf2w4_GfZhyZQmehJN_Oo95icbIkDgh_H6hBcwPgdWKgqaBPR-atBqMkzjKGF8S9vda8cdZ9y8F3cq928Lf9T_4J0s3SVouDi4UMxxTVJWPKPgkh80yxrpXbrytPxGi7_cRuqEhkBg42PA0qZ9bUz2PQJyjhvmP3ZdVEz7h_F2ko?width=587&height=282&cropmode=none">
-          <p>Compress a file in .tar: tar --create --file=archive.tar file1 or tar cf archive.tar file1 </p>
-          <img src="https://7mhpwq.bn1301.livefilestore.com/y3m3_3VzTpVbtSFe9AgWVcXv1uchVa4Q5QXd_mtyL3sS8VNtkm5uZNOtG-A_qmAYc4nakKmihxRu8dAl4a4LtHsdvvPok1jgCz1rSac39VaW6LlfwdgCBoDdeJgqSSoo1JggCYBINiavEy8T6YlxWf2rfOiitibQyEfHhKTRcjfIL4?width=654&height=278&cropmode=none">
-          <p>Decompress a file in .tar: tar xf compressed.tar </p>
-          <img src="https://kcs01q.bn1301.livefilestore.com/y3mgu7NEIzfNXNKl2xXe_E50WUq5RsYWjofxQkT7BpgccwJZAng86e-7K5F_zwrZAFO4kxkz9FtVkXr3SZEqT_1s98ucbEpeESyzfU1biOVVBuIed668ggEjde39E_D0I7VagMoLJu4sMm1nn4XSJ0Oh9IeEvuIbBzvs8XHNqQEz7g?width=654&height=67&cropmode=none">
-        </article>
-        <ul class="w3-leftbar w3-theme-border" style="list-style:none">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
         <br>
-        <!--
-          <h2></h2>
-          <div class="w3-container w3-sand w3-leftbar">
-          <p><i></i><br></p>
-          </div>-->
+
         <br>
       </div>
       <footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
@@ -479,7 +102,7 @@
           document.getElementById("mySidenav").style.display = "none";
           document.getElementById("myOverlay").style.display = "none";
       }
-      
+
       // Change style of top container on scroll
       window.onscroll = function() {myFunction()};
       function myFunction() {
@@ -491,20 +114,19 @@
               document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
           }
       }
-      
+
       // Accordions
       function myAccordion(id) {
           var x = document.getElementById(id);
           if (x.className.indexOf("w3-show") == -1) {
               x.className += " w3-show";
               x.previousElementSibling.className += " w3-theme";
-          } else { 
+          } else {
               x.className = x.className.replace("w3-show", "");
-              x.previousElementSibling.className = 
+              x.previousElementSibling.className =
               x.previousElementSibling.className.replace(" w3-theme", "");
           }
       }
     </script>
   </body>
 </html>
-
