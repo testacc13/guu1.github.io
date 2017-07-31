@@ -409,3 +409,33 @@ main()
           <p>Obviously we need root permissions to do so.</p>
           <p>Now if we check ours files again we can see that the owner and the group changed.</p>
           <img src="https://k5ks1g.bn1301.livefilestore.com/y3mRtID8qiuzIpjkav-ekCtJwxY_-J1SRShuLKZKVRRPAicj2c322W0M55DHfRMqfvyhuyicHyJEmP-0bgohfNCnsYqjriANkAjUmswRRDjtOVSARePR9hOeBH1yH24PDHjP37BTbq08mqWoSBMU4HZFwn58MnYi1HskXE1eon_Ghc?width=655&height=160&cropmode=none" >
+
+
+
+                 <article>
+          <h2>CTF training</h2>
+          <p>The problem: having to loop through multiple folders and files, but since everything is a file in linux... You get the point. So, solution, bash script.</p>
+          <pre>
+
+          #!/bin/bash
+          FILES=~/inhere/*
+          do 
+          	echo "Processing $f file\n"
+          	#to do
+          	ls $f
+          	for 	
+          done
+
+		      </pre>
+          <p>The output looks like so.</p>
+          <p>But this doesn't solve anything. Now we have to <b>cat</b> each file.</p>
+          <pre>
+
+          for f in $FILES
+          do
+            cd $f && cat -- *
+          done
+
+          </pre>
+
+        </article>
