@@ -2,115 +2,115 @@
 
 <!DOCTYPE html>
 <html>
-  <title>About</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body {font-family: "Roboto", sans-serif}
-    .w3-sidenav a {padding:16px;font-weight:bold}
-  </style>
-  <body>
-    <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
-      <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
-      <a href="javascript:void(0)" onclick="w3_close()"
-        class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
-      <a href="index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-      <div class="w3-accordion">
-        <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
-        <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
-            <a href="Code/Networking/protocols.html">Protocols</a>
-            <a href="Code/Networking/networking.html">Networking</a>
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {font-family: "Roboto", sans-serif}
+        .w3-sidenav a {padding:16px;font-weight:bold}
+    </style>
+    <body>
+        <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
+            <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
+            <a href="javascript:void(0)" onclick="w3_close()"
+                class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
+            <a href="index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            <div class="w3-accordion">
+                <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
+                <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
+                    <a href="Code/Networking/protocols.html">Protocols</a>
+                    <a href="Code/Networking/networking.html">Networking</a>
+                </div>
+            </div>
+            <div class="w3-accordion">
+                <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i>Programming <i class="fa fa-caret-down"></i></a>
+                <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
+                    <a href="../Code/Casm/asm.html">ASM</a>
+                    <a href="../Code/Casm/see.html">C</a>
+                    <a href="Code/Python/just-python.html">Python</a>
+                </div>
+            </div>
+            <a href="Code/Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
+            <div class="w3-accordion">
+                <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-terminal" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
+                <div id="3id" class="w3-accordion-content w3-animate-left w3-padding">
+                    <a href="">CTF</a>
+                    <a href="">Web Hacking</a>
+                    <a href="">Binary Hacking</a>
+                </div>
+            </div>
+            <a href="posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
+            <a href="Gaming/gaming.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
+            <a href="about.html"><i class="fa fa-user-circle" aria-hidden="true"></i> About</a>
+        </nav>
+        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+        <div class="w3-main" style="margin-left:250px;">
+            <div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
+                <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
+                <span id="myIntro" class="w3-hide">About</span>
+            </div>
+            <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
+                <h1 class="w3-xxxlarge w3-padding-16">About</h1>
+            </header>
+            <div class="w3-container w3-padding-32" style="padding-left:32px">
+                <hr>
+                <article>
+                    <h2>About this site</h2>
+                    <p></p>
+                    <p>I will post on a daily basis about my coding adventures.</p>
+                    <p>All the photos are mine.
+                        Template from W3Schools!
+                    </p>
+                    <h2>About me</h2>
+                    <p></p>
+                    <p>Self-Learner and self-taught. Origami Master. Robot enthusiast. Cyberpunk. The Not so Bobby Fisher of Chess.</p>
+                    <h2>My setup</h2>
+                    <p>Super old keyboard, 2 eye burning monitors, very uncomfortable chair, a nice mouse, and Blue Charles. Blue Charles is now almost 1 year old, except for the GPU... As for OSes, I have Ubuntu on my SSD even tho I never really liked Ubuntu, always so buggy and I much prefer GNOME. Kali Linux on my green 500 Gb HDD and Windows on my 1Tb Black HDD with 5 other VM's.</p>
+                    <img src="https://id2o2a.bn1301.livefilestore.com/y4mRVXvh939oMtok8pfWyf1WManBT-8wiiOdnzEcp1KuQ4cjqUlYc9Sqsfw3XHGyfPk4hTWyt9Cuie7j3eferDxCy1z57LyItC9DMSuK0cWWtXL4xV7sm3pkFd43hFtS1c7rZL1KVpS7IhFEdbtxWTGyjfx0CnzLlcDWlaigdj3KI1bkuUMA2HEWKaqTIV5q5zWcdqr0kAWt6Ale6fxWUcQXQ?width=1024&height=683&cropmode=none">
+                </article>
+                <br>
+            </div>
+            <footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
+                <!--adress style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>-->
+            </footer>
         </div>
-      </div>
-          <div class="w3-accordion">
-      <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i>Programming <i class="fa fa-caret-down"></i></a>
-      <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
-          <a href="../Code/Casm/asm.html">ASM</a>
-          <a href="../Code/Casm/see.html">C</a>
-          <a href="Code/Python/just-python.html">Python</a>
-      </div>
-    </div>
-      <a href="Code/Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
-      <div class="w3-accordion">
-          <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-terminal" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
-          <div id="3id" class="w3-accordion-content w3-animate-left w3-padding">
-              <a href="">CTF</a>
-              <a href="">Web Hacking</a>
-              <a href="">Binary Hacking</a>
-          </div>
-      </div>
-      <a href="posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
-      <a href="Gaming/gaming.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
-      <a href="about.html"><i class="fa fa-user-circle" aria-hidden="true"></i> About</a>
-    </nav>
-    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-    <div class="w3-main" style="margin-left:250px;">
-      <div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
-        <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
-        <span id="myIntro" class="w3-hide">About</span>
-      </div>
-      <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
-        <h1 class="w3-xxxlarge w3-padding-16">About</h1>
-      </header>
-      <div class="w3-container w3-padding-32" style="padding-left:32px">
-        <hr>
-        <article>
-          <h2>About this site</h2>
-          <p></p>
-          <p>I will post on a daily basis about my coding adventures.</p>
-          <p>All the photos are mine.
-            Template from W3Schools!
-          </p>
-          <h2>About me</h2>
-          <p></p>
-          <p>Self-Learner and self-taught. Origami Master. Robot enthusiast. Cyberpunk. The Not so Bobby Fisher of Chess.</p>
-          <h2>My setup</h2>
-          <p>Super old keyboard, 2 eye burning monitors, very uncomfortable chair, a nice mouse, and Blue Charles. Blue Charles is now almost 1 year old, except for the GPU... As for OSes, I have Ubuntu on my SSD even tho I never really liked Ubuntu, always so buggy and I much prefer GNOME. Kali Linux on my green 500 Gb HDD and Windows on my 1Tb Black HDD with 5 other VM's.</p>
-          <img src="https://id2o2a.bn1301.livefilestore.com/y4mRVXvh939oMtok8pfWyf1WManBT-8wiiOdnzEcp1KuQ4cjqUlYc9Sqsfw3XHGyfPk4hTWyt9Cuie7j3eferDxCy1z57LyItC9DMSuK0cWWtXL4xV7sm3pkFd43hFtS1c7rZL1KVpS7IhFEdbtxWTGyjfx0CnzLlcDWlaigdj3KI1bkuUMA2HEWKaqTIV5q5zWcdqr0kAWt6Ale6fxWUcQXQ?width=1024&height=683&cropmode=none">
-        </article>
-        <br>
-      </div>
-      <footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
-        <!--adress style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>-->
-      </footer>
-    </div>
-    <script>
-      // Open and close the sidenav on medium and small screens
-      function w3_open() {
-          document.getElementById("mySidenav").style.display = "block";
-          document.getElementById("myOverlay").style.display = "block";
-      }
-      function w3_close() {
-          document.getElementById("mySidenav").style.display = "none";
-          document.getElementById("myOverlay").style.display = "none";
-      }
+        <script>
+            // Open and close the sidenav on medium and small screens
+            function w3_open() {
+                document.getElementById("mySidenav").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+            function w3_close() {
+                document.getElementById("mySidenav").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
 
-      // Change style of top container on scroll
-      window.onscroll = function() {myFunction()};
-      function myFunction() {
-          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-              document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
-              document.getElementById("myIntro").classList.add("w3-show-inline-block");
-          } else {
-              document.getElementById("myIntro").classList.remove("w3-show-inline-block");
-              document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
-          }
-      }
+            // Change style of top container on scroll
+            window.onscroll = function() {myFunction()};
+            function myFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+                    document.getElementById("myIntro").classList.add("w3-show-inline-block");
+                } else {
+                    document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+                    document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+                }
+            }
 
-      // Accordions
-      function myAccordion(id) {
-          var x = document.getElementById(id);
-          if (x.className.indexOf("w3-show") == -1) {
-              x.className += " w3-show";
-              x.previousElementSibling.className += " w3-theme";
-          } else {
-              x.className = x.className.replace("w3-show", "");
-              x.previousElementSibling.className =
-              x.previousElementSibling.className.replace(" w3-theme", "");
-          }
-      }
-    </script>
-  </body>
+            // Accordions
+            function myAccordion(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                    x.previousElementSibling.className += " w3-theme";
+                } else {
+                    x.className = x.className.replace("w3-show", "");
+                    x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-theme", "");
+                }
+            }
+        </script>
+    </body>
 </html>

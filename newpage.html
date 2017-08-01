@@ -1,111 +1,95 @@
 <!DOCTYPE html>
 <html>
-<title>Protocols</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
-body {font-family: "Roboto", sans-serif}
-.w3-sidenav a {padding:16px;font-weight:bold}
-</style>
-<body>
-
-  <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
-
-    <a href="javascript:void(0)" onclick="w3_close()"
-    class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="../../index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-
-    <div class="w3-accordion">
-    <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
-    <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
-        <a href="../Networking/protocols.html">Protocols</a>
-        <a href="../Networking/networking.html">Networking</a>
-
-    </div>
-  </div>
-
-    <div class="w3-accordion">
-        <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
-        <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
-            <a href="../Casm/asm.html">ASM</a>
-            <a href="../Casm/see.html">C</a>
-            <a href="../Python/just-python.html">Python</a>
+    <title>Protocols</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {font-family: "Roboto", sans-serif}
+        .w3-sidenav a {padding:16px;font-weight:bold}
+    </style>
+    <body>
+        <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
+            <a href="javascript:void(0)" onclick="w3_close()"
+                class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
+            <a href="../../index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            <div class="w3-accordion">
+                <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
+                <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
+                    <a href="../Networking/protocols.html">Protocols</a>
+                    <a href="../Networking/networking.html">Networking</a>
+                </div>
+            </div>
+            <div class="w3-accordion">
+                <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
+                <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
+                    <a href="../Casm/asm.html">ASM</a>
+                    <a href="../Casm/see.html">C</a>
+                    <a href="../Python/just-python.html">Python</a>
+                </div>
+            </div>
+            <a href="../Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
+            <a href=""><i class="fa fa-terminal" aria-hidden="true"></i> Hacking</a>
+            <div class="w3-accordion">
+                <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
+                <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
+                    <a href="">CTF</a>
+                    <a href="">Web Hacking</a>
+                    <a href="">Binary Hacking</a>
+                </div>
+            </div>
+            <a href="../../posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
+            <a href="../../Gaming/gaming.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
+            <a href="../../about.html"><i class="fa fa-user-circle" aria-hidden="true"></i> About</a>
+        </nav>
+        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+        <div class="w3-main" style="margin-left:250px;">
+            <div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
+                <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
+                <span id="myIntro" class="w3-hide">Protocols</span>
+            </div>
+            <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
+                <h1 class="w3-xxxlarge w3-padding-16">Protocols</h1>
+            </header>
+            <div class="w3-container w3-padding-32" style="padding-left:32px">
+            </div>
         </div>
-    </div>
+        <script>
+            // Open and close the sidenav on medium and small screens
+            function w3_open() {
+                document.getElementById("mySidenav").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+            function w3_close() {
+                document.getElementById("mySidenav").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
 
-  <a href="../Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
-  <a href=""><i class="fa fa-terminal" aria-hidden="true"></i> Hacking</a>
-  <div class="w3-accordion">
-      <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
-      <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
-          <a href="">CTF</a>
-          <a href="">Web Hacking</a>
-          <a href="">Binary Hacking</a>
-      </div>
-  </div>
-  <a href="../../posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
-  <a href="../../Gaming/gaming.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
-  <a href="../../about.html"><i class="fa fa-user-circle" aria-hidden="true"></i> About</a>
+            // Change style of top container on scroll
+            window.onscroll = function() {myFunction()};
+            function myFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+                    document.getElementById("myIntro").classList.add("w3-show-inline-block");
+                } else {
+                    document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+                    document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+                }
+            }
 
-</nav>
-
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
-<div class="w3-main" style="margin-left:250px;">
-
-	<div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
-	  <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
-	  <span id="myIntro" class="w3-hide">Protocols</span>
-	</div>
-
-	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
-	  <h1 class="w3-xxxlarge w3-padding-16">Protocols</h1>
-	</header>
-
-	<div class="w3-container w3-padding-32" style="padding-left:32px">
-
-	</div>
-
-
-</div>
-
-<script>
-// Open and close the sidenav on medium and small screens
-function w3_open() {
-    document.getElementById("mySidenav").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
-function w3_close() {
-    document.getElementById("mySidenav").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-
-// Change style of top container on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
-        document.getElementById("myIntro").classList.add("w3-show-inline-block");
-    } else {
-        document.getElementById("myIntro").classList.remove("w3-show-inline-block");
-        document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
-    }
-}
-
-// Accordions
-function myAccordion(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-        x.previousElementSibling.className += " w3-theme";
-    } else {
-        x.className = x.className.replace("w3-show", "");
-        x.previousElementSibling.className =
-        x.previousElementSibling.className.replace(" w3-theme", "");
-    }
-}
-</script>
-
-</body>
+            // Accordions
+            function myAccordion(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                    x.previousElementSibling.className += " w3-theme";
+                } else {
+                    x.className = x.className.replace("w3-show", "");
+                    x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-theme", "");
+                }
+            }
+        </script>
+    </body>
 </html>
