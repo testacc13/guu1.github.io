@@ -60,7 +60,33 @@ body {font-family: "Roboto", sans-serif}
 	</header>
 
 	<div class="w3-container w3-padding-32" style="padding-left:32px">
-
+  <article>
+    <h2>Python cool things</h2>
+    <h3>Flat printing</h3>
+    <img src="Images/coolone.png">
+    <h3>Generating lists</h3>
+    <p>A quick way of generating lists. Here we create a list of all the pair numbers from one to ten.</p>
+    <img src="Images/listsone.png">
+    <p>Let's try something else.</p>
+    <img src="Images/liststwo1.png">
+    <img src="Images/liststwo.png">
+    <p>Make two lists of all the words starting with <b>e</b> and another starting with <b>b</b></p>
+    <img src="Images/liststwo3.png">
+    <img src="Images/liststwo4.png">
+  </article>
+  <article>
+    <h3>Split</h3>
+    <p>In this example, I start with a simple string, and what split can do to that string is, as the name says, split it. And you can do so simply but using <b>.split()</b> as I did in the beginning. But we can take this one step further. So let's say we want to grab whatever is in front of 'example'. We can do so buy spliting 'example' of the string and picking whats in front of it, hence the <b>[1]</b>. And that would be it. Now let's pick just the word phrase 'phrase'. Like previously, we get whats in front of 'example' but now we split twice. The last split is to remove the '.'</p>
+    <img src="../Linux/Images/split1.png">
+    <h3>BeautifulSoup</h3>
+    <p>This gets very useful when parsing specific text in a html page as we will see soon. So let's talk about BeautifulSoup. To use this you need to install the bs4 module. For this example i used the main page of Hack Forums and grabed the names of online users.</p>
+    <p>This code uses bs4 to grab specific tags like tbody and td. Also <b>find_all()</b> allows us to grab tags with a certain class. Bs4 does much, much more. In the end we use <b>text=True</b> to grab our names. We could have used split.</p>
+    <p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Bs4 docs</a></p>
+    <img src="../Linux/Images/tbody.png">
+    <img src="../Linux/Images/bs.png">
+    <p>Running our code we can see the span tags and the final result the names. All of this output is done by our get_names() function.</p>
+    <img src="../Linux/Images/bsoutput.png">
+  </article>
 	<article>
 		<h2>Socket chat</h2>
 		<p>Terminal based socket chat (for linux) for multiple client connections. I'm thinking about implementing it in here to create some sort of chat. </p>
