@@ -12,28 +12,37 @@ body {font-family: "Roboto", sans-serif}
 
   <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
 
-    <a href="javascript:void(0)" onclick="w3_close()" 
+    <a href="javascript:void(0)" onclick="w3_close()"
     class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
   <a href="../../index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-  <a href="../Python/just-python.html"><i class="fa fa-code" aria-hidden="true"></i> Python</a>
+
     <div class="w3-accordion">
     <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
     <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
-      <a href="../Networking/protocols.html">Protocols</a>
-      <!--<a href="../Networking/apache.html">Apache</a>-->
-      
+        <a href="../Networking/protocols.html">Protocols</a>
+        <a href="../Networking/networking.html">Networking</a>
+
     </div>
   </div>
-  
+
     <div class="w3-accordion">
-      <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> C/ASM <i class="fa fa-caret-down"></i></a>
-      <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
-          <a href="../Casm/asm.html">ASM</a>
-          <a href="../Casm/see.html">C</a> 
-      </div>
+        <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
+        <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
+            <a href="../Casm/asm.html">ASM</a>
+            <a href="../Casm/see.html">C</a>
+            <a href="../Python/just-python.html">Python</a>
+        </div>
     </div>
 
   <a href="../Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
+  <div class="w3-accordion">
+      <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-terminal" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
+      <div id="3id" class="w3-accordion-content w3-animate-left w3-padding">
+          <a href="">CTF</a>
+          <a href="">Web Hacking</a>
+          <a href="">Binary Hacking</a>
+      </div>
+  </div>
   <a href="../../posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
   <a href="../../Gaming/gaming.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
   <a href="../../about.html"><i class="fa fa-user-circle" aria-hidden="true"></i> About</a>
@@ -149,7 +158,7 @@ HTTP/1.1 200 OK             (This is Status-Line sent by the server)</pre>
 <pre>
 <ul>
 	<li>A Status-line</li>
-	<li>An empty line (i.e., a line with nothing preceding the CRLF) 
+	<li>An empty line (i.e., a line with nothing preceding the CRLF)
 indicating the end of the header fields</li>
 	<li>Optionally a message-body</li>
 
@@ -190,7 +199,7 @@ indicating the end of the header fields</li>
 
 
 </article>
-	
+
 
 
 
@@ -228,7 +237,7 @@ indicating the end of the header fields</li>
 
 		<footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
 	  		<address style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>
-	  	</footer>   
+	  	</footer>
 </div>
 
 <script>
@@ -260,13 +269,13 @@ function myAccordion(id) {
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
         x.previousElementSibling.className += " w3-theme";
-    } else { 
+    } else {
         x.className = x.className.replace("w3-show", "");
-        x.previousElementSibling.className = 
+        x.previousElementSibling.className =
         x.previousElementSibling.className.replace(" w3-theme", "");
     }
 }
 </script>
-     
+
 </body>
-</html> 
+</html>

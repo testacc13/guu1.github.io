@@ -12,29 +12,38 @@ body {font-family: "Roboto", sans-serif}
 
 <nav class="w3-sidenav w3-collapse w3-text-black w3-hover-text-black w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
   <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
-  <a href="javascript:void(0)" onclick="w3_close()" 
+  <a href="javascript:void(0)" onclick="w3_close()"
   class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
 
   <a href="../../index.html" class="w3-light-grey w3-medium"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-  <a href="../Python/just-python.html"><i class="fa fa-code" aria-hidden="true"></i> Python</a>
+
     <div class="w3-accordion">
     <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
     <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
       <a href="../Networking/protocols.html">Protocols</a>
-      <!--<a href="../Networking/apache.html">Apache</a>-->
-      
+      <a href="../Networking/networking.html">Networking</a>
+
     </div>
   </div>
-  
+
   	<div class="w3-accordion">
-  		<a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> C/ASM <i class="fa fa-caret-down"></i></a>
+  		<a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
   		<div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
       		<a href="../Casm/asm.html">ASM</a>
-      		<a href="../Casm/see.html">C</a> 
+      		<a href="../Casm/see.html">C</a>
+            <a href="../Python/just-python.html">Python</a>
     	</div>
     </div>
 
   <a href="../Linux/linux.html"><i class="fa fa-linux" aria-hidden="true"></i> Linux</a>
+  <div class="w3-accordion">
+      <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-terminal" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
+      <div id="3id" class="w3-accordion-content w3-animate-left w3-padding">
+          <a href="">CTF</a>
+          <a href="">Web Hacking</a>
+          <a href="">Binary Hacking</a>
+      </div>
+  </div>
   <a href="../../posts.html"><i class="fa fa-camera" aria-hidden="true"></i> Photography</a>
   <a href="../../Gaming/gaming.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
   <a href="../../about.html"><i class="fa fa-user-circle" aria-hidden="true"></i> About</a>
@@ -52,13 +61,39 @@ body {font-family: "Roboto", sans-serif}
 	</div>
 
 	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
-	  <h1 class="w3-xxxlarge w3-padding-16">Just python</h1>
-	  <a style="text-decoration: none; font-family: Verdana;" href="https://twitter.com/awdasdqwert">My Twitter Bot  <span></a><i class="fa fa-twitter" aria-hidden="true"></i>
+	  <h1 class="w3-xxxlarge w3-padding-16">Python</h1>
+	  <a style="text-decoration: none; font-family: Verdana;" target="_blank" href="https://twitter.com/awdasdqwert">My Twitter Bot  <span></a><i class="fa fa-twitter" aria-hidden="true"></i>
 
 	</header>
 
 	<div class="w3-container w3-padding-32" style="padding-left:32px">
-	
+  <article>
+    <h2>Python cool things</h2>
+    <h3>Flat printing</h3>
+    <img src="Images/coolone.png">
+    <h3>Generating lists</h3>
+    <p>A quick way of generating lists. Here we create a list of all the pair numbers from one to ten.</p>
+    <img src="Images/listsone.png">
+    <p>Let's try something else.</p>
+    <img src="Images/liststwo1.png">
+    <img src="Images/liststwo.png">
+    <p>Make two lists of all the words starting with <b>e</b> and another starting with <b>b</b></p>
+    <img src="Images/liststwo3.png">
+    <img src="Images/liststwo4.png">
+  </article>
+  <article>
+    <h3>Split</h3>
+    <p>In this example, I start with a simple string, and what split can do to that string is, as the name says, split it. And you can do so simply but using <b>.split()</b> as I did in the beginning. But we can take this one step further. So let's say we want to grab whatever is in front of 'example'. We can do so buy spliting 'example' of the string and picking whats in front of it, hence the <b>[1]</b>. And that would be it. Now let's pick just the word phrase 'phrase'. Like previously, we get whats in front of 'example' but now we split twice. The last split is to remove the '.'</p>
+    <img src="../Linux/Images/split1.png">
+    <h3>BeautifulSoup</h3>
+    <p>This gets very useful when parsing specific text in a html page as we will see soon. So let's talk about BeautifulSoup. To use this you need to install the bs4 module. For this example i used the main page of Hack Forums and grabed the names of online users.</p>
+    <p>This code uses bs4 to grab specific tags like tbody and td. Also <b>find_all()</b> allows us to grab tags with a certain class. Bs4 does much, much more. In the end we use <b>text=True</b> to grab our names. We could have used split.</p>
+    <p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Bs4 docs</a></p>
+    <img src="../Linux/Images/tbody.png">
+    <img src="../Linux/Images/bs.png">
+    <p>Running our code we can see the span tags and the final result the names. All of this output is done by our get_names() function.</p>
+    <img src="../Linux/Images/bsoutput.png">
+  </article>
 	<article>
 		<h2>Socket chat</h2>
 		<p>Terminal based socket chat (for linux) for multiple client connections. I'm thinking about implementing it in here to create some sort of chat. </p>
@@ -70,7 +105,7 @@ body {font-family: "Roboto", sans-serif}
 
 		 # Accept a new socket and receive the nickname
 		def socket_accept():
-			
+
 			conn, address = s.accept() # Three-way handshake - This is a TCP connection with the server
 			# Receive the nickname
 			nickname = conn.recv(1024)
@@ -88,7 +123,7 @@ body {font-family: "Roboto", sans-serif}
 			thread_client.start()
 
 		def data(nickname, conn):
-			while True:	
+			while True:
 				# Reveive the data from client
 				data = conn.recv(4096)
 				#conn.sendall(data)
@@ -97,15 +132,15 @@ body {font-family: "Roboto", sans-serif}
 					bcast(conn, data, nickname) # Call for broadcast
 								    # I tried to put this function here instead of
 								    # calling it but it don't work because it's
-								    # always on the same client socket and we 
+								    # always on the same client socket and we
 								    # need to change socket to send to other clients
 								    # sendto(data, address) also didn't work
-				if not data:	
+				if not data:
 					break
 
-		 # Broadcast 
+		 # Broadcast
 		def bcast(client_socket, message, client_nickname):
-			# We don't want to receive what we sent	
+			# We don't want to receive what we sent
 			for i in clients:
 				if i == client_socket:
 					pass
@@ -115,18 +150,18 @@ body {font-family: "Roboto", sans-serif}
 					#i.sendall(client_nickname)
 					#i.sendall()
 					# New line on the client side
-					i.sendall(client_nickname + ': ' + message)	
+					i.sendall(client_nickname + ': ' + message)
 
 		if __name__ == '__main__':
 			# Args for host and port
 			parser = argparse.ArgumentParser(description='My TCP server')
 			parser.add_argument('host',  help='Interface the server listens at')
-			parser.add_argument('-p', metavar='PORT', type=int, help='TCP PORT (default 9999)')	
+			parser.add_argument('-p', metavar='PORT', type=int, help='TCP PORT (default 9999)')
 			args = parser.parse_args()
 			host = args.host
 			port = args.p
 
-			 # Client List	
+			 # Client List
 			clients = []
 
 			 # Create socket
@@ -145,11 +180,11 @@ body {font-family: "Roboto", sans-serif}
 				print("Socket binding error: " + str(msg) + "\n" + "Retrying...")
 
 
-			
+
 			while True:
 				socket_accept()
 		</pre>
-		
+
 		<h3> Client </h3>
 
 		<pre>
@@ -185,7 +220,7 @@ body {font-family: "Roboto", sans-serif}
 			 # Args for host and port
 			parser = argparse.ArgumentParser(description='My TCP server')
 			parser.add_argument('host',  help='server to connect to')
-			parser.add_argument('-p', metavar='PORT', type=int, help='TCP PORT (default 9999)')      
+			parser.add_argument('-p', metavar='PORT', type=int, help='TCP PORT (default 9999)')
 			args = parser.parse_args()
 			host = args.host
 			port = args.p
@@ -202,7 +237,7 @@ body {font-family: "Roboto", sans-serif}
 			sys.exit()
 
 			# Sends nickname to server
-			my_nickname = raw_input('Choose nick: ')    
+			my_nickname = raw_input('Choose nick: ')
 			sock.sendall(my_nickname)
 
 			# A thread for send and receive
@@ -212,28 +247,13 @@ body {font-family: "Roboto", sans-serif}
 			thread_receive.start()
 
 		</pre>
-	
+
 
 	</article>
-	<hr>
-
-
-	<article>
-		<h3>Endless screaming</h3>
-		<img src="https://gpzdza.bn1301.livefilestore.com/y3mUe_s5RI8eVa9AsPje3YJg35ovRfcGbwyx0Rp2ZjEDu9KlOiWBNEg_PLP639ar_h-99My0fLld0YEnDtBj8pcaeRSsWPm8bRXgIzYGMFIfRY6zm_4tPyewl5OkLfHFjisHbmin_SVnrQ4iH0sHoHVQ_lp1uMiz43f_ZX66wR9Yk8?width=674&height=548&cropmode=none">
-		<p>python</p>
-		<img src="https://gpb42a.bn1301.livefilestore.com/y3mPDCWq_fsOVVmeGJ6iqZvLkHZ3C-Hg2nEye7d4emrcnvm5PNXiSGP22d7gpIm-hb6VVh-JNyB_1_4w-gnkS7Utuk3xUQzGQBqhMeU_YVbCkigAPmSh2ayUoKAaXlAEcTJuk4SZNCgFNoeMvsMLQ1EHMXsyadm6_m-_8RjRFDYH5k?width=670&height=185&cropmode=none">
-	</article>
-
-
-		<hr>
-			
 	<br>
 	</div>
 
-		<footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
-	  		<address style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>
-	  	</footer>   
+
 </div>
 
 <script>
@@ -265,13 +285,13 @@ function myAccordion(id) {
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
         x.previousElementSibling.className += " w3-theme";
-    } else { 
+    } else {
         x.className = x.className.replace("w3-show", "");
-        x.previousElementSibling.className = 
+        x.previousElementSibling.className =
         x.previousElementSibling.className.replace(" w3-theme", "");
     }
 }
 </script>
-     
+
 </body>
-</html> 
+</html>

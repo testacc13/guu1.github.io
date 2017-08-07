@@ -1,3 +1,3 @@
 # Site/Blog
 
-https://chickenmcheese.github.io/MySiteBlog/
+https://guu1.github.io
