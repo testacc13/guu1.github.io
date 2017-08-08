@@ -74,6 +74,26 @@
 
                 -->
                 <article>
+            		<h2>Memory</h2>
+                    <h3>Working with the heap</h3>
+            		<p></p>
+                    <div class="">
+                        <img src="Code/Casm/Images/Memory/malloc1.png">
+                    </div>
+                    <div style="display:inline-block;">
+                            <p>Here we set a default memory size of 50 if no arguments are passed. Then we allocate the memory size with our <b>errorcheck_malloc()</b>. Since malloc() doesn't know what type of memory it's allocating, we must typecast into the appropriate type. Else, it will return a void pointer. We then copy a string using <b>strcpy()</b> into the allocated memory.</p>
+                           <img src="Code/Casm/Images/Memory/malloc2.png">
+                    </div>
+                    <p><b>free()</b> is used to free the allocated memory.</p>
+            		<img src="Code/Casm/Images/Memory/malloc3.png">
+                    <p>Here is our <b>errorchecked_malloc()</b>. It accepts the size in bytes to allocate. If that allocation fails, the error checking code will display and error and exit the program. The error display is done with <b>fprintf()</b>, the first argument is <b>stderr</b> with is a standard filestream meant for displaying errors. Otherwise it will return the pointer to the newly allocated heap memory.</p>
+            		<img src="Code/Casm/Images/Memory/malloc4.png">
+
+
+            	</article>
+
+            	<hr>
+                <article>
                     <h2>Base64 encoding</h2>
                     <p></p>
                     <img src="Code/Linux/Images/base64.png">
