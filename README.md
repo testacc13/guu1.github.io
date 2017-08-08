@@ -1,3 +1,3 @@
 # Site/Blog
 
-https://guu1.github.io/MySiteBlog/
+https://guu1.github.io
