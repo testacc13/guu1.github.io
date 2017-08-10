@@ -7,52 +7,49 @@
     <!--<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">-->
     <link rel="stylesheet" href="w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:700" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Prompt|Stalinist+One|Titillium+Web:700" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Ubuntu+Mono:700" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Bowlby+One+SC|Prompt|Stalinist+One|Titillium+Web:700" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Prompt|Stalinist+One|Titillium+Web:700" rel="stylesheet">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-body {/*font-family: "Roboto", sans-serif*/}
+    body {/*font-family: "Roboto", sans-serif*/}
     .w3-sidenav a {padding:16px;/*font-weight:bold*/}
     </style>
     <body>
-        <nav class="w3-sidenav w3-text-cyan w3-black w3-collapse w3-animate-left w3-card-2" style="z-index:3;width:250px;border-right: 1px solid slategray; font-family:'Black Ops One';" id="mySidenav">
+        <nav class="w3-sidenav w3-text-cyan w3-black w3-collapse w3-animate-left w3-card-2" style="z-index:3;width:250px;border-right: 1px solid slategray; font-family:'Monospace';" id="mySidenav">
             <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
             <a href="javascript:void(0)" onclick="w3_close()"
                 class="w3-text-teal w3-hide-large w3-closenav w3-large ">Close <i class="fa fa-remove"></i></a>
             <!-- /////////////////// Nav Bar ////////////////////// -->
-            <a href="index.html"><i class="fa fa-home w3-xlarge" aria-hidden="true"></i> Home</a>
+            <a href="index.html"><i class="fa fa-home w3-xlarge w3-margin-right w3-margin-right" aria-hidden="true"></i> Home</a>
             <div class="w3-accordion">
-                <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server w3-xlarge" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
+                <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server w3-xlarge w3-margin-right" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
                 <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
                     <a class="" href="Code/Networking/protocols.html">Protocols</a>
                     <a class="" href="Code/Networking/networking.html">Networking</a>
                 </div>
             </div>
             <div class="w3-accordion">
-                <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code w3-xlarge" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
+                <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code w3-xlarge w3-margin-right" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
                 <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
                     <a class="" href="Code/Casm/asm.html">ASM</a>
                     <a class="" href="Code/Casm/see.html">C</a>
                     <a class="" href="Code/Python/just-python.html">Python</a>
                 </div>
             </div>
-            <a class="" href="Code/Linux/linux.html"><i class="fa fa-linux w3-xlarge" aria-hidden="true"></i> Linux</a>
+            <a class="" href="Code/Linux/linux.html"><i class="fa fa-linux w3-xlarge w3-margin-right" aria-hidden="true"></i> Linux</a>
             <div class="w3-accordion">
-                <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-terminal w3-xlarge" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
+                <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-terminal w3-xlarge w3-margin-right" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
                 <div id="3id" class="w3-accordion-content w3-animate-left w3-padding">
                     <a class="" href="">CTF</a>
                     <a class="" href="">Web Hacking</a>
                     <a class="" href="">Binary Hacking</a>
                 </div>
             </div>
-            <a class="" href="posts.html"><i class="fa fa-camera w3-xlarge" aria-hidden="true"></i> Photography</a>
-            <a class="" href="Gaming/gaming.html"><i class="fa fa-gamepad w3-xlarge" aria-hidden="true"></i> Gaming</a>
-            <a class="" href="about.html"><i class="fa fa-user-circle w3-xlarge" aria-hidden="true"></i> About</a>
+            <a class="" href="posts.html"><i class="fa fa-camera w3-xlarge w3-margin-right" aria-hidden="true"></i> Photography</a>
+            <a class="" href="Gaming/gaming.html"><i class="fa fa-gamepad w3-xlarge w3-margin-right" aria-hidden="true"></i> Gaming</a>
+            <a class="" href="about.html"><i class="fa fa-user-circle w3-xlarge w3-margin-right" aria-hidden="true"></i> About</a>
         </nav>
         <!-- /////////////////// END of Nav Bar ////////////////////// -->
         <!-- /////////////////// Big black Title Display ////////////////////// -->
@@ -62,13 +59,13 @@ body {/*font-family: "Roboto", sans-serif*/}
                 <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
                 <span id="myIntro" class="w3-hide">Home</span>
             </div>
-            <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px; background-image: url('test2.png'); background-size: 1300px;">
+            <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px; background-image: url('test2.png'); background-size: 1030px;">
                 <h1 class="w3-xxxlarge w3-padding-16"><b>Home</b></h1>
 
             </header>
             <!-- /////////////////// END of Big black Title Display ////////////////////// -->
             <!-- /////////////////// Articles ////////////////////// -->
-            <div class="w3-container w3-padding-32" style="padding-left:32px; background-color:black; color:white;">
+            <div class="w3-container w3-padding-32" style="padding-left:32px; background-color:#101010; color:white;">
                 <!--
                     create a new article:
 
