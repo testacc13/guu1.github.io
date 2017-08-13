@@ -80,9 +80,9 @@
 
                 <article>
                     <h2>#101BashBeginnerToProfessional#hashtaghashtaghashtag</h2>
-                    <h3>Navigation</h3>
+                    <h3>Lesson one: Navigation</h3>
                     <p>So let's learn how to navigate on the command line and learn some basic commands.</p>
-                    <h3>cd | ls | pwd | mkdir</h3>
+                    <h3>ls | pwd | cd | mkdir | clear and tput reset</h3>
                     <p>Once you open the terminal, you will see your username followed by the pc name (the one that identifies you on a network etc) and finally <b>~$
 </b> which means the terminal is ready to receive your input and also that you're on your home directory (<b>~</b>).</p>
                     <h4>ls</h4>
@@ -99,7 +99,7 @@
                     <p>Going backwards in directories.</p>
                     <img src="Code/Linux/Images/bashcd.png" alt="">
                     <img src="Code/Linux/Images/bashcdmore.png" alt="">
-                    <p>using just <b>cd</b> will takes us straight to home.</p>
+                    <p>Using just <b>cd</b> will takes us straight to home.</p>
                     <img src="Code/Linux/Images/bashcdhome.png" alt="">
                     <p>Also, if any errors pop-up, make sure to read them carefully and most importantly stay calm. Bash is not wrong, you are. To minimize typing errors, use <b>Tab</b> for autocompletion. It's very handy.<br> Ok, now were in our Desktop folder. But if you just installed linux you probably wont have anything there and you can check it with <b>ls</b>.</p>
                     <h4>mkdir</h4>
@@ -109,20 +109,40 @@
                     <img src="Code/Linux/Images/bash5.png" alt="">
                     <p>To end this lesson, use <b>clear</b> to clear your terminal. However, <b>clear</b> will basically just scroll down, if you really want to clean all of the terminal output use <b>tput reset</b>.</p>
 
-                <!--</article>
+                </article>
                 <hr>
                 <article>
                     <h2>#101BashBeginnerToProfessional#hashtaghashtaghashtag</h2>
-                    <h3>Dealing with files</h3>
-                    <h3>cat | vim and nano | touch | mv | rm | cp</h3>
+                    <h3>Lesson two: Dealing with files</h3>
+                    <h3>touch | vim and nano | cat | cp | mv | rm</h3>
                     <p>Let's start with creating files, text files.<br>Bash comes with <b>vim</b> and <b>nano</b> pre-installed. <b>nano</b> is better for beginners, <b>vim</b> has the fame of being very dificult to learn, but its probably the most powerful text editor. So, we are going to create a file with <b>touch</b>, edit it with nano and use <b>cat</b> to see the content inside of it.</p>
+                    <h4>touch</h4>
                     <img src="Code/Linux/Images/bashtouch.png" alt="">
+                    <h4>nano</h4>
                     <p><b>CTRL-O + ENTER + CTRL-X</b> to write and quit</p>
                     <img src="Code/Linux/Images/bashnano.png" style="border-right: 2px solid stalegray;">
+                    <h4>cat</h4>
                     <p>Now we use <b>cat</b> to see whats inside of the without having to open it.</p>
                     <img src="Code/Linux/Images/bashcat.png">
+                    <p>Now that we created a file, we will now learn how to move it or remove it.</p>
+                    <h4>cp</h4>
+                    <p><b>cp</b> is for copying files or directories.</p>
+                    <img src="Code/Linux/Images/bashcp.png">
+                    <h4>mv</h4>
+                    <p><b>mv</b> is used to move but also to rename files or directories.</p>
+                    <p>I made a new directory and moved our <b>squid_file.txt</b> into it.</p>
+                    <img src="Code/Linux/Images/bashmv.png">
+                    <p>Here I renamed the file that we copied into the Desktop directory.</p>
+                    <img src="Code/Linux/Images/bashmvrename.png">
+                    <h4>rm</h4>
+                    <p><b>rm</b> removes files or directories.</p>
+                    <p>Removing a file.</p>
+                    <img src="Code/Linux/Images/bashrmfile.png">
+                    <p>Removing a directory. Notice the <b>--recursive, -r</b> option we need to use it when we want to remove a directory.</p>
+                    <img src="Code/Linux/Images/bashrmdir.png">
                 </article>
-                <hr>-->
+                <hr>
+
                 <article>
                     <h2>Archives with tar</h2>
                     <p>Tar stores and extracts files. <b>tar</b> saves many files together into a single tape or disk archive, and can restore individual files from the archive.</p>
@@ -133,17 +153,16 @@
                     <p><b>tar</b> has many more options, for example you can this options to also compress the file or list the files inside.</p>
                     <img src="Code/Linux/Images/tar3.png">
                     <img src="Code/Linux/Images/tar5.png">
-
-
-
                 </article>
                 <hr>
+
                 <article>
                     <h2>Opening pdf files with command line</h2>
                     <p>If you want to open a window with the pdf <b>gnome-open</b> and <b>evince</b> will work for you. But if you want to open the pdf in the command line, you can do so with <b>less</b>. I used head to see the first 10 lines, but with out it the full pdf will be displayed.</p>
                     <img src="Code/Linux/Images/pdfopen.png">
                 </article>
                 <hr>
+
                 <article>
                     <h2>Working with Files</h2>
                     <p>All the libraries, a usage function and the function prototypes.</p>
@@ -157,6 +176,7 @@
                     <img src="Code/Casm/Images/Files/file5.png">
                 </article>
                 <hr>
+
                 <article>
             		<h2>Memory</h2>
                     <h3>Working with the heap</h3>
@@ -175,8 +195,8 @@
 
 
             	</article>
-
             	<hr>
+
                 <article>
                     <h2>Base64 encoding</h2>
                     <p></p>
@@ -190,6 +210,7 @@
                     <img src="Code/Linux/Images/convert.png">
                 </article>
                 <hr>
+
                 <article>
                     <h2>Curl</h2>
                     <p>I'm learning about <b>curl</b>. Very powerful tool. I'm also going to talk about <b>split</b> and <b>BeautifulSoup</b>. Let's start with split.</p>
