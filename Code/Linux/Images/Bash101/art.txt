@@ -1,0 +1,25 @@
+<!--<article>
+                    <h2>Lesson 3: Standard I/O streams</h2>
+                    <h3>standard input | standard output | standard error</h3>
+                    <p>Let's read about this first so we understand what we're dealing with. This man page explains this very well</p>
+                    <img src="Code/Linux/Images/Bash101/Lesson3/bashio.png" alt="">
+                    <h3>echo | > | >> | < | pipe | grep </h3>
+                    <p>This lesson will be a bit more complex and therefore more attention and pratice will be adviced because it's fairly easy to forget about this commands in 2 days if they're are not worked constantly for a while. Take it from me...</p>
+                    <p>So, <b>input</b> is when we give something to the program or in this case the <b>echo</b> command, and the <b>output</b> will be what the command gives you back. Here we pass a string and <b>echo</b> simply display it as <b>standard output</b>. </p>
+                    <h4>echo</h4>
+                    <img src="Code/Linux/Images/Bash101/Lesson3/bashecho.png">
+                    <p>But what if we want to use the <b>output</b> of a program and pass it to another as <b>input</b>? This is called <b>redirection</b> and can be done with redirection operators.</p>
+                    <h4>></h4>
+                    <p>Here, we redirect the output of <b>echo</b> to write in a file. It does a bit more then that as we'll see in a second.</p>
+                    <img src="Code/Linux/Images/Bash101/Lesson3/bash>.png">
+                    <h4>>></h4>
+                    <img src="Code/Linux/Images/Bash101/Lesson3/bash>>.png">
+                    <p>As you can see they did the same thing, so what's the catch?</p>
+                    <p>There is a solid difference between the two. <b>></b> redirects and <b>overwrites</b> the file.However, <b>>></b> redirects but <b>appends</b> the output at the end of the file.</p>
+                    <img src="Code/Linux/Images/Bash101/Lesson3/bash>explain.png">
+                    <img src="Code/Linux/Images/Bash101/Lesson3/bash>>explain.png">
+                    <h4><</h4>
+                    <img src="Code/Linux/Images/Bash101/Lesson3/bash>>.png">
+                    <img src="Code/Linux/Images/Bash101/Lesson3/bash>>.png">
+                </article>
+                <hr>-->
