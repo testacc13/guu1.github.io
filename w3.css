@@ -376,7 +376,11 @@ pre {
 	color: white;
 	font-size: 15px;
 	font-family: unset;
-	margin: 36px auto 36px;
+	/*margin: 36px auto 36px;*/
 	border: 2px solid darkgray;
 	width: 800px;
+}
+
+article {
+    margin-top: 50px;
 }
