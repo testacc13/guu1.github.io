@@ -4,38 +4,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../../w3.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
-body {}
-.w3-sidenav a {padding:16px;font-family: 'Roboto Mono', monospace;}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {}
+    .w3-sidenav a {padding:16px;font-family: 'Roboto Mono', monospace;}
 </style>
+
 <body>
 
-  <nav class="w3-sidenav w3-text-cyan w3-black w3-collapse w3-animate-left w3-card-2" style="z-index:3;width:250px; border-right: 1px solid slategray;" id="mySidenav">
+    <nav class="w3-sidenav w3-text-cyan w3-black w3-collapse w3-animate-left w3-card-2" style="z-index:3;width:250px; border-right: 1px solid slategray;" id="mySidenav">
 
-    <a href="javascript:void(0)" onclick="w3_close()"
-    class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="../../index.html"><i class="w3-xlarge w3-margin-right fa fa-home" aria-hidden="true"></i> Home</a>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
+        <a href="../../index.html"><i class="w3-xlarge w3-margin-right fa fa-home" aria-hidden="true"></i> Home</a>
 
-    <div class="w3-accordion">
-    <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="w3-xlarge w3-margin-right fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
-    <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
-      <a href="../Networking/protocols.html">Protocols</a>
-      <a href="../Networking/networking.html">Networking</a>
+        <div class="w3-accordion">
+            <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="w3-xlarge w3-margin-right fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
+            <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
+                <a href="../Networking/protocols.html">Protocols</a>
+                <a href="../Networking/networking.html">Networking</a>
 
-    </div>
-  </div>
-
-    <div class="w3-accordion">
-        <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="w3-xlarge w3-margin-right fa fa-code" aria-hidden="true"></i>Programming <i class="fa fa-caret-down"></i></a>
-        <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
-            <a href="../Casm/asm.html">ASM</a>
-            <a href="../Casm/see.html">C</a>
-            <a href="../Python/just-python.html">Python</a>
+            </div>
         </div>
-    </div>
 
-  <a href="../Linux/linux.html"><i class="w3-xlarge w3-margin-right fa fa-linux" aria-hidden="true"></i> Linux</a>
-  <!--
+        <div class="w3-accordion">
+            <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="w3-xlarge w3-margin-right fa fa-code" aria-hidden="true"></i>Programming <i class="fa fa-caret-down"></i></a>
+            <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
+                <a href="../Casm/asm.html">ASM</a>
+                <a href="../Casm/see.html">C</a>
+                <a href="../Python/just-python.html">Python</a>
+            </div>
+        </div>
+
+        <a href="../Linux/linux.html"><i class="w3-xlarge w3-margin-right fa fa-linux" aria-hidden="true"></i> Linux</a>
+        <!--
   <div class="w3-accordion">
       <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-terminal w3-xlarge w3-margin-right" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
       <div id="3id" class="w3-accordion-content w3-animate-left w3-padding">
@@ -44,197 +45,198 @@ body {}
           <a class="" href="">Binary Hacking</a>
       </div>
   </div>-->
-  <a href="../../posts.html"><i class="w3-xlarge w3-margin-right fa fa-camera" aria-hidden="true"></i> Photography</a>
-  <a href="../../Gaming/gaming.html"><i class="w3-xlarge w3-margin-right fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
-  <a href="../../about.html"><i class="w3-xlarge w3-margin-right fa fa-user-circle" aria-hidden="true"></i> About</a>
+        <a href="../../posts.html"><i class="w3-xlarge w3-margin-right fa fa-camera" aria-hidden="true"></i> Photography</a>
+        <a href="../../Gaming/gaming.html"><i class="w3-xlarge w3-margin-right fa fa-gamepad" aria-hidden="true"></i> Gaming</a>
+        <a href="../../about.html"><i class="w3-xlarge w3-margin-right fa fa-user-circle" aria-hidden="true"></i> About</a>
 
-</nav>
+    </nav>
 
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
-<div class="w3-main" style="margin-left:250px;">
+    <div class="w3-main" style="margin-left:250px;">
 
-	<div id="myTop" class="w3-bottom w3-container w3-theme w3-large">
-	  <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
-	  <span id="myIntro" class="w3-hide">General Networking</span>
-	</div>
+        <div id="myTop" class="w3-bottom w3-container w3-theme w3-large">
+            <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
+            <span id="myIntro" class="w3-hide">General Networking</span>
+        </div>
 
-	<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
-	  <h1 class="w3-xxxlarge">General Networking</h1>
-	</header>
+        <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
+            <h1 class="w3-xxxlarge">General Networking</h1>
+        </header>
 
-	<div class="w3-container w3-padding-32" style="padding-left:32px; background-color:#101010; color:white;">
+        <div class="w3-container w3-padding-32" style="padding-left:32px; background-color:#101010; color:white;">
 
-        <article>
-          <h2>Iptables</h2>
-          <h4>
-          Description</h2>
-          <p>Iptables  and  ip6tables  are used to set up, maintain, and inspect the tables of IPv4 and IPv6 packet filter rules in the Linux kernel.  Several different tables may be defined.  Each table contains a number of built-in chains and may also contain user-defined chains. Each chain is a list of rules which can match a set of packets.  Each rule specifies what to do with a packet that matches.  This  is  called  a  'target', which may be a jump to a user-defined chain in the same table.</p>
-          <h4>Targets</h4>
-          <p> A firewall rule specifies criteria for a packet and a target.  If the packet does not match, the next rule in the chain is examined; if it does match, then the next rule is specified by the value of the target, which can be the name of a user-defined chain, one  of  the  targets  described  in iptables-extensions(8), or one of the special values ACCEPT, DROP or RETURN.</p>
-          <ul>
-            <li>ACCEPT -  means  to let the packet through.</li>
-            <li> DROP - means to drop the packet on the floor.</li>
-            <li> RETURN - means stop traversing this chain and resume at the next rule in the previous (calling) chain. If the end of a built-in chain is reached or a rule in a built-in chain with target RETURN is matched, the target specified by the chain policy determines the fate of the packet.</li>
-          </ul>
-          <h4>Tables and Chains</h4>
-          <ul>
-            <li>
-              Filter Tables - Filter is default table. It contains the built-in chains <b>INPUT</b> (for packets destined to local sockets), <b>FORWARD</b> (for packets being routed through the box) and <b>OUTPUT</b> (for locally generated packets)
-              <p></p>
-              <ul>
-                <li>INPUT chain -  Incoming to firewall. For packets coming to the local server.</li>
-                <li>OUTPUT chain -  Outgoing from firewall. For packets generated locally and going out of the local server.</li>
-                <li>FORWARD chain -  Packet for another NIC (Network interface controller) on the local server. For packets routed through the local server.</li>
-                <p></p>
-              </ul>
-              <img src="Images/OneDrive-2017-08-07/iptables-l.PNG" style="margin: 20px 0px 20px;">
-            </li>
-            <p></p>
-            <li>
-              NAT table - This table is consulted when a packet that creates a new connection is encountered. It consists of three built-ins: <b>PREROUTING</b> (for altering packets as soon as they <u>come in</u>), <b>OUTPUT</b> (for altering locally -generated packets <u>before routing</u>), and <b>POSTROUTING</b> (for altering packets as they are about to <u>go out</u>).
-              <ul>
-                <p></p>
-                <li>PREROUTING chain - Alters packets before routing. i.e Packet translation happens immediately after the packet comes to the system (and before routing). This helps to translate the destination ip address of the packets to something that matches the routing on the local server. This is used for DNAT (destination NAT).</li>
-                <li>OUTPUT chain - NAT for locally generated packets on the firewall.</li>
-                <li>POSTROUTING chain - Alters packets after routing. i.e Packet translation happens when the packets are leaving the system. This helps to translate the source ip address of the packets to something that might match the routing on the desintation server. This is used for SNAT (source NAT).</li>
-              </ul>
-              <img src="Images/OneDrive-2017-08-07/nat.PNG" style="margin: 20px 0px 20px;">
-            </li>
-            <p></p>
-            <li>
-              Mangle table - This table is used for specialized packet alteration. It has the following built-in chains:
-              <ul>
-                <p></p>
-                <li>PREROUTING chain - for altering incoming packets before  routing</li>
-                <li>OUTPUT chain - for altering locally-generated packets before routing</li>
-                <li>FORWARD chain - for altering packets being routed through the  box</li>
-                <li>INPUT chain - for packets coming into the box itself</li>
-                <li>POSTROUTING chain - for altering packets as they are about to go out</li>
-              </ul>
-              <img <img src="Images/OneDrive-2017-08-07/mangle.PNG" style="margin: 20px 0px 20px;">
-            </li>
-            <p></p>
-            <li>
-              Raw table - This table is used for configuration excemptions. It has the following built-in chains:
-              <ul>
-                <li>PREROUTING chain</li>
-                <li>OUTPUT chain</li>
-              </ul>
-            </li>
-            <img src="Images/OneDrive-2017-08-07/raw.PNG" style="margin: 20px 0px 20px;" >
-          </ul>
-          <h4>Table Chain and Rule Structure</h4>
-          <img src="Images/OneDrive-2017-08-07/table.PNG" style="margin: 20px 0px 20px; width: 20%; ">
-          <h4>Edit iptable rules</h4>
-          <ul>
-            <ul>
-              <img src="Images/OneDrive-2017-08-07/asd.PNG" style="margin: 20px 0px 20px; ">
-              <li>target - Special target variable (ACCEPT; DROP; REJECT; etc)</li>
-              <li>prot - Protocols. (TCP; UDP; ICMP; etc)</li>
-              <li>opt - Special options for that specific rule.</li>
-              <li>source - Source ip-address of the packet.</li>
-              <li>destination - Destination ip-address for the packet</li>
-            </ul>
-            <ul>
-              <p>Let's append a rule to the INPUT chain. This will allow incoming SSH (port 22) traffic:</p>
-              <img src="Images/OneDrive-2017-08-07/ruleE.PNG" style="margin: 20px 0px 20px; ">
-              <p>What just happened</p>
-              <li><b>-A INPUT</b> - Append a rule to the INPUT chain</li>
-              <li><b>-p tcp</b> - Apply the rule to the tcp protocol</li>
-              <li><b>--dport ssh</b> - Apply the rule to the port used by SSH (port 22)</li>
-              <li><b>-j ACCEPT</b> - Set it to accept traffic to the input chain when using tcp on the ssh port</li>
-            </ul>
-            <h4>Basic Iptables Options</h4>
-            <p><b>- A</b> - Append this rule to a rule chain. Valid chains for what we're doing are INPUT, FORWARD and OUTPUT, but we mostly deal with INPUT in this tutorial, which affects only incoming traffic. </p>
-            <p><b>- L</b> - List the current filter rules. </p>
-            <p><b>- m conntrack</b> - Allow filter rules to match based on connection state. Permits the use of the --ctstate option. </p>
-            <p><b>- -ctstate</b> - Define the list of states for the rule to match on. Valid states are:</p>
-            <ul>
-              <li><b>NEW</b> - The connection has not yet been seen.</li>
-              <li><b>RELATED</b> - The connection is new, but is related to another connection already permitted.</li>
-              <li><b>ESTABLISHED</b> - The connection is already established.</li>
-              <li><b>INVALID</b> - The traffic couldn't be identified for some reason.</li>
-            </ul>
-            <p><b>- m limit</b> - Require the rule to match only a limited number of times. Allows the use of the --limit option. Useful for limiting logging rules. </p>
-            <ul>
-              <li><b> - -limit</b> - The maximum matching rate, given as a number followed by "/second", "/minute", "/hour", or "/day" depending on how often you want the rule to match. If this option is not used and -m limit is used, the default is "3/hour". </li>
-              <img src="Images/OneDrive-2017-08-07/ddos.PNG" style="margin: 20px 0px 20px; ">
-            </ul>
-            <p><b>- p</b> - The connection protocol used. </p>
-            <p><b>- -dport</b> - The destination port(s) required for this rule. A single port may be given, or a range may be given as start:end, which will match all ports from start to end, inclusive. </p>
-            <p><b>- j</b> - Jump to the specified target. By default, iptables allows four targets: </p>
-            <ul>
-              <li>ACCEPT - Accept the packet and stop processing rules in this chain. </li>
-              <li>REJECT - Reject the packet and notify the sender that we did so, and stop processing rules in this chain. </li>
-              <li>DROP - Silently ignore the packet, and stop processing rules in this chain. </li>
-              <li>LOG - Log the packet, and continue processing more rules in this chain. Allows the use of the --log-prefix and --log-level options.	</li>
-            </ul>
-            <p>
-            <p><b>- -log-prefix</b> - When logging, put this text before the log message. Use double quotes around the text to use. </p>
-            <p><b>- -log-level</b> - Log using the specified syslog level. 7 is a good choice unless you specifically need something else. </p>
-            <img src="Images/OneDrive-2017-08-07/log.PNG" style="margin: 20px 0px 20px; ">
-            <p>Checking logs:</p>
-            <img src="Images/OneDrive-2017-08-07/logcheck.PNG" style="margin: 20px 0px 20px; width: 100%;">
-            </p>
-            <p><b>- I</b> - Inserts a rule. Takes two options, the chain to insert the rule into, and the rule number it should be. </p>
-            <ul>
-              <li>-I INPUT 5 would insert the rule into the INPUT chain and make it the 5th rule in the list. </li>
-            </ul>
-            <p><b>- v</b> - Display more information in the output. Useful for if you have rules that look similar without using -v. </p>
-            <p><b>- s - -source</b> - address[/mask] source specification </p>
-            <img src="Images/OneDrive-2017-08-07/block.PNG" style="margin: 20px 0px 20px; ">
-            <p><b>- d - -destination</b></p>
-            <p><b>- o - -out-interface</b> - output name[+] network interface name ([+] for wildcard) </p>
-            <p><b>- i</b> - Only match if the packet is coming in on the specified interface. </p>
-            <img src="Images/OneDrive-2017-08-07/io.PNG" style="margin: 20px 0px 20px; ">
-          </ul>
-          </ul>
-        </article>
+            <article>
+                <h2>Iptables</h2>
+                <h4>
+                    Description</h2>
+                    <p>Iptables and ip6tables are used to set up, maintain, and inspect the tables of IPv4 and IPv6 packet filter rules in the Linux kernel. Several different tables may be defined. Each table contains a number of built-in chains and may also contain user-defined chains. Each chain is a list of rules which can match a set of packets. Each rule specifies what to do with a packet that matches. This is called a 'target', which may be a jump to a user-defined chain in the same table.</p>
+                    <h4>Targets</h4>
+                    <p> A firewall rule specifies criteria for a packet and a target. If the packet does not match, the next rule in the chain is examined; if it does match, then the next rule is specified by the value of the target, which can be the name of a user-defined chain, one of the targets described in iptables-extensions(8), or one of the special values ACCEPT, DROP or RETURN.</p>
+                    <ul>
+                        <li>ACCEPT - means to let the packet through.</li>
+                        <li> DROP - means to drop the packet on the floor.</li>
+                        <li> RETURN - means stop traversing this chain and resume at the next rule in the previous (calling) chain. If the end of a built-in chain is reached or a rule in a built-in chain with target RETURN is matched, the target specified by the chain policy determines the fate of the packet.</li>
+                    </ul>
+                    <h4>Tables and Chains</h4>
+                    <ul>
+                        <li>
+                            Filter Tables - Filter is default table. It contains the built-in chains <b>INPUT</b> (for packets destined to local sockets), <b>FORWARD</b> (for packets being routed through the box) and <b>OUTPUT</b> (for locally generated packets)
+                            <p></p>
+                            <ul>
+                                <li>INPUT chain - Incoming to firewall. For packets coming to the local server.</li>
+                                <li>OUTPUT chain - Outgoing from firewall. For packets generated locally and going out of the local server.</li>
+                                <li>FORWARD chain - Packet for another NIC (Network interface controller) on the local server. For packets routed through the local server.</li>
+                                <p></p>
+                            </ul>
+                            <img src="Images/OneDrive-2017-08-07/iptables-l.PNG" style="margin: 20px 0px 20px;">
+                        </li>
+                        <p></p>
+                        <li>
+                            NAT table - This table is consulted when a packet that creates a new connection is encountered. It consists of three built-ins: <b>PREROUTING</b> (for altering packets as soon as they <u>come in</u>), <b>OUTPUT</b> (for altering locally -generated packets <u>before routing</u>), and <b>POSTROUTING</b> (for altering packets as they are about to <u>go out</u>).
+                            <ul>
+                                <p></p>
+                                <li>PREROUTING chain - Alters packets before routing. i.e Packet translation happens immediately after the packet comes to the system (and before routing). This helps to translate the destination ip address of the packets to something that matches the routing on the local server. This is used for DNAT (destination NAT).</li>
+                                <li>OUTPUT chain - NAT for locally generated packets on the firewall.</li>
+                                <li>POSTROUTING chain - Alters packets after routing. i.e Packet translation happens when the packets are leaving the system. This helps to translate the source ip address of the packets to something that might match the routing on the desintation server. This is used for SNAT (source NAT).</li>
+                            </ul>
+                            <img src="Images/OneDrive-2017-08-07/nat.PNG" style="margin: 20px 0px 20px;">
+                        </li>
+                        <p></p>
+                        <li>
+                            Mangle table - This table is used for specialized packet alteration. It has the following built-in chains:
+                            <ul>
+                                <p></p>
+                                <li>PREROUTING chain - for altering incoming packets before routing</li>
+                                <li>OUTPUT chain - for altering locally-generated packets before routing</li>
+                                <li>FORWARD chain - for altering packets being routed through the box</li>
+                                <li>INPUT chain - for packets coming into the box itself</li>
+                                <li>POSTROUTING chain - for altering packets as they are about to go out</li>
+                            </ul>
+                            <img <img src="Images/OneDrive-2017-08-07/mangle.PNG" style="margin: 20px 0px 20px;">
+                        </li>
+                        <p></p>
+                        <li>
+                            Raw table - This table is used for configuration excemptions. It has the following built-in chains:
+                            <ul>
+                                <li>PREROUTING chain</li>
+                                <li>OUTPUT chain</li>
+                            </ul>
+                        </li>
+                        <img src="Images/OneDrive-2017-08-07/raw.PNG" style="margin: 20px 0px 20px;">
+                    </ul>
+                    <h4>Table Chain and Rule Structure</h4>
+                    <img src="Images/OneDrive-2017-08-07/table.PNG" style="margin: 20px 0px 20px; width: 20%; ">
+                    <h4>Edit iptable rules</h4>
+                    <ul>
+                        <ul>
+                            <img src="Images/OneDrive-2017-08-07/asd.PNG" style="margin: 20px 0px 20px; ">
+                            <li>target - Special target variable (ACCEPT; DROP; REJECT; etc)</li>
+                            <li>prot - Protocols. (TCP; UDP; ICMP; etc)</li>
+                            <li>opt - Special options for that specific rule.</li>
+                            <li>source - Source ip-address of the packet.</li>
+                            <li>destination - Destination ip-address for the packet</li>
+                        </ul>
+                        <ul>
+                            <p>Let's append a rule to the INPUT chain. This will allow incoming SSH (port 22) traffic:</p>
+                            <img src="Images/OneDrive-2017-08-07/ruleE.PNG" style="margin: 20px 0px 20px; ">
+                            <p>What just happened</p>
+                            <li><b>-A INPUT</b> - Append a rule to the INPUT chain</li>
+                            <li><b>-p tcp</b> - Apply the rule to the tcp protocol</li>
+                            <li><b>--dport ssh</b> - Apply the rule to the port used by SSH (port 22)</li>
+                            <li><b>-j ACCEPT</b> - Set it to accept traffic to the input chain when using tcp on the ssh port</li>
+                        </ul>
+                        <h4>Basic Iptables Options</h4>
+                        <p><b>- A</b> - Append this rule to a rule chain. Valid chains for what we're doing are INPUT, FORWARD and OUTPUT, but we mostly deal with INPUT in this tutorial, which affects only incoming traffic. </p>
+                        <p><b>- L</b> - List the current filter rules. </p>
+                        <p><b>- m conntrack</b> - Allow filter rules to match based on connection state. Permits the use of the --ctstate option. </p>
+                        <p><b>- -ctstate</b> - Define the list of states for the rule to match on. Valid states are:</p>
+                        <ul>
+                            <li><b>NEW</b> - The connection has not yet been seen.</li>
+                            <li><b>RELATED</b> - The connection is new, but is related to another connection already permitted.</li>
+                            <li><b>ESTABLISHED</b> - The connection is already established.</li>
+                            <li><b>INVALID</b> - The traffic couldn't be identified for some reason.</li>
+                        </ul>
+                        <p><b>- m limit</b> - Require the rule to match only a limited number of times. Allows the use of the --limit option. Useful for limiting logging rules. </p>
+                        <ul>
+                            <li><b> - -limit</b> - The maximum matching rate, given as a number followed by "/second", "/minute", "/hour", or "/day" depending on how often you want the rule to match. If this option is not used and -m limit is used, the default is "3/hour". </li>
+                            <img src="Images/OneDrive-2017-08-07/ddos.PNG" style="margin: 20px 0px 20px; ">
+                        </ul>
+                        <p><b>- p</b> - The connection protocol used. </p>
+                        <p><b>- -dport</b> - The destination port(s) required for this rule. A single port may be given, or a range may be given as start:end, which will match all ports from start to end, inclusive. </p>
+                        <p><b>- j</b> - Jump to the specified target. By default, iptables allows four targets: </p>
+                        <ul>
+                            <li>ACCEPT - Accept the packet and stop processing rules in this chain. </li>
+                            <li>REJECT - Reject the packet and notify the sender that we did so, and stop processing rules in this chain. </li>
+                            <li>DROP - Silently ignore the packet, and stop processing rules in this chain. </li>
+                            <li>LOG - Log the packet, and continue processing more rules in this chain. Allows the use of the --log-prefix and --log-level options. </li>
+                        </ul>
+                        <p>
+                            <p><b>- -log-prefix</b> - When logging, put this text before the log message. Use double quotes around the text to use. </p>
+                            <p><b>- -log-level</b> - Log using the specified syslog level. 7 is a good choice unless you specifically need something else. </p>
+                            <img src="Images/OneDrive-2017-08-07/log.PNG" style="margin: 20px 0px 20px; ">
+                            <p>Checking logs:</p>
+                            <img src="Images/OneDrive-2017-08-07/logcheck.PNG" style="margin: 20px 0px 20px; width: 100%;">
+                        </p>
+                        <p><b>- I</b> - Inserts a rule. Takes two options, the chain to insert the rule into, and the rule number it should be. </p>
+                        <ul>
+                            <li>-I INPUT 5 would insert the rule into the INPUT chain and make it the 5th rule in the list. </li>
+                        </ul>
+                        <p><b>- v</b> - Display more information in the output. Useful for if you have rules that look similar without using -v. </p>
+                        <p><b>- s - -source</b> - address[/mask] source specification </p>
+                        <img src="Images/OneDrive-2017-08-07/block.PNG" style="margin: 20px 0px 20px; ">
+                        <p><b>- d - -destination</b></p>
+                        <p><b>- o - -out-interface</b> - output name[+] network interface name ([+] for wildcard) </p>
+                        <p><b>- i</b> - Only match if the packet is coming in on the specified interface. </p>
+                        <img src="Images/OneDrive-2017-08-07/io.PNG" style="margin: 20px 0px 20px; ">
+                    </ul>
+                    </ul>
+            </article>
 
-	</div>
+        </div>
 
-		<footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
-	  		<address style="color:white;"></address>
-	  	</footer>
-</div>
+        <footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
+            <address style="color:white;"></address>
+        </footer>
+    </div>
 
-<script>
-// Open and close the sidenav on medium and small screens
-function w3_open() {
-    document.getElementById("mySidenav").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
-function w3_close() {
-    document.getElementById("mySidenav").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
+    <script>
+        // Open and close the sidenav on medium and small screens
+        function w3_open() {
+            document.getElementById("mySidenav").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidenav").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
 
-// Change style of top container on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
-        document.getElementById("myIntro").classList.add("w3-show-inline-block");
-    } else {
-        document.getElementById("myIntro").classList.remove("w3-show-inline-block");
-        document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
-    }
-}
+        // Change style of top container on scroll
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+                document.getElementById("myIntro").classList.add("w3-show-inline-block");
+            } else {
+                document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+                document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+            }
+        }
 
-// Accordions
-function myAccordion(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-        x.previousElementSibling.className += " w3-theme";
-    } else {
-        x.className = x.className.replace("w3-show", "");
-        x.previousElementSibling.className =
-        x.previousElementSibling.className.replace(" w3-theme", "");
-    }
-}
-</script>
+        // Accordions
+        function myAccordion(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-theme";
+            } else {
+                x.className = x.className.replace("w3-show", "");
+                x.previousElementSibling.className =
+                x.previousElementSibling.className.replace(" w3-theme", "");
+            }
+        }
+    </script>
 
 </body>
+
 </html>

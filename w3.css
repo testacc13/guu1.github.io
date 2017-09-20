@@ -385,3 +385,10 @@ pre {
 article {
     margin-top: 50px;
 }
+
+.pre {
+    border: 1px solid grey;
+    background-color: #a8a8a8;
+    padding: 10px;
+    color: black;
+}
