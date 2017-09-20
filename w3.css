@@ -151,7 +151,8 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 .w3-layout-container{display:table;width:100%}.w3-layout-row{display:table-row}.w3-layout-cell,.w3-layout-col{display:table-cell}
 .w3-layout-top{vertical-align:top}.w3-layout-middle{vertical-align:middle}.w3-layout-bottom{vertical-align:bottom}
 .w3-hide{display:none!important}.w3-show-block,.w3-show{display:block!important}.w3-show-inline-block{display:inline-block!important}
-@media (max-width:600px){body,html{font-size: 12px;} h2{font-size: initial;} h3{font-size: initial;} img { margin-bottom:-5px;border: 1px solid slategray;width:100%;} table{width: 10%;}}.w3-modal-content{margin:0 10px;width:auto!important; font-size: 12px;}.w3-modal{padding-top:30px}}
+@media (max-width:600px){body,html{font-size: 12px;} h2{font-size: initial;} h3{font-size: initial;} img { margin-bottom:-5px;border: 1px solid slategray;width:100%;} table{width: 10%;} pre {background-color: #1A1A1A; color: white;
+font-size: 4px; font-family: unset; margin: 36px auto 36px; border: 2px solid darkgray; width: 100%;}} .w3-modal-content{margin:0 10px;width:auto!important; font-size: 12px;}.w3-modal{padding-top:30px}}
 @media (max-width:768px){.w3-modal-content{width:500px}.w3-modal{padding-top:50px}}
 @media (min-width:993px){.w3-modal-content{width:900px}}
 @media screen and (max-width:600px){.w3-topnav a{display:block}.w3-navbar li:not(.w3-opennav){float:none;width:100%!important}.w3-navbar li.w3-right{float:none!important}}
@@ -378,7 +379,7 @@ pre {
 	font-family: unset;
 	/*margin: 36px auto 36px;*/
 	border: 2px solid darkgray;
-	width: 60%;
+	width: 70%;
 }
 
 article {
