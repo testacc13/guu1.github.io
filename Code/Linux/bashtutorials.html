@@ -76,88 +76,101 @@
                       <hr>
 
                     -->
-                <article>
-                    <h2>Linux - Displaying text when opening terminal<br><h6>3-Out-2017</h6></h2>
-                    <p>Open <b>~/.bashrc</b> and use <b>echo</b> to print to the terminal. Here I simply print a red mobius loop</p>
-                    <img src="Images/asciiopen.png">
-                    <img src="Images/asciiopenshow.png">
-                    <p>Codes for the colors:</p>
-                    <img style="width:40%;"src="Images/asciicolors.png">
-                    <p>Finally we do <b>source ~/.bashrc</b> to save our changes.</p>
-                </article>
-                <hr>
-                <article>
-                <article>
-                    <h2>Bash Commands</h2>
-                    <h3>alias</h3>
-                    <p>Very cool command. Used to create an alias of another command.</p>
-                    <img src="Images/alias.png">
-                    <h3>apropos</h3>
-                    <p>Used to search the manual page names and descriptions. This search is done by using <i>keywords</i>.</p>
-                    <img src="Images/apropos1.png">
-                    <h3>aspell</h3>
-                    <p>The interactive spell checker.</p>
-                    <img src="Images/aspell1.png">
-                    <img src="Images/aspell.png">
-                    <img src="Images/aspell2.png">
-                    <h3>basename</h3>
-                    <p>Used to strip directory and sufflix from filenames. Much like .split() in python.</p>
-                    <img src="Images/basename.png">
-                    <h3>bc</h3>
-                    <p>Bash calculator, which i ended up breaking after some bad inputs. But the creator did say that error recovery is still very bad in the man pages. Anyways, good for quick calculations while in the command-line.</p>
-                    <img src="Images/bc.png">
-                    <h3>cal</h3>
-                    <p>Just a calendar</p>
-                    <img src="Images/cal.png">
-                    <h3>cfdisk</h3>
-                    <p>A cool GUI to display or manipulate a disk partition table. The default device is <b>/dev/sda</b>.</p>
-                    <img src="Images/cfdisk1.png">
-                    <img src="Images/cfdisk.png">
-                    <img src="Images/cfdiskhelp.png">
-                    <h3>bzip2</h3>
-                    <p>A block-sorting file compressor.</p>
-                    <img src="Images/zip.png">
+                    <article style="">
+                        <h2>Lesson 3: Standard I/O streams<br><h6>4-Out-2017</h6></h2>
+                        <h3>standard input | standard output | standard error</h3>
+                        <p>Let's read about this first so we understand what we're dealing with. This man page explains this very well</p>
+                        <img src="Images/Bash101/Lesson3/bashio.png" alt="">
+                        <h3>echo | > | >> | < | grep | pipe </h3>
+                        <p>This lesson will be a bit more complex and therefore more attention and pratice will be adviced because it's fairly easy to forget about this commands in 2 days if they're are not worked constantly for a while. Take it from me...</p>
+                        <p>So, <b>input</b> is when we give something to the program or in this case the <b>echo</b> command, and the <b>output</b> will be what the command gives you back. Here we pass a string and <b>echo</b> simply display it as <b>standard output</b>. </p>
+                        <h4>echo</h4>
+                        <img src="Images/Bash101/Lesson3/bashecho.png">
+                        <p>But what if we want to use the <b>output</b> of a program and pass it to another as <b>input</b>? This is called <b>redirection</b> and can be done with redirection operators.</p>
+                        <h4>></h4>
+                        <p>Here, we redirect the output of <b>echo</b> to write in a file. It does a bit more then that as we'll see in a second.</p>
+                        <img src="Images/Bash101/Lesson3/bash>.png">
+                        <h4>>></h4>
+                        <img src="Images/Bash101/Lesson3/bash>>.png">
+                        <p>As you can see they did the same thing, so what's the catch?</p>
+                        <p>There is a solid difference between the two. <b>></b> redirects and <b>overwrites</b> the file.However, <b>>></b> redirects but <b>appends</b> the output at the end of the file.</p>
+                        <img src="Images/Bash101/Lesson3/bash>explain.png">
+                        <img src="Images/Bash101/Lesson3/bash>>explain.png">
+                        <h4><</h4>
+                        <p><b><</b> takes the output from the file and passes it to the program on the right. Now, we haven't talked about <b>grep</b> yet but all you need to know is that we taking whats inside of the file and pass it to <b>grep</b>, as input, which then searchs for those words.</p>
+                        <img src="Images/Bash101/Lesson3/bash<file.png">
+                        <img src="Images/Bash101/Lesson3/bash<.png">
+                        <h4>grep and pipe</h4>
+                        <p>Like we saw previously, <b>grep</b> allows us to search for patterns like words, for example. <b>| (pipe)</b> sends the output from one program as input to another program. Here, we use <b>ps</b> which displays information on active processes and we pass that output, with pipe <b>|</b>, to <b>grep</b> which then finds our search word <b>terminal</b></p>
+                        <img src="Images/Bash101/Lesson3/grepandpipe.png">
+                    </article>
                     <hr>
-                </article>
-                <article>
-                    <h2>Curl</h2>
-                    <p>I'm learning about <b>curl</b>. Very powerful tool. I'm also going to talk about <b>split</b> and <b>BeautifulSoup</b>. Let's start with split.</p>
-                    <h3>Split</h3>
-                    <p>In this example, I start with a simple string, and what split can do to that string is, as the name says, split it. And you can do so simply but using <b>.split()</b> as I did in the beginning. But we can take this one step further. So let's say we want to grab whatever is in front of 'example'. We can do so buy spliting 'example' of the string and picking whats in front of it, hence the <b>[1]</b>. And that would be it. Now let's pick just the word phrase 'phrase'. Like previously, we get whats in front of 'example' but now we split twice. The last split is to remove the '.'</p>
-                    <img src="Images/split1.png">
-                    <h3>BeautifulSoup</h3>
-                    <p>This gets very useful when parsing specific text in a html page as we will see soon. So let's talk about BeautifulSoup. To use this you need to install the bs4 module. For this example i used the main page of Hack Forums and grabed the names of online users.</p>
-                    <p>This code uses bs4 to grab specific tags like tbody and td. Also <b>find_all()</b> allows us to grab tags with a certain class. Bs4 does much, much more. In the end we use <b>text=True</b> to grab our names. We could have used split.</p>
-                    <p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Bs4 docs</a></p>
-                    <img src="Images/tbody.png">
-                    <img src="Images/bs.png">
-                    <p>Running our code we can see the span tags and the final result the names. All of this output is done by our get_names() function.</p>
-                    <img src="Images/bsoutput.png">
-                    <h2>Curl</h2>
-                    <p>So, what is curl? If we look at our man pages we get a pretty straight answser. Curl is a tool to transfer data from or to a server, using several protocols like HTTP FTP IMAP and many others. Curl offers proxy support, user authentication, SSL connections, cookies etc. Let's write a small script to get timings of connections. For this I'm running apache2 on localhost. Very easy to setup <b>POST SCRIPT</b></p>
-                    <img src="Images/curl1.png">
-                    <img src="Images/curloutput.png">
-                    <p>To be updated...</p>
+                    <article>
+                        <h2>Learning Bash</h2>
+                        <h3>Lesson two: Dealing with files</h3>
+                        <h3>touch | vim and nano | cat | cp | mv | rm</h3>
+                        <p>Let's start with creating files, text files.<br>Bash comes with <b>vim</b> and <b>nano</b> pre-installed. <b>nano</b> is better for beginners, <b>vim</b> has the fame of being very dificult to learn, but its probably the most powerful text editor. So, we are going to create a file with <b>touch</b>, edit it with nano and use <b>cat</b> to see the content inside of it.</p>
+                        <h4>touch</h4>
+                        <img src="Images/bashtouch.png" alt="">
+                        <h4>nano</h4>
+                        <p><b>CTRL-O + ENTER + CTRL-X</b> to write and quit</p>
+                        <img src="Images/bashnano.png" style="border-right: 2px solid stalegray;">
+                        <h4>cat</h4>
+                        <p>Now we use <b>cat</b> to see whats inside of the without having to open it.</p>
+                        <img src="Images/bashcat.png">
+                        <p>Now that we created a file, we will now learn how to move it or remove it.</p>
+                        <h4>cp</h4>
+                        <p><b>cp</b> is for copying files or directories.</p>
+                        <img src="Images/bashcp.png">
+                        <h4>mv</h4>
+                        <p><b>mv</b> is used to move but also to rename files or directories.</p>
+                        <p>I made a new directory and moved our <b>squid_file.txt</b> into it.</p>
+                        <img src="Images/bashmv.png">
+                        <p>Here I renamed the file that we copied into the Desktop directory.</p>
+                        <img src="Images/bashmvrename.png">
+                        <h4>rm</h4>
+                        <p><b>rm</b> removes files or directories.</p>
+                        <p>Removing a file.</p>
+                        <img src="Images/bashrmfile.png">
+                        <p>Removing a directory. Notice the <b>--recursive, -r</b> option we need to use it when we want to remove a directory.</p>
+                        <img src="Images/bashrmdir.png">
+                    </article>
                     <hr>
-                </article>
+                    <article>
+                        <h2>Learning Bash</h2>
+                        <h3>Lesson one: Navigation</h3>
+                        <p>So let's learn how to navigate on the command line and learn some basic commands.</p>
+                        <h3>ls | pwd | cd | mkdir | clear and tput reset</h3>
+                        <p>Once you open the terminal, you will see your username followed by the pc name (the one that identifies you on a network etc) and finally <b>~$
+    </b> which means the terminal is ready to receive your input and also that you're on your home directory (<b>~</b>).</p>
+                        <h4>ls</h4>
+                        <p>Let's shine some light into our terminal with <b>ls</b>. <br><b>ls</b> will list all the files in a directory, it can do it with many more information but that will come later.</p>
+                        <img src="Images/bash1.png" alt="">
+                        <h4>pwd</h4>
+                        <p>So now we have directories like the <b>Desktop</b> <b>Pictures</b> etc, but before we jump into one of these folders let's learn about <b>pwd</b>, which basicaly <b>prints the working directory</b></p>
+                        <img src="Images/bash2.png" alt="">
+                        <p>Now that we know where we are located with a little more detail than just home, let's go to our <b>Desktop</b>. Keep in mind that using the terminal will be much like using windows, except you have much more power with you.</p>
 
-                <article>
-                    <h2>Free</h2>
-                    <p>free - Display amount of free and used memory in the system</p>
-                    <p>free displays the total amount of free and used physical and swap memory in the system, as well as the buffers used by the kernel.  The shared memory column represents
-                        either  the MemShared value (2.4 series kernels) or the Shmem value (2.6 series ker‐
-                        nels and later) taken from the /proc/meminfo file. The value is zero if none of  the
-                        entries is exported by the kernel.
-                    </p>
-                    <img src="Images/free.png">
-                    <hr>
-                </article>
+                        <h4>cd</h4>
+                        <p>To <b>change directory</b> we just put our <b>cd</b> command followed by the directory we want to go.</p>
+                        <img src="Images/bash3.png" alt="">
+                        <p>Going backwards in directories.</p>
+                        <img src="Images/bashcd.png" alt="">
+                        <img src="Images/bashcdmore.png" alt="">
+                        <p>Using just <b>cd</b> will takes us straight to home.</p>
+                        <img src="Images/bashcdhome.png" alt="">
+                        <p>Also, if any errors pop-up, make sure to read them carefully and most importantly stay calm. Bash is not wrong, you are. To minimize typing errors, use <b>Tab</b> for autocompletion. It's very handy.<br> Ok, now were in our Desktop folder. But if you just installed linux you probably wont have anything there and you can check it with <b>ls</b>.</p>
+                        <h4>mkdir</h4>
+                        <p>This time to shed some light, we will create a folder with <b>mkdir</b> and the folder name right next to it.</p>
+                        <img src="Images/bash4.png" alt="">
+                        <p>Now let's go into the folder that we just created with <b>cd</b></p>
+                        <img src="Images/bash5.png" alt="">
+                        <p>To end this lesson, use <b>clear</b> to clear your terminal. However, <b>clear</b> will basically just scroll down, if you really want to clean all of the terminal output use <b>tput reset</b>.</p>
 
-                <article>
-                    <h2>Uptime</h2>
-                    <img src="Images/uptime.png">
+                    </article>
                     <hr>
-                </article>
+
+
 
 
                 <!--<article>
