@@ -50,7 +50,7 @@ body {}
           <a class="" href="">Binary Hacking</a>
       </div>
   </div>-->
-  <a href="../../posts.html"><i class="w3-xlarge w3-margin-right fa fa-camera" aria-hidden="true"></i> Photography</a>
+  <!-- <a href="../../posts.html"><i class="w3-xlarge w3-margin-right fa fa-camera" aria-hidden="true"></i> Photography</a> -->
   <!--<a class="" href="Gaming/gaming.html"><i class="fa fa-gamepad w3-xlarge w3-margin-right" aria-hidden="true"></i> Gaming</a>-->
   <a href="../../about.html"><i class="w3-xlarge w3-margin-right fa fa-user-circle" aria-hidden="true"></i> About</a>
 
@@ -74,16 +74,37 @@ body {}
 	<!--
 	create a new article:
 
-	<article>
-		<h2></h2>
-		<p></p>
-		<img src="">
-
-
-	</article>
+    <article>
+        <h2><br><h6></h6></h2>
+        <p></p>
+        <img src="">
+    </article>
+    <hr>le>
 	<hr>
 
 	-->
+    <article>
+        <h2>Nulls<br><h6>29-dez-2017</h6></h2>
+        <h3>Removing null characters (\x00)</h3>
+        <pre style="font-size: 13px">
+
+            mov ebx, 0  ; \xbb\x00\x00\x00
+            mov eax, 1  ; \xb8\x01\x00\x00
+            int 0x80    ; \xcd\x80
+        </pre>
+        <p>Using <b>xor</b>, which will return 0 if both operands are equal. So our first instruction</p>
+        <pre style="font-size: 13px">
+
+            xor ebx, ebx
+        </pre>
+        <p>For the second instruction, we need to remember that we're using <b>32-bit</b> register and moving only one byte into it. But <b>eax</b> has room for four more bytes, therefore the rest of the bytes will be filled with nulls. So how do we fix this?</p>
+        <p>Each <b>32-bit</b> register is broken up into two <b>16-bit</b> areas. The first <b>16-bit</b> area can be acessed with the <b>ax</b> register. This <b>16-bit</b> register can be broken down further into the <b>al</b> and <b>ah</b> <b>8-bit</b> registers. Our second instruction will be:</p>
+        <pre style="font-size: 13px">
+
+            mov al, 1
+        </pre>
+    </article>
+    <hr>
 	 <article>
 
 	        <h2>I'm finally learning Assembly!</h2>
