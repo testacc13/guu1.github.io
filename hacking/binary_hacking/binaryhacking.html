@@ -21,34 +21,36 @@
             <a href="javascript:void(0)" onclick="w3_close()"
                 class="w3-text-teal w3-hide-large w3-closenav w3-large ">Close <i class="fa fa-remove"></i></a>
             <!-- /////////////////// Nav Bar ////////////////////// -->
-            <a href="index.html"><i class="fa fa-home w3-xlarge w3-margin-right w3-margin-right" aria-hidden="true"></i> Binary Hacking</a>
+            <a href="../../index.html"><i class="fa fa-home w3-xlarge w3-margin-right w3-margin-right" aria-hidden="true"></i> Home</a>
+            <a class="" href="../../create_new_post.html"><i class="fa w3-xlarge fa-plus-circle w3-margin-right w3-margin-right" aria-hidden="true"></i> New Post </a>
+
             <div class="w3-accordion">
                 <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server w3-xlarge w3-margin-right" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
                 <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
-                    <a class="" href="Code/Networking/protocols.html">Protocols</a>
-                    <a class="" href="Code/Networking/networking.html">Networking</a>
+                    <a class="" href="../../networking/protocols.html">Protocols</a>
+                    <a class="" href="../../networking/networking.html">Networking</a>
                 </div>
             </div>
             <div class="w3-accordion">
                 <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code w3-xlarge w3-margin-right" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
                 <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
-                    <a class="" href="Code/Casm/asm.html">ASM</a>
-                    <a class="" href="Code/Casm/see.html">C</a>
-                    <a class="" href="Code/Python/just-python.html">Python</a>
+                    <a class="" href="../../programming/c_and_assembly/assembly.html">ASM</a>
+                    <a class="" href="../../programming/c_and_assembly/c.html">C</a>
+                    <a class="" href="../../programmingpython/just-python.html">Python</a>
                 </div>
             </div>
-            <a class="" href="Code/Linux/linux.html"><i class="fa fa-linux w3-xlarge w3-margin-right" aria-hidden="true"></i> Linux</a>
+            <a class="" href="../../linux/linux.html"><i class="fa fa-linux w3-xlarge w3-margin-right" aria-hidden="true"></i> Linux</a>
 
             <div class="w3-accordion">
                 <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-terminal w3-xlarge w3-margin-right" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
                 <div id="3id" class="w3-accordion-content w3-animate-left w3-padding">
-                    <a class="" href="">CTF</a>
-                    <a class="" href="">Web Hacking</a>
-                    <a class="" href="">Binary Hacking</a>
+                    <a class="" href="#">CTF</a>
+                    <a class="" href="#">Web Hacking</a>
+                    <a class="" href="#">Binary Hacking</a>
                 </div>
             </div>
-            <a class="" href="posts.html"><i class="fa fa-camera w3-xlarge w3-margin-right" aria-hidden="true"></i> Photography</a>
-            <a class="" href="Gaming/gaming.html"><i class="fa fa-gamepad w3-xlarge w3-margin-right" aria-hidden="true"></i> Gaming</a>
+            <!-- <a class="" href="posts.html"><i class="fa fa-camera w3-xlarge w3-margin-right" aria-hidden="true"></i> Photography</a> -->
+            <!-- <a class="" href="Gaming/gaming.html"><i class="fa fa-gamepad w3-xlarge w3-margin-right" aria-hidden="true"></i> Gaming</a> -->
             <a class="" href="about.html"><i class="fa fa-user-circle w3-xlarge w3-margin-right" aria-hidden="true"></i> About</a>
         </nav>
         <!-- /////////////////// END of Nav Bar ////////////////////// -->
@@ -70,7 +72,7 @@
                     create a new article:
 
                     <article>
-                        <h2></h2>
+                        <h2><br><h6></h6></h2>
                         <p></p>
                         <img src="">
                     </article>
@@ -78,39 +80,14 @@
 
                 -->
                 <article>
-                    <h2>Nebula Exploit Exercises</h2>
-                    <p><a href="https://exploit-exercises.com/nebula/">Nebula Exercises Link</a></p>
-                    <h3>Level00</h3>
-
-                    <p><i>This level requires you to find a Set User ID program that will run as the "flag00" account.</i></p>
-                    <p>Pretty straight forward</p>
-                    <img src="Images/Nebula/level00.png">
-                    <img src="Images/Nebula/level00getflag.png">
-
-                    <h3>Level01</h3>
-                    <p><i>There is a vulnerability in the below program that allows arbitrary programs to be executed.</i></p>
-                    <!--http://www.gnu.org/software/libc/manual/html_node/Reading-Persona.html
-                    https://www.owasp.org/index.php/Command_Injection
-                    <pre>
-
-
-int main(int argc, char **argv, char **envp)
-{
-    gid_t gid;
-    uid_t uid;
-    gid = getegid(); // get group identity
-    uid = geteuid(); // get user identity
-
-    setresgid(gid, gid, gid); // set real, effective and saved user or group ID
-    setresuid(uid, uid, uid); // set real, effective and saved user or group ID
-
-    system("/usr/bin/env echo and now what?"); // execute a shell command
-}
-                    </pre>
+                    <h2>Stack<br><h6>28-Dez-2017</h6></h2>
+                    <h3>Defeating Non-Executable Stack</h3>
+                    <p>Known as <b><i>Return to libc</i></b> - It will make use of libc library to export our syscalls. Instead of returning control to instructions on the stack, as a traditional stack buffer overflow, we will force the program to return to an address that corresponds to a specific dynamic library function. That dynamic library function will not be on the stack, circumventing any stack exection restrictions.</p>
+                    <p>Heres an challenge on a non-executable stack and using the return to libc method to call system, which would then cat a file where it the flag would be.</p>
+                    <img src="Images/rootm/ch2/ch2.png">
                 </article>
-                <!--#4811FF-->
-                <br>
-                <br>
+                <hr>
+
             </div>
             <footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
                 <!--  		<address style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>-->

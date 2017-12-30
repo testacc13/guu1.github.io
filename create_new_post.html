@@ -2,80 +2,94 @@
 
 <!DOCTYPE html>
 <html>
-    <title>Radare2</title>
+    <title>Brainpasta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../w3.css">
+    <!--<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">-->
+    <link rel="stylesheet" href="w3.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body {}
-        .w3-sidenav a {padding:16px;font-family: 'Roboto Mono', monospace;}
+    body {/*font-family: "Roboto", sans-serif*/}
+    .w3-sidenav a {padding:16px;/*font-weight:bold*/font-family: 'Roboto Mono', monospace;}
     </style>
     <body>
-        <nav class="w3-sidenav w3-text-cyan w3-black w3-collapse w3-animate-left w3-card-2" style="z-index:3;width:250px; border-right: 1px solid slategray;" id="mySidenav">
+        <nav class="w3-sidenav w3-text-cyan w3-black w3-collapse w3-animate-left w3-card-2" style="z-index:3;width:250px;border-right: 1px solid slategray; font-family: 'Roboto Mono', monospace;" id="mySidenav">
             <!--<a href="#" class="w3-border-bottom w3-large"><img src="http://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>-->
             <a href="javascript:void(0)" onclick="w3_close()"
-                class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
-            <a href="index.html"><i class="fa fa-home w3-xlarge w3-margin-right" aria-hidden="true"></i> Home</a>
+                class="w3-text-teal w3-hide-large w3-closenav w3-large ">Close <i class="fa fa-remove"></i></a>
+            <!-- /////////////////// Nav Bar ////////////////////// -->
+            <a href="index.html"><i class="fa fa-home w3-xlarge w3-margin-right w3-margin-right" aria-hidden="true"></i> Home</a>
             <div class="w3-accordion">
-                <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class=" w3-xlarge w3-margin-right fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
+                <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server w3-xlarge w3-margin-right" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
                 <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
-                    <a href="../../Code/Networking/protocols.html">Protocols</a>
-                    <a href="../../Code/Networking/networking.html">Networking</a>
+                    <a class="" href="networking/protocols.html">Protocols</a>
+                    <a class="" href="networking/networking.html">Networking</a>
                 </div>
             </div>
             <div class="w3-accordion">
-                <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class=" w3-xlarge w3-margin-right fa fa-code" aria-hidden="true"></i>Programming <i class=" fa fa-caret-down"></i></a>
+                <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code w3-xlarge w3-margin-right" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
                 <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
-                    <a href="../../Code/Casm/asm.html">ASM</a>
-                    <a href="../../Code/Casm/see.html">C</a>
-                    <a href="../../Code/Python/just-python.html">Python</a>
+                    <a class="" href="programming/c_and_assembly/assembly.html">ASM</a>
+                    <a class="" href="programming/c_and_assembly/c.html">C</a>
+                    <a class="" href="programming/python/just-python.html">Python</a>
                 </div>
             </div>
             <div class="w3-accordion">
             <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="w3-xlarge w3-margin-right fa fa-code" aria-hidden="true"></i> Linux <i class="fa fa-caret-down"></i></a>
                 <div id="3id" class="w3-accordion-content w3-animate-left w3-padding">
-                    <a href="../../Code/Linux/bashtutorials.html">Bash tutorials</a>
-                    <a href="../../Code/Linux/linux.html">Other things</a>
+                    <a href="linux/bashtutorials.html">Bash tutorials</a>
+                    <a href="linux/linux.html">Other things</a>
                 </div>
             </div>
+            <!-- <i class="fa fa-github" style="width:60px;" aria-hidden="true"></i> -->
+
 
             <div class="w3-accordion">
-                <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-terminal w3-xlarge w3-margin-right" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
-                <div id="3id" class="w3-accordion-content w3-animate-left w3-padding">
-                    <a class="" href="">CTF</a>
-                    <a class="" href="">Web Hacking</a>
-                    <a class="" href="">Binary Hacking</a>
+                <a onclick="myAccordion('4id')" href="javascript:void(0)"><i class="fa fa-terminal w3-xlarge w3-margin-right" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
+                <div id="4id" class="w3-accordion-content w3-animate-left w3-padding">
+                    <a class="" href="#">CTF</a>
+                    <a class="" href="#">Web Hacking</a>
+                    <a class="" href="hacking/binary_hacking/binaryhacking.html">Binary Hacking</a>
+                    <!-- <a class="" href="Hacking/radare2/radare.html">Radare2</a> -->
                 </div>
             </div>
-            <a href="../../posts.html"><i class=" w3-xlarge w3-margin-right fa fa-camera" aria-hidden="true"></i> Photography</a>
+            <!-- <a class="" href="posts.html"><i class="fa fa-camera w3-xlarge w3-margin-right" aria-hidden="true"></i> Photography</a> -->
             <!--<a class="" href="Gaming/gaming.html"><i class="fa fa-gamepad w3-xlarge w3-margin-right" aria-hidden="true"></i> Gaming</a>-->
-            <a href="../../about.html"><i class=" w3-xlarge w3-margin-right fa fa-user-circle" aria-hidden="true"></i> About</a>
+            <a class="" href="about.html"><i class="fa fa-user-circle w3-xlarge w3-margin-right" aria-hidden="true"></i> About</a>
         </nav>
+        <!-- /////////////////// END of Nav Bar ////////////////////// -->
+        <!-- /////////////////// Big black Title Display ////////////////////// -->
         <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
         <div class="w3-main" style="margin-left:250px;">
-            <div id="myTop" class="w3-bottom w3-container w3-theme w3-large">
+            <div id="myTop" class="w3-bottom w3-container /*w3-padding-16*/ w3-theme w3-large">
                 <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
-                <span id="myIntro" class="w3-hide">About</span>
+                <span id="myIntro" class="w3-hide">Home</span>
             </div>
-            <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
-                <h1 class="w3-xxxlarge">Radare</h1>
+            <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px; background-image: url('test2.png'); background-size: 1030px;">
+                <h1 class="w3-xxxlarge w3-padding-16"><b>Home</b></h1>
+
             </header>
+            <!-- /////////////////// END of Big black Title Display ////////////////////// -->
+            <!-- /////////////////// Articles ////////////////////// -->
             <div class="w3-container w3-padding-32" style="padding-left:32px; background-color:#101010; color:white;">
+                <!--
+                    create a new article:
 
-                <article>
                     <article>
-                        <h2>radare2<br><h6>28-Dez-2017</h6></h2>
-                        <h3>Getting started with radare2</h3>
-                        <p>To start with debug mode use the <b>-d</b> flag</p>
+                        <h2><br><h6></h6></h2>
+                        <p></p>
+                        <img src="">
+                    </article>
+                    <hr>
 
+                -->
 
-
-                </article>
-                <br>
             </div>
             <footer class="w3-container w3-theme w3-padding-32" style="padding-left:32px">
-                <!--adress style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>-->
+                <!--  		<address style="color:white;">Apache/2.4.25 (Unix) Server on raspberrypi at brainpasta.ddns.net Port 80</address>-->
             </footer>
         </div>
         <script>

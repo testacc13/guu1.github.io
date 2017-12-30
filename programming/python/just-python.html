@@ -17,12 +17,14 @@
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-text-teal w3-hide-large w3-closenav w3-large">Close <i class="w3-xlarge fa fa-remove"></i></a>
 
         <a href="../../index.html"><i class="w3-xlarge w3-margin-right fa fa-home" aria-hidden="true"></i> Home</a>
+        <a class="" href="../../create_new_post.html"><i class="fa w3-xlarge fa-plus-circle w3-margin-right w3-margin-right" aria-hidden="true"></i> New Post </a>
+
 
         <div class="w3-accordion">
             <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="w3-xlarge w3-margin-right fa fa-server" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
             <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
-                <a href="../Networking/protocols.html">Protocols</a>
-                <a href="../Networking/networking.html">Networking</a>
+                <a href="../networking/protocols.html">Protocols</a>
+                <a href="../networking/networking.html">Networking</a>
 
             </div>
         </div>
@@ -30,25 +32,25 @@
         <div class="w3-accordion">
             <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="w3-xlarge w3-margin-right fa fa-code" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
             <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
-                <a href="../Casm/asm.html">ASM</a>
-                <a href="../Casm/see.html">C</a>
-                <a href="../Python/just-python.html">Python</a>
+                <a href="../c_and_assembly/assembly.html">ASM</a>
+                <a href="../c_and_assembly/c.html">C</a>
+                <a href="just-python.html">Python</a>
             </div>
         </div>
 
         <div class="w3-accordion">
-            <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-terminal w3-xlarge w3-margin-right" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
-            <div id="4id" class="w3-accordion-content w3-animate-left w3-padding">
-                <a href="../Linux/bashtutorials.html">Bash tutorials</a>
-                <a href="../Linux/linux.html">Other things</a>
+            <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-linux w3-xlarge w3-margin-right" aria-hidden="true"></i> Linux<i class="fa fa-caret-down"></i></a>
+            <div id="3id" class="w3-accordion-content w3-animate-left w3-padding">
+                <a href="../linux/bashtutorials.html">Bash tutorials</a>
+                <a href="../linux/linux.html">Other things</a>
             </div>
         </div>
         <div class="w3-accordion">
             <a onclick="myAccordion('4id')" href="javascript:void(0)"><i class="fa fa-terminal w3-xlarge w3-margin-right" aria-hidden="true"></i> Hacking <i class="fa fa-caret-down"></i></a>
-            <div id="3id" class="w3-accordion-content w3-animate-left w3-padding">
+            <div id="4id" class="w3-accordion-content w3-animate-left w3-padding">
                 <a class="" href="#">CTF</a>
                 <a class="" href="#">Web Hacking</a>
-                <a class="" href="../../Hacking/BinaryHacking/binaryhacking.html">Binary Hacking</a>
+                <a class="" href="../../hacking/binary_hacking/binaryhacking.html">Binary Hacking</a>
             </div>
         </div>
         <!-- <a href="../../posts.html"><i class="w3-xlarge w3-margin-right fa fa-camera" aria-hidden="true"></i> Photography</a> -->
@@ -66,7 +68,7 @@
             <span id="myIntro" class="w3-hide">Python</span>
         </div>
 
-        <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px; background-image: url('Images/pythonwallpaper.png'); background-size: 100%; background-repeat: no-repeat; background-position-y: 55%;">
+        <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px; background-image: url('Imagespythonwallpaper.png'); background-size: 100%; background-repeat: no-repeat; background-position-y: 55%;">
             <h1 class="w3-xxxlarge w3-padding-32"><b>Python</b></h1>
 
         </header>
@@ -89,15 +91,15 @@
             <article>
                 <h3>Split</h3>
                 <p>In this example, I start with a simple string, and what split can do to that string is, as the name says, split it. And you can do so simply but using <b>.split()</b> as I did in the beginning. But we can take this one step further. So let's say we want to grab whatever is in front of 'example'. We can do so buy spliting 'example' of the string and picking whats in front of it, hence the <b>[1]</b>. And that would be it. Now let's pick just the word phrase 'phrase'. Like previously, we get whats in front of 'example' but now we split twice. The last split is to remove the '.'</p>
-                <img src="../Linux/Images/split1.png">
+                <img src="../linux/Images/split1.png">
                 <h3>BeautifulSoup</h3>
                 <p>This gets very useful when parsing specific text in a html page as we will see soon. So let's talk about BeautifulSoup. To use this you need to install the bs4 module. For this example i used the main page of Hack Forums and grabed the names of online users.</p>
                 <p>This code uses bs4 to grab specific tags like tbody and td. Also <b>find_all()</b> allows us to grab tags with a certain class. Bs4 does much, much more. In the end we use <b>text=True</b> to grab our names. We could have used split.</p>
                 <p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Bs4 docs</a></p>
-                <img src="../Linux/Images/tbody.png">
-                <img src="../Linux/Images/bs.png">
+                <img src="../linux/Images/tbody.png">
+                <img src="../linux/Images/bs.png">
                 <p>Running our code we can see the span tags and the final result the names. All of this output is done by our get_names() function.</p>
-                <img src="../Linux/Images/bsoutput.png">
+                <img src="../linux/Images/bsoutput.png">
             </article>
             <!--<article>
 		<h2>Socket chat</h2>

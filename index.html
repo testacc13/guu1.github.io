@@ -22,26 +22,28 @@
                 class="w3-text-teal w3-hide-large w3-closenav w3-large ">Close <i class="fa fa-remove"></i></a>
             <!-- /////////////////// Nav Bar ////////////////////// -->
             <a href="index.html"><i class="fa fa-home w3-xlarge w3-margin-right w3-margin-right" aria-hidden="true"></i> Home</a>
+            <a class="" href="create_new_post.html"><i class="fa w3-xlarge fa-plus-circle w3-margin-right w3-margin-right" aria-hidden="true"></i> New Post </a>
+
             <div class="w3-accordion">
                 <a onclick="myAccordion('demo')" href="javascript:void(0)"><i class="fa fa-server w3-xlarge w3-margin-right" aria-hidden="true"></i> Networking <i class="fa fa-caret-down"></i></a>
                 <div id="demo" class="w3-accordion-content w3-animate-left w3-padding">
-                    <a class="" href="Code/Networking/protocols.html">Protocols</a>
-                    <a class="" href="Code/Networking/networking.html">Networking</a>
+                    <a class="" href="networking/protocols.html">Protocols</a>
+                    <a class="" href="networking/networking.html">Networking</a>
                 </div>
             </div>
             <div class="w3-accordion">
                 <a onclick="myAccordion('2id')" href="javascript:void(0)"><i class="fa fa-code w3-xlarge w3-margin-right" aria-hidden="true"></i> Programming <i class="fa fa-caret-down"></i></a>
                 <div id="2id" class="w3-accordion-content w3-animate-left w3-padding">
-                    <a class="" href="Code/Casm/asm.html">ASM</a>
-                    <a class="" href="Code/Casm/see.html">C</a>
-                    <a class="" href="Code/Python/just-python.html">Python</a>
+                    <a class="" href="programming/c_and_assembly/assembly.html">ASM</a>
+                    <a class="" href="programming/c_and_assembly/c.html">C</a>
+                    <a class="" href="programming/python/just-python.html">Python</a>
                 </div>
             </div>
             <div class="w3-accordion">
-            <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="w3-xlarge w3-margin-right fa fa-code" aria-hidden="true"></i> Linux <i class="fa fa-caret-down"></i></a>
+            <a onclick="myAccordion('3id')" href="javascript:void(0)"><i class="fa fa-linux w3-xlarge w3-margin-right" aria-hidden="true"></i>Linux <i class="fa fa-caret-down"></i></a>
                 <div id="3id" class="w3-accordion-content w3-animate-left w3-padding">
-                    <a href="Code/Linux/bashtutorials.html">Bash tutorials</a>
-                    <a href="Code/Linux/linux.html">Other things</a>
+                    <a href="linux/bashtutorials.html">Bash tutorials</a>
+                    <a href="linux/linux.html">Other things</a>
                 </div>
             </div>
             <!-- <i class="fa fa-github" style="width:60px;" aria-hidden="true"></i> -->
@@ -52,7 +54,7 @@
                 <div id="4id" class="w3-accordion-content w3-animate-left w3-padding">
                     <a class="" href="#">CTF</a>
                     <a class="" href="#">Web Hacking</a>
-                    <a class="" href="Hacking/BinaryHacking/binaryhacking.html">Binary Hacking</a>
+                    <a class="" href="hacking/binary_hacking/binaryhacking.html">Binary Hacking</a>
                     <!-- <a class="" href="Hacking/radare2/radare.html">Radare2</a> -->
                 </div>
             </div>
@@ -90,48 +92,48 @@
                     <h2>C - Struct problem<br><h6>4-Out-2017</h6></h2>
                     <p>Returning a poiter to a struct from a function.</p>
 
-                    <img src="Code/Casm/Images/Quantore/struc_problem/structterminal.png">
-                    <img src="Code/Casm/Images/Quantore/struc_problem/structcode.png">
-                    <img src="Code/Casm/Images/Quantore/struc_problem/structcode1.png">
-                    <img src="Code/Casm/Images/Quantore/struc_problem/structcode2.png">
+                    <img src="programming/c_and_assembly/Images/Quantore/struc_problem/structterminal.png">
+                    <img src="programming/c_and_assembly/Images/Quantore/struc_problem/structcode.png">
+                    <img src="programming/c_and_assembly/Images/Quantore/struc_problem/structcode1.png">
+                    <img src="programming/c_and_assembly/Images/Quantore/struc_problem/structcode2.png">
                 </article>
                 <hr>
                 <article>
                     <h2>Lesson 3: Standard I/O streams<br><h6>4-Out-2017</h6></h2>
                     <h3>standard input | standard output | standard error</h3>
                     <p>Let's read about this first so we understand what we're dealing with. This man page explains this very well</p>
-                    <img src="Code/Linux/Images/Bash101/Lesson3/bashio.png" alt="">
+                    <img src="linux/Images/Bash101/Lesson3/bashio.png" alt="">
                     <h3>echo | > | >> | < | grep | pipe </h3>
                     <p>This lesson will be a bit more complex and therefore more attention and pratice will be adviced because it's fairly easy to forget about this commands in 2 days if they're are not worked constantly for a while. Take it from me...</p>
                     <p>So, <b>input</b> is when we give something to the program or in this case the <b>echo</b> command, and the <b>output</b> will be what the command gives you back. Here we pass a string and <b>echo</b> simply display it as <b>standard output</b>. </p>
                     <h4>echo</h4>
-                    <img src="Code/Linux/Images/Bash101/Lesson3/bashecho.png">
+                    <img src="linux/Images/Bash101/Lesson3/bashecho.png">
                     <p>But what if we want to use the <b>output</b> of a program and pass it to another as <b>input</b>? This is called <b>redirection</b> and can be done with redirection operators.</p>
                     <h4>></h4>
                     <p>Here, we redirect the output of <b>echo</b> to write in a file. It does a bit more then that as we'll see in a second.</p>
-                    <img src="Code/Linux/Images/Bash101/Lesson3/bash>.png">
+                    <img src="linux/Images/Bash101/Lesson3/bash>.png">
                     <h4>>></h4>
-                    <img src="Code/Linux/Images/Bash101/Lesson3/bash>>.png">
+                    <img src="linux/Images/Bash101/Lesson3/bash>>.png">
                     <p>As you can see they did the same thing, so what's the catch?</p>
                     <p>There is a solid difference between the two. <b>></b> redirects and <b>overwrites</b> the file.However, <b>>></b> redirects but <b>appends</b> the output at the end of the file.</p>
-                    <img src="Code/Linux/Images/Bash101/Lesson3/bash>explain.png">
-                    <img src="Code/Linux/Images/Bash101/Lesson3/bash>>explain.png">
+                    <img src="linux/Images/Bash101/Lesson3/bash>explain.png">
+                    <img src="linux/Images/Bash101/Lesson3/bash>>explain.png">
                     <h4><</h4>
                     <p><b><</b> takes the output from the file and passes it to the program on the right. Now, we haven't talked about <b>grep</b> yet but all you need to know is that we taking whats inside of the file and pass it to <b>grep</b>, as input, which then searchs for those words.</p>
-                    <img src="Code/Linux/Images/Bash101/Lesson3/bash<file.png">
-                    <img src="Code/Linux/Images/Bash101/Lesson3/bash<.png">
+                    <img src="linux/Images/Bash101/Lesson3/bash<file.png">
+                    <img src="linux/Images/Bash101/Lesson3/bash<.png">
                     <h4>grep and pipe</h4>
                     <p>Like we saw previously, <b>grep</b> allows us to search for patterns like words, for example. <b>| (pipe)</b> sends the output from one program as input to another program. Here, we use <b>ps</b> which displays information on active processes and we pass that output, with pipe <b>|</b>, to <b>grep</b> which then finds our search word <b>terminal</b></p>
-                    <img src="Code/Linux/Images/Bash101/Lesson3/grepandpipe.png">
+                    <img src="linux/Images/Bash101/Lesson3/grepandpipe.png">
                 </article>
                 <hr>
                 <article>
                     <h2>Linux - Displaying text when opening terminal<br><h6>3-Out-2017</h6></h2>
                     <p>Open <b>~/.bashrc</b> and use <b>echo</b> to print to the terminal. Here I simply print a red mobius loop</p>
-                    <img src="Code/Linux/Images/asciiopen.png">
-                    <img src="Code/Linux/Images/asciiopenshow.png">
+                    <img src="linux/Images/asciiopen.png">
+                    <img src="linux/Images/asciiopenshow.png">
                     <p>Codes for the colors:</p>
-                    <img style="width:40%;"src="Code/Linux/Images/asciicolors.png">
+                    <img style="width:40%;"src="linux/Images/asciicolors.png">
                     <p>Finally we do <b>source ~/.bashrc</b> to save our changes.</p>
                 </article>
                 <hr>
@@ -165,11 +167,11 @@
 
                     <h3>Some examples: </h3>
                     <h4>#define </h4>
-                    <img src="Code/Casm/Images/macros/macrodefine.png">
-                    <img src="Code/Casm/Images/macros/macrodefinecompile.png">
+                    <img src="programming/c_and_assembly/Images/macros/macrodefine.png">
+                    <img src="programming/c_and_assembly/Images/macros/macrodefinecompile.png">
                     <h4>Conditions</h4>
-                    <img src="Code/Casm/Images/macros/macrosconditions.png">
-                    <img src="Code/Casm/Images/macros/macrosconditioncompile.png">
+                    <img src="programming/c_and_assembly/Images/macros/macrosconditions.png">
+                    <img src="programming/c_and_assembly/Images/macros/macrosconditioncompile.png">
                 </article>
                 <hr>
                 <article>
@@ -177,11 +179,11 @@
                     <p><b>xxd</b> creates a hex dump of a given file or standard input.  It can also
        convert a hex dump back to its original binary form.</p>
                     <p><b>-b</b> for binary digit dump. <b>-ps</b> output in postscript plain hexdump style. <b>-r</b> for reverse. <b>-c</b> display with columns.</p>
-                    <img class="imgsmall" src="Code/Linux/Images/xxd1.png">
-                    <img class="imgsmall" src="Code/Linux/Images/xxd2.png">
-                    <img class="imgsmall" src="Code/Linux/Images/xxd3.png">
-                    <img class="imgsmall" src="Code/Linux/Images/xxd4.png">
-                    <img class="imgsmall" src="Code/Linux/Images/xxd5.png">
+                    <img class="imgsmall" src="linux/Images/xxd1.png">
+                    <img class="imgsmall" src="linux/Images/xxd2.png">
+                    <img class="imgsmall" src="linux/Images/xxd3.png">
+                    <img class="imgsmall" src="linux/Images/xxd4.png">
+                    <img class="imgsmall" src="linux/Images/xxd5.png">
                 </article>
                 <hr>
                 <article>
@@ -189,8 +191,8 @@
                     <p>We know that we can send to a function the addresses of variables. However, we can also send to a function the adress of another function, because these are also load to memory. Declaration is as follows:</p>
                     <p><b>type (* ptr_to_function) (function parameters)</b></p>
 
-                    <img src="Code/Casm/Images/Pointers/function_pointers_code.png">
-                    <img src="Code/Casm/Images/Pointers/function_pointers.png">
+                    <img src="programming/c_and_assembly/Images/Pointers/function_pointers_code.png">
+                    <img src="programming/c_and_assembly/Images/Pointers/function_pointers.png">
                 </article>
                 <hr>
 
@@ -203,26 +205,26 @@
 </b> which means the terminal is ready to receive your input and also that you're on your home directory (<b>~</b>).</p>
                     <h4>ls</h4>
                     <p>Let's shine some light into our terminal with <b>ls</b>. <br><b>ls</b> will list all the files in a directory, it can do it with many more information but that will come later.</p>
-                    <img src="Code/Linux/Images/bash1.png" alt="">
+                    <img src="linux/Images/bash1.png" alt="">
                     <h4>pwd</h4>
                     <p>So now we have directories like the <b>Desktop</b> <b>Pictures</b> etc, but before we jump into one of these folders let's learn about <b>pwd</b>, which basicaly <b>prints the working directory</b></p>
-                    <img src="Code/Linux/Images/bash2.png" alt="">
+                    <img src="linux/Images/bash2.png" alt="">
                     <p>Now that we know where we are located with a little more detail than just home, let's go to our <b>Desktop</b>. Keep in mind that using the terminal will be much like using windows, except you have much more power with you.</p>
 
                     <h4>cd</h4>
                     <p>To <b>change directory</b> we just put our <b>cd</b> command followed by the directory we want to go.</p>
-                    <img src="Code/Linux/Images/bash3.png" alt="">
+                    <img src="linux/Images/bash3.png" alt="">
                     <p>Going backwards in directories.</p>
-                    <img src="Code/Linux/Images/bashcd.png" alt="">
-                    <img src="Code/Linux/Images/bashcdmore.png" alt="">
+                    <img src="linux/Images/bashcd.png" alt="">
+                    <img src="linux/Images/bashcdmore.png" alt="">
                     <p>Using just <b>cd</b> will takes us straight to home.</p>
-                    <img src="Code/Linux/Images/bashcdhome.png" alt="">
+                    <img src="linux/Images/bashcdhome.png" alt="">
                     <p>Also, if any errors pop-up, make sure to read them carefully and most importantly stay calm. Bash is not wrong, you are. To minimize typing errors, use <b>Tab</b> for autocompletion. It's very handy.<br> Ok, now were in our Desktop folder. But if you just installed linux you probably wont have anything there and you can check it with <b>ls</b>.</p>
                     <h4>mkdir</h4>
                     <p>This time to shed some light, we will create a folder with <b>mkdir</b> and the folder name right next to it.</p>
-                    <img src="Code/Linux/Images/bash4.png" alt="">
+                    <img src="linux/Images/bash4.png" alt="">
                     <p>Now let's go into the folder that we just created with <b>cd</b></p>
-                    <img src="Code/Linux/Images/bash5.png" alt="">
+                    <img src="linux/Images/bash5.png" alt="">
                     <p>To end this lesson, use <b>clear</b> to clear your terminal. However, <b>clear</b> will basically just scroll down, if you really want to clean all of the terminal output use <b>tput reset</b>.</p>
 
                 </article>
@@ -233,29 +235,29 @@
                     <h3>touch | vim and nano | cat | cp | mv | rm</h3>
                     <p>Let's start with creating files, text files.<br>Bash comes with <b>vim</b> and <b>nano</b> pre-installed. <b>nano</b> is better for beginners, <b>vim</b> has the fame of being very dificult to learn, but its probably the most powerful text editor. So, we are going to create a file with <b>touch</b>, edit it with nano and use <b>cat</b> to see the content inside of it.</p>
                     <h4>touch</h4>
-                    <img src="Code/Linux/Images/bashtouch.png" alt="">
+                    <img src="linux/Images/bashtouch.png" alt="">
                     <h4>nano</h4>
                     <p><b>CTRL-O + ENTER + CTRL-X</b> to write and quit</p>
-                    <img src="Code/Linux/Images/bashnano.png" style="border-right: 2px solid stalegray;">
+                    <img src="linux/Images/bashnano.png" style="border-right: 2px solid stalegray;">
                     <h4>cat</h4>
                     <p>Now we use <b>cat</b> to see whats inside of the without having to open it.</p>
-                    <img src="Code/Linux/Images/bashcat.png">
+                    <img src="linux/Images/bashcat.png">
                     <p>Now that we created a file, we will now learn how to move it or remove it.</p>
                     <h4>cp</h4>
                     <p><b>cp</b> is for copying files or directories.</p>
-                    <img src="Code/Linux/Images/bashcp.png">
+                    <img src="linux/Images/bashcp.png">
                     <h4>mv</h4>
                     <p><b>mv</b> is used to move but also to rename files or directories.</p>
                     <p>I made a new directory and moved our <b>squid_file.txt</b> into it.</p>
-                    <img src="Code/Linux/Images/bashmv.png">
+                    <img src="linux/Images/bashmv.png">
                     <p>Here I renamed the file that we copied into the Desktop directory.</p>
-                    <img src="Code/Linux/Images/bashmvrename.png">
+                    <img src="linux/Images/bashmvrename.png">
                     <h4>rm</h4>
                     <p><b>rm</b> removes files or directories.</p>
                     <p>Removing a file.</p>
-                    <img src="Code/Linux/Images/bashrmfile.png">
+                    <img src="linux/Images/bashrmfile.png">
                     <p>Removing a directory. Notice the <b>--recursive, -r</b> option we need to use it when we want to remove a directory.</p>
-                    <img src="Code/Linux/Images/bashrmdir.png">
+                    <img src="linux/Images/bashrmdir.png">
                 </article>
                 <hr>
 
@@ -263,33 +265,33 @@
                     <h2>Archives with tar</h2>
                     <p>Tar stores and extracts files. <b>tar</b> saves many files together into a single tape or disk archive, and can restore individual files from the archive.</p>
                     <p>Here I join two files, a copy of my site and a meme file, and create an archive with both of them called <b>archive_of_my_site.tar</b></p>
-                    <img src="Code/Linux/Images/tar1.png">
+                    <img src="linux/Images/tar1.png">
                     <p>I then move the .tar file into a new directory and extract it.</p>
-                    <img src="Code/Linux/Images/tar2.png">
+                    <img src="linux/Images/tar2.png">
                     <p><b>tar</b> has many more options, for example you can this options to also compress the file or list the files inside.</p>
-                    <img src="Code/Linux/Images/tar3.png">
-                    <img src="Code/Linux/Images/tar5.png">
+                    <img src="linux/Images/tar3.png">
+                    <img src="linux/Images/tar5.png">
                 </article>
                 <hr>
 
                 <article>
                     <h2>Opening pdf files with command line</h2>
                     <p>If you want to open a window with the pdf <b>gnome-open</b> and <b>evince</b> will work for you. But if you want to open the pdf in the command line, you can do so with <b>less</b>. I used head to see the first 10 lines, but with out it the full pdf will be displayed.</p>
-                    <img src="Code/Linux/Images/pdfopen.png">
+                    <img src="linux/Images/pdfopen.png">
                 </article>
                 <hr>
 
                 <article>
                     <h2>Working with Files</h2>
                     <p>All the libraries, a usage function and the function prototypes.</p>
-                    <img src="Code/Casm/Images/Files/file1.png">
+                    <img src="programming/c_and_assembly/Images/Files/file1.png">
                     <p>Reserving heap space for the directory and the input and using <b>strcpy()</b> to insert the user input and the file location into that allocated space. Also, a failsafe in case of user attempts buffer overflow.</p>
-                    <img src="Code/Casm/Images/Files/file2.png">
+                    <img src="programming/c_and_assembly/Images/Files/file2.png">
                     <p>The opening the writing and the closing of the file.</p>
-                    <img src="Code/Casm/Images/Files/file3.png">
+                    <img src="programming/c_and_assembly/Images/Files/file3.png">
                     <p><b>fatal()</b> for error messages and <b>errorchecked_malloc()</b> to allocate the memory and to return error in case of failure.</p>
-                    <img src="Code/Casm/Images/Files/file4.png">
-                    <img src="Code/Casm/Images/Files/file5.png">
+                    <img src="programming/c_and_assembly/Images/Files/file4.png">
+                    <img src="programming/c_and_assembly/Images/Files/file5.png">
                 </article>
                 <hr>
 
@@ -298,16 +300,16 @@
                     <h3>Working with the heap</h3>
             		<p></p>
                     <div class="">
-                        <img src="Code/Casm/Images/Memory/malloc1.png">
+                        <img src="programming/c_and_assembly/Images/Memory/malloc1.png">
                     </div>
                     <div style="display:inline-block;">
                             <p>Here we set a default memory size of 50 if no arguments are passed. Then we allocate the memory size with our <b>errorcheck_malloc()</b>. Since malloc() doesn't know what type of memory it's allocating, we must typecast into the appropriate type. Else, it will return a void pointer. We then copy a string using <b>strcpy()</b> into the allocated memory.</p>
-                           <img src="Code/Casm/Images/Memory/malloc2.png">
+                           <img src="programming/c_and_assembly/Images/Memory/malloc2.png">
                     </div>
                     <p><b>free()</b> is used to free the allocated memory.</p>
-            		<img src="Code/Casm/Images/Memory/malloc3.png">
+            		<img src="programming/c_and_assembly/Images/Memory/malloc3.png">
                     <p>Here is our <b>errorchecked_malloc()</b>. It accepts the size in bytes to allocate. If that allocation fails, the error checking code will display and error and exit the program. The error display is done with <b>fprintf()</b>, the first argument is <b>stderr</b> with is a standard filestream meant for displaying errors. Otherwise it will return the pointer to the newly allocated heap memory.</p>
-            		<img src="Code/Casm/Images/Memory/malloc4.png">
+            		<img src="programming/c_and_assembly/Images/Memory/malloc4.png">
 
 
             	</article>
@@ -316,14 +318,14 @@
                 <article>
                     <h2>Base64 encoding</h2>
                     <p></p>
-                    <img src="Code/Linux/Images/base64.png">
+                    <img src="linux/Images/base64.png">
                 </article>
 
                 <hr>
                 <article>
                     <h2>Bash script to resize images</h2>
                     <p>So I had to do this script because I needed to resize my Pictures to reduze load times on the Photolio and to save alot of work. I used <b>basename</b> to grab the names of the images and <b>convert</b> to resize them.</p>
-                    <img src="Code/Linux/Images/convert.png">
+                    <img src="linux/Images/convert.png">
                 </article>
                 <hr>
 
@@ -332,19 +334,19 @@
                     <p>I'm learning about <b>curl</b>. Very powerful tool. I'm also going to talk about <b>split</b> and <b>BeautifulSoup</b>. Let's start with split.</p>
                     <h3>Split</h3>
                     <p>In this example, I start with a simple string, and what split can do to that string is, as the name says, split it. And you can do so simply but using <b>.split()</b> as I did in the beginning. But we can take this one step further. So let's say we want to grab whatever is in front of 'example'. We can do so buy spliting 'example' of the string and picking whats in front of it, hence the <b>[1]</b>. And that would be it. Now let's pick just the word phrase 'phrase'. Like previously, we get whats in front of 'example' but now we split twice. The last split is to remove the '.'</p>
-                    <img src="Code/Linux/Images/split1.png">
+                    <img src="linux/Images/split1.png">
                     <h3>BeautifulSoup</h3>
                     <p>This gets very useful when parsing specific text in a html page as we will see soon. So let's talk about BeautifulSoup. To use this you need to install the bs4 module. For this example i used the main page of Hack Forums and grabed the names of online users.</p>
                     <p>This code uses bs4 to grab specific tags like tbody and td. Also <b>find_all()</b> allows us to grab tags with a certain class. Bs4 does much, much more. In the end we use <b>text=True</b> to grab our names. We could have used split.</p>
                     <p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Bs4 docs</a></p>
-                    <img src="Code/Linux/Images/tbody.png">
-                    <img src="Code/Linux/Images/bs.png">
+                    <img src="linux/Images/tbody.png">
+                    <img src="linux/Images/bs.png">
                     <p>Running our code we can see the span tags and the final result the names. All of this output is done by our get_names() function.</p>
-                    <img src="Code/Linux/Images/bsoutput.png">
+                    <img src="linux/Images/bsoutput.png">
                     <h2>Curl</h2>
                     <p>So, what is curl? If we look at our man pages we get a pretty straight answser. Curl is a tool to transfer data from or to a server, using several protocols like HTTP FTP IMAP and many others. Curl offers proxy support, user authentication, SSL connections, cookies etc. Let's write a small script to get timings of connections. For this I'm running apache2 on localhost. Very easy to setup <b>POST SCRIPT</b></p>
-                    <img src="Code/Linux/Images/curl1.png">
-                    <img src="Code/Linux/Images/curloutput.png">
+                    <img src="linux/Images/curl1.png">
+                    <img src="linux/Images/curloutput.png">
                     <p>To be updated...</p>
                 </article>
                 <br>
